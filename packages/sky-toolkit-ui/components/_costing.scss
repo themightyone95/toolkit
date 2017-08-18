@@ -6,7 +6,7 @@
 @import "sky-toolkit-core/tools";
 
 // Settings
-$costing-spacing: 5px;
+$costing-spacing: $global-spacing-unit-tiny;
 
 // Dependencies (Optional)
 // =========================================== */
@@ -24,8 +24,8 @@ $costing-spacing: 5px;
 /**
  * Costing
  *
- * 1. We need to use non-standard font sizing at different breakpoints in order to align various
- *    blocks of text in this component
+ * 1. We need to use non-standard font sizing at different breakpoints in order
+ *    to align various blocks of text in this component
  */
 .c-costing {
   @include rem(14px); /* [1] */
@@ -41,8 +41,9 @@ $costing-spacing: 5px;
  * 1. We'll be positioning children relative to this element
  * 2. Non-standard line height to align various text nodes
  * 3. Fractional values (pence) display smaller than main values (pounds)
- * 4. Position fractional values to the top right of the price. Magic number for `top` value
- *    is unfortunate but necessary to align with line-height of parent
+ * 4. Position fractional values to the top right of the price.
+ *    Magic number for `top` value is unfortunate but necessary to align with
+ *    line-height of parent
  */
 .c-costing__price {
   @include rem(36px);
@@ -97,31 +98,42 @@ $costing-spacing: 5px;
   ============================================ */
 
 /**
- * Offer Costing
- *
- * 1. Apply the offer colouring to the price
- * 2. Striked prices on offers are displayed above the price, so need to be on a new line while
- *    maintaining width for the strikethrough line.
+ * Costing Offer
  */
 .c-costing--offer {
-  .c-costing__price {
-    color: color(offer); /* [1] */
+  /**
+   * Apply offer colors to relevent elements
+   */
+  .c-costing__price,
+  .c-price__symbol {
+    color: color(offer);
   }
 
+  /**
+   * Striked prices on offers are displayed above the price, so need to be on a
+   * new line while maintaining width for the strikethrough line.
+   */
   .c-costing__strike {
     margin-left: 0;
-    display: table; /* [2] */
+    display: table;
+  }
+
+  /**
+   * Offer amounts should be placed on own line
+   */
+  .c-costing__offer-amount {
+    display: block;
   }
 }
 
 /**
- * Smaller Costing
- *
- * 1. On smaller costs, suffixes don't display beneath fractional values, so we realign line-height
- *    and create additonal spacing
- * 2. Fractional values don't need offsetting for smaller prices
+ * Costing Small
  */
 .c-costing--small {
+  /**
+   *  1. On smaller costs, suffixes don't display beneath fractional values, so
+   *     we realign line-height and create additonal spacing
+   */
   .c-costing__price {
     @include rem(22px);
     font-weight: bold;
@@ -130,13 +142,77 @@ $costing-spacing: 5px;
     @include mq($from: medium) {
       @include rem(28px);
     }
-
-    &.c-price--fractional {
-      margin-right: 1em; /* [1] */
-    }
   }
 
+  /**
+   * Fractional values don't need offsetting for smaller prices
+   */
   .c-price__fractional {
-    top: 0; /* [2] */
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+}
+
+/**
+ * Footnote Marker
+ *
+ * Various accommodations to the footnote symbol based on the costing modifers
+ */
+.c-costing__price--footnote {
+  /**
+   * The symbol itself is adjacent to the element with modifers, hence the use
+   * of '+'
+   * 1. Potential use of prefix text limits space above values
+   * 2. Unset any bolding applied to parent item
+   */
+  + .c-price__symbol {
+    top: -0.25em; /* [1] */
+    font-weight: normal; /* [2] */
+    position: absolute;
+    left: 100%;  /* [1] */
+
+    /* Conditional Modifiers
+      -------------------------------- */
+
+    /**
+     * @at-root and #{&} allow us to combine modifer selectors with
+     * 'c-costing__price--footnote' and apply to 'c-price__symbol'
+     */
+
+    /**
+     * Price has fraction
+     *
+     * Fractionals take the form of an absolutely positioned number set to two
+     * decimal places - we account for their spacing by adjusting our left value
+     * by 2 characters
+     *
+     * Compiles to:
+     * .c-costing__price--fraction.c-costing__price--footnote + .c-price__symbol
+     */
+    @at-root .c-costing__price--fraction#{&} {
+      left: calc(100% + 2ch); /* [1] */
+    }
+
+    /**
+     * Small display
+     *
+     * No additional absolutely positioned elements when small so we reset
+     * symbol back to the left
+     *
+     * Compiles to:
+     * .c-costing__price--small.c-costing__price--footnote + .c-price__symbol
+     */
+    @at-root .c-costing__price--small#{&} {
+      left: 100%;
+
+      /* As font size increases, symbol needs adjustment to realign with text */
+      /* stylelint-disable-next-line max-nesting-depth */
+      @include mq($from: large) {
+        top: 0; /* [4] */
+      }
+    }
   }
 }
