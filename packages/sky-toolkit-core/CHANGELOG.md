@@ -3,6 +3,13 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.1.4
+
+### Fixes
+
+* [Mixins] Fixed issue causing screen readers to strip white space from visually hidden text for `@include hide-visually()`.
+
+
 ## 2.1.3
 
 ### Dependencies
