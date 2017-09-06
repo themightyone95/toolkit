@@ -3,6 +3,34 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.4.0
+
+### Features
+
+* [Price, Costing] New feature to append a symbol to Price and Costing for
+referencing footnote text (e.g. Terms & Conditions).
+
+#### Example Markup
+
+Price with footnote symbol
+
+```html
+<span class="c-price-container">
+  <span class="c-price c-price--fraction c-price--footnote">£15<span class="c-price__fractional">.95</span></span>
+  <sup class="c-price__symbol c-text-body">*</sup>
+</span>
+```
+
+Price with footnote symbol (strike)
+
+```html
+<span class="c-price-container">
+  <s class="c-price c-price--strike c-price--fraction c-price--footnote">£15<span class="c-price__fractional">.95</span></s>
+  <sup class="c-price__symbol c-text-body">†</sup>
+</span>
+```
+
+
 ## 2.3.0
  
 ### Features
