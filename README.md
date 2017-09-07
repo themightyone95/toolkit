@@ -229,8 +229,9 @@ cd toolkit
 # Install common dependencies.
 npm i
 # Toolkit comprises several sub-packages; Lerna links them together for us.
-# Learn more at lernajs.io
+npm i -g lerna
 lerna bootstrap
+# Learn more at lernajs.io
 ```
 
 After running these commands, you should have all the relevant code and its
