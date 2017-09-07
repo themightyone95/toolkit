@@ -3,6 +3,13 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.4.1
+
+### Fixes
+
+* [Roundel] Fixes a bug in Safari where colour selectors weren't rendering correctly.
+
+
 ## 2.4.0
 
 ### Features
