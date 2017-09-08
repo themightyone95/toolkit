@@ -1,3 +1,5 @@
-[refs #00000] Subject line
+[refs #00000] Descriptive subject line
 
-Body (72 chars)
+Body adding detail and context to changes made (72 chars)
+
+# If you don't follow the critera set in `/CONTRIBUTING.md` your changes will not be approved.
