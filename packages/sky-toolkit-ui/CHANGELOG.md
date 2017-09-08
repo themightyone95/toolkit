@@ -3,6 +3,13 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.5.0
+
+### Features
+
+* [Docs] Migrate **existing** documentation from sky.com/toolkit to `docs/`.
+
+
 ## 2.4.1
 
 ### Fixes
