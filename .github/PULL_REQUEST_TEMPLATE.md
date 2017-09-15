@@ -1,5 +1,5 @@
 <!--
-                                 W A R N I N G
+                            W A R N I N G
 
    Please ensure you have followed our contributing guidelines before
              attempting to merge any work into the project.
@@ -14,7 +14,11 @@
 -->
 
 ## Description
-<!-- Describe your changes in detail -->
+<!--
+  Describe your changes in detail
+
+  NOTE: This should match the CHANGELOG structure and will be used on release.
+-->
 
 
 ## Related Issue
@@ -74,5 +78,3 @@ What types of changes does your code introduce? Put an `x` in all the boxes that
 - [ ] New functions and mixins have appropriate tests.
 - [ ] All new and existing tests passed.
 - [ ] I have added instructions on how to test my changes.
-- [ ] Package version updated.
-- [ ] CHANGELOG.md updated.
