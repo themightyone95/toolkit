@@ -3,6 +3,14 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.5.1
+
+### Fixes
+
+* [Docs] Tweaks and refinement to existing documentation.
+* [Select] Fix sizing of gradient overflow in Select labels.
+
+
 ## 2.5.0
 
 ### Features
