@@ -13,21 +13,21 @@ dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/shine
 contributors:
-  - danieljbryson
   - joebell93
   - aaronthomas
   - csswizardry
   - mrdinsdale
+  - danieljbryson
 layout: component
 ---
 
 # Tile
 
-## Default Tile
+## Base
 
 This is the Tile component in its most simple form.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile">
   <div class="c-tile__content">
     <div class="c-tile__body">
@@ -38,12 +38,12 @@ This is the Tile component in its most simple form.
 </article>
 ```
 
-## Split Media Tile
+### Split Media Tile
 
 The split media tile allows for an image to be placed in the top half of the
 tile and title to be placed below.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square">
   <a class="c-tile__link" href="#">
     <div class="c-tile__content">
@@ -58,12 +58,16 @@ tile and title to be placed below.
 </article>
 ```
 
-## Full Tile
+---
+
+## Modifiers
+
+### Full Tile
 
 The full tile allows for an image to be placed as a background for the tile and
 title to be placed at the bottom.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--full">
   <a class="c-tile__link" href="#">
     <div class="c-tile__content">
@@ -80,9 +84,6 @@ title to be placed at the bottom.
 </article>
 ```
 
-
-## Modifiers
-
 ### Square
 
 The square modifier sets a fixed ratio for equal tile height and width. To
@@ -90,7 +91,7 @@ remove this forced ratio on mobile see `.c-tile--collapsible`.
 
 **Note**: square tiles can cause issues with scaling typography.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square">
   <div class="c-tile__content">
     <div class="c-tile__body">
@@ -108,7 +109,7 @@ the height constraint for mobile breakpoints and allow the tile to inherit
 height from its content. If used on a tile featuring the `.c-tile__media`
 element it will reposition this to the left.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--collapsible">
   <a class="c-tile__link" href="#">
     <div class="c-tile__content">
@@ -129,7 +130,7 @@ For tiles requiring branded hover states, simply include the name of the channel
 in the format of the gradient names defined in `sky-toolkit-core`; such as 
 `.c-tile--sky-atlantic`.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--sky-atlantic">
   <a class="c-tile__link" href="#">
     <div class="c-tile__content">
@@ -144,6 +145,8 @@ in the format of the gradient names defined in `sky-toolkit-core`; such as
 </article>
 ```
 
+---
+
 ## States
 
 ### Focus
@@ -151,7 +154,7 @@ in the format of the gradient names defined in `sky-toolkit-core`; such as
 We can programmatically apply a has focus class to Tiles by adding the
 `.has-focus` state. This is a requirement for accessibility.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile c-tile--square has-focus">
   <a class="c-tile__link" href="#">
     <div class="c-tile__content">
@@ -173,18 +176,22 @@ corresponding panel is open and display the indicator. It should only be used
 in combination with a panel.
 
 ```html
-<article class="c-tile c-tile--square is-selected">
-  <a class="c-tile__link" href="#">
-    <div class="c-tile__content">
-      <div class="c-tile__media">
-        <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
-      </div>
-      <div class="c-tile__body c-tile__caption">
-        <p class="c-tile__title c-heading-delta">Tile Title</p>
-      </div>
-    </div>
-  </a>
-</article>
+<div class="o-layout o-layout--center">
+  <div class="o-layout__item u-width-1/2@large">
+    <article class="c-tile c-tile--square is-selected">
+      <a class="c-tile__link" href="#">
+        <div class="c-tile__content">
+          <div class="c-tile__media">
+            <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
+          </div>
+          <div class="c-tile__body c-tile__caption">
+            <p class="c-tile__title c-heading-delta">Tile Title</p>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+</div>
 <article class="c-panel is-open">
   <div class="c-panel__content">
     <a class="c-panel__toggle" href="#1">Close</a>
@@ -203,21 +210,26 @@ in combination with a panel.
 ### Selected (Dark)
 
 As the indicator arrow to show that the corresponding panel is open is part of
-the tile we can use the .c-tile--dark class to match the tile indicator to the panel.
+the tile we can use the `.c-tile--dark` class to match the tile indicator to the
+`.c-panel--dark` panel.
 
 ```html
-<article class="c-tile c-tile--square c-tile--dark is-selected">
-  <a class="c-tile__link" href="#">
-    <div class="c-tile__content">
-      <div class="c-tile__media">
-        <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
-      </div>
-      <div class="c-tile__body c-tile__caption">
-        <p class="c-tile__title c-heading-delta">Tile Title</p>
-      </div>
-    </div>
-  </a>
-</article>
+<div class="o-layout o-layout--center">
+  <div class="o-layout__item u-width-1/2@large">
+    <article class="c-tile c-tile--dark c-tile--square is-selected">
+      <a class="c-tile__link" href="#">
+        <div class="c-tile__content">
+          <div class="c-tile__media">
+            <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
+          </div>
+          <div class="c-tile__body c-tile__caption">
+            <p class="c-tile__title c-heading-delta">Tile Title</p>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+</div>
 <article class="c-panel c-panel--dark is-open">
   <div class="c-panel__content">
     <a class="c-panel__toggle" href="#1">Close</a>

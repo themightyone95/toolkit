@@ -10,8 +10,8 @@ source: sky-toolkit-ui/components/divider
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
+  - danieljbryson
 layout: component
 ---
 
@@ -26,6 +26,8 @@ and below without disrupting the flow of the document.
 ```html
 <hr class="c-divider" />
 ```
+
+---
 
 ## Modifiers
 
@@ -45,10 +47,10 @@ Provides vertical dividers with a prominent shadow on the left and right edges.
 and wrapped around content.
 
 ```html
-<div class="c-divider c-divider--left">
+<div class="c-divider c-divider--left u-padding-all">
   Divider on the left.
 </div>
-<div class="c-divider c-divider--right">
+<div class="c-divider c-divider--right u-padding-all">
   Divider on the right.
 </div>
 ```

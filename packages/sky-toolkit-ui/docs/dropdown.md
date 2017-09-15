@@ -12,10 +12,10 @@ source: sky-toolkit-ui/components/dropdown
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
   - mrdinsdale
   - aaronthomas
+  - danieljbryson
 layout: component
 ---
 
@@ -58,6 +58,8 @@ Menu items are stored as a list of links.
   </ul>
 </div>
 ```
+
+---
 
 ## Modifiers
 
@@ -120,6 +122,8 @@ For dropdowns that need to display full-width on **small devices only**.
   </ul>
 </div>
 ```
+
+---
 
 ## States
 

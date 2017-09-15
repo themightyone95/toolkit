@@ -10,10 +10,10 @@ source: sky-toolkit-ui/components/tables
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
   - csswizardry
   - skitson
+  - danieljbryson
 layout: component
 ---
 

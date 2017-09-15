@@ -13,8 +13,8 @@ source: sky-toolkit-ui/components/links
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
+  - danieljbryson
 layout: component
 ---
 
@@ -28,6 +28,8 @@ The default `sky-toolkit-core` styling provides a minimal branded link with
 ```html
 <a href="#">This is a default link</a>
 ```
+
+---
 
 ## External
 

@@ -10,13 +10,13 @@ source: sky-toolkit-ui/components/forms
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
-  - liamhutchinson
   - joebell93
   - csswizardry
   - mrdinsdale
   - skitson
   - aaronthomas
+  - danieljbryson
+  - liamhutchinson
 layout: component
 ---
 
@@ -267,6 +267,8 @@ than an entire new element.
 <!-- Within .c-form-list -->
 ```
 
+---
+
 ## Modifiers
 
 ### Full Width
@@ -307,6 +309,8 @@ modifier to display them inline.
   </fieldset>
 </li>
 ```
+
+---
 
 ## States
 
