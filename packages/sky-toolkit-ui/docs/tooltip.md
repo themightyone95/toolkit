@@ -10,8 +10,8 @@ source: sky-toolkit-ui/components/tooltip
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - aaronthomas
+  - danieljbryson
 layout: component
 ---
 
@@ -33,6 +33,8 @@ toggling the stateful `.is-active` class from the `.c-tooltip` component.
   </div>
 </div>
 ```
+
+---
 
 ## Modifiers
 

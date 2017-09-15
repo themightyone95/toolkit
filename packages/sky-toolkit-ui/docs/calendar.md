@@ -137,6 +137,8 @@ All state classes within the calendar are toggled on this element.
 <!-- Within `.c-calendar` component -->
 ```
 
+---
+
 ## States
 
 ### Selected

@@ -12,9 +12,9 @@ dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/shine
 contributors:
-  - danieljbryson
   - joebell93
   - mrdinsdale
+  - danieljbryson
 layout: component
 ---
 
@@ -24,7 +24,7 @@ layout: component
 
 This is the hero component in its most simple form.
 
-```html
+```html { "container": "flush" }
 <div class="c-hero" style="background-image: url('https://www.sky.com/assets/toolkit/docs/hero/example.jpg');">
   <div class="c-hero__caption">
     <div class="o-container">
@@ -37,13 +37,15 @@ This is the hero component in its most simple form.
 </div>
 ```
 
+---
+
 ## Modifiers
 
 ### Cover
 
 Sets hero height to be 100% of the viewport height.
 
-```html
+```html { "container": "flush" }
 <div class="c-hero c-hero--cover" style="background-image: url('https://www.sky.com/assets/toolkit/docs/hero/example.jpg');">
   <div class="c-hero__caption">
     <div class="o-container">
@@ -61,7 +63,7 @@ Sets hero height to be 100% of the viewport height.
 Removes the standard `min-height` on the hero allowing it to scale with the 
 content. This allows `.c-hero__video` videos to scale and maintain aspect ratio.
 
-```html
+```html { "container": "flush" }
 <div class="c-hero c-hero--fit-content">
   <video class="c-hero__video" autoPlay loop preload="auto" poster="https://www.sky.com/assets/toolkit/docs/hero/example-poster.jpg" width="100%" height="100%">
     <source src="https://www.sky.com/assets/toolkit/docs/hero/example.mp4" type="video/mp4">
@@ -83,7 +85,7 @@ Pulls adjacent content to overlap the bottom of the hero. The adjacent content
 should be set to `position: relative;` or using a `z-index` to avoid incorrect
 overlapping.
 
-```html
+```html { "container": "flush" }
 <div class="c-hero c-hero--overlap" style="background-image: url('https://www.sky.com/assets/toolkit/docs/hero/example.jpg');">
   <div class="c-hero__caption">
     <div class="o-container">

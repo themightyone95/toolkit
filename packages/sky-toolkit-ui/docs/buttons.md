@@ -13,12 +13,12 @@ source: sky-toolkit-ui/components/buttons
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
   - csswizardry
   - aaronthomas
   - mrdinsdale
   - steveduffin
+  - danieljbryson
 layout: component
 ---
 
@@ -70,6 +70,8 @@ This is achievable through two optional modifiers:
 <button class="c-btn c-btn--primary c-btn--full u-margin-bottom">Full Width Button</button>
 <button class="c-btn c-btn--primary c-btn--full@small">Full Width Button (Small)</button>
 ```
+
+---
 
 ## States
 

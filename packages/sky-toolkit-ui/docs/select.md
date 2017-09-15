@@ -11,11 +11,11 @@ dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/buttons
 contributors:
-  - danieljbryson
   - joebell93
   - steveduffin
   - mrdinsdale
   - skitson
+  - danieljbryson
 layout: component
 ---
 
@@ -53,6 +53,8 @@ the radio input's checked state being switched.
   <span class="c-btn c-btn--select c-select__btn">Select B</span>
 </label>
 ```
+
+---
 
 ## States
 

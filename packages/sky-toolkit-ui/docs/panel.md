@@ -13,11 +13,11 @@ source: sky-toolkit-ui/components/panel
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - aaronthomas
   - joebell93
   - mrdinsdale
   - skitson
+  - danieljbryson
 layout: component
 ---
 
@@ -32,7 +32,7 @@ white background with dark text. When a panel is visible, it also has a class of
 You can put any content you like inside a panel. It is recommended that you nest
 the content inside a wrapper with a class of `.o-container`.
 
-```html
+```html { "container": "flush" }
 <article class="c-panel is-open">
   <div class="c-panel__content">
     <a class="c-panel__toggle" href="#1">Close</a>
@@ -49,13 +49,15 @@ the content inside a wrapper with a class of `.o-container`.
 </article>
 ```
 
+---
+
 ## Modifiers
 
 ### Dark
 
 A dark version of the panel with a black background and white text.
 
-```html
+```html { "container": "flush" }
 <article class="c-panel c-panel--dark is-open">
   <div class="c-panel__content">
     <a class="c-panel__toggle" href="#1">Close</a>

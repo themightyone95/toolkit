@@ -10,8 +10,8 @@ source: sky-toolkit-ui/components/bezel
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
+  - danieljbryson
 layout: component
 ---
 
@@ -21,7 +21,7 @@ layout: component
 
 The bezel container wraps the media element to provide the glass edge.
 
-```html
+```html { "container": "tile" }
 <div class="c-bezel">
   <img src="https://www.sky.com/assets/toolkit/docs/bezel/example.jpg" alt="Example">
 </div>

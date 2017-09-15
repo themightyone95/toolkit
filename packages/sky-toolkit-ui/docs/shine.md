@@ -11,8 +11,8 @@ source: sky-toolkit-ui/components/shine
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
+  - danieljbryson
 layout: component
 ---
 
@@ -30,7 +30,7 @@ The Shine is generated completely via CSS, and consists of two elements:
 The Shine Rail is hidden out-of-view on the left side by default, and can be
 moved or animated by modifying the `transform: translateX(×);` value.
 
-```html
+```html { "theme": "dark" }
 <!-- Note: Shine Rail centered using `style` for demo purposes -->
 <div class="c-shine">
   <div class="c-shine__rail" style="transform: translateX(0);"></div>
@@ -48,7 +48,7 @@ direction.
 The Shine edge positioning can be altered to suit your component, and can be
 modified using an additional class alongside `.c-shine` (e.g. Tile Shine).
 
-```html
+```html { "theme": "dark", "container": "flush" }
 <div class="c-shine-context">
   <div class="c-shine">
     <div class="c-shine__rail"></div>

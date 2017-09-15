@@ -14,10 +14,10 @@ source: sky-toolkit-ui/components/spinner
 dependencies:
   - sky-toolkit-core
 contributors:
-  - danieljbryson
   - joebell93
   - skitson
   - welikeideas
+  - danieljbryson
 layout: component
 ---
 
@@ -38,16 +38,18 @@ Displays a single spinner component in the page.
 Used in tiles and displays a spinner with an opaque background over the top of
 the content to be loaded.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile">
   <div class="c-tile__content">
     <div class="c-spinner-overlay c-spinner-overlay--light">
       <strong class="c-spinner" role="progressbar">Loading…</strong>
     </div>
-    <img src="<url-to-image>" alt="Demo image"/>
+    <img class="u-width-1/1" alt="Example image" src="https://www.sky.com/assets/toolkit/docs/spinner/example.gif" />
   </div>
-</article
+</article>
 ```
+
+---
 
 ## Modifiers
 
@@ -72,22 +74,26 @@ the content to be loaded.
 Displays an Overlay Spinner using a dark background with a lighter, inverted
 Spinner to contrast with the darker background.
 
-```html
+```html { "container": "tile" }
 <article class="c-tile">
   <div class="c-tile__content">
     <div class="c-spinner-overlay c-spinner-overlay--dark">
       <strong class="c-spinner c-spinner--inverse" role="progressbar">Loading…</strong>
     </div>
-    <img src="url-to-image" alt="Sample image"/>
+    <img class="u-width-1/1" alt="Example image" src="https://www.sky.com/assets/toolkit/docs/spinner/example.gif" />
   </div>
 </article>
 ```
+
+---
+
+## States
 
 ### Complete
 
 Adding a class of `.is-complete` to the Spinner or Spinner Overlay will provide
 a fade-out exit transition to indicate loading completion.
 
-```html { "render": "false" }
+```html { "render": false }
 <strong class="c-spinner is-complete" role="progressbar">Loading…</strong>
 ```
