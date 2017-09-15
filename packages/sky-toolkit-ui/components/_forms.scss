@@ -14,7 +14,7 @@ $form-border-width: $global-border-width;
 $form-border: $form-border-width solid color(grey-20);
 $form-font-size: text-body;
 $form-icon-size: 15px;
-$form-icon-offset: $global-spacing-unit;
+$form-icon-offset: $global-spacing-unit-large;
 $form-checkbox-size: 1em;
 $form-checkbox-margin: $form-checkbox-size;
 $form-checkbox-y-offset: 3px;
@@ -255,6 +255,7 @@ $form-animation-speed: $global-animation-speed-fast;
    *
    * 1. Hidden by default, shown on browsers that support pointer-events using feature detection
    * 2. Stretch to full height on the right (taking into account border width)
+   * 3. The gradient always starts before the select icon appears.
    */
   &::before {
     display: none; /* [1] */
@@ -263,7 +264,7 @@ $form-animation-speed: $global-animation-speed-fast;
     top: $global-border-width; /* [2] */
     right: $form-border-width; /* [2] */
     bottom: $form-border-width; /* [2] */
-    width: $global-spacing-unit-large;
+    width: $form-icon-offset + $form-icon-size; /* [3] */
     background: $form-background;
     background: -ms-linear-gradient(right, rgba($form-background, 1) 60%, rgba($form-background, 0));
     background: linear-gradient(to left, rgba($form-background, 1) 60%, rgba($form-background, 0));
