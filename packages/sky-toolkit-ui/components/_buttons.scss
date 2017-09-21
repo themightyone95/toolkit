@@ -12,6 +12,8 @@ $btn-spacing: $global-spacing-unit - $btn-border-width !default;
 $btn-border-radius: $global-border-radius !default;
 $btn-animation-speed: $global-animation-speed !default;
 $btn-animation-speed-fast: $global-animation-speed-fast !default;
+$btn-icon-size: $global-spacing-unit !default;
+$btn-icon-spacing: $global-spacing-unit-small !default;
 
 /* Base
   ============================================ */
@@ -64,6 +66,42 @@ $btn-animation-speed-fast: $global-animation-speed-fast !default;
     border: 0;
     padding: 0;
   }
+}
+
+/**
+ * Button Icon
+ *
+ * This enables an icon to be placed to the **left** of a button's text. The
+ * icon's colour will be inherited from the component's `color` attribute unless
+ * the icon has an explicit `fill` property set.
+ *
+ * Note: To avoid spacing issues, do *not* add an extra space character between
+ *       your button text and image tag.
+ *
+ * 1. Offset icon from the text baseline to be centered within
+      the component.
+ * 2. Icons must always conform to a set width and height
+ * 3. Icon should inherit it's fill from the component's text colour.
+ */
+.c-btn__icon {
+  position: relative; /* [1] */
+  top: $btn-icon-size / 2; /* [1] */
+  margin-right: $btn-icon-spacing;
+  width: $btn-icon-size; /* [2] */
+  height: $btn-icon-size; /* [2] */
+  line-height: inherit; /* [1] */
+  vertical-align: top; /* [1] */
+  fill: currentColor; /* [3] */
+}
+
+/**
+ * Button Icon - Right
+ *
+ * This enables an icon to be placed to the **right** side of a button's text.
+ */
+.c-btn__icon--right {
+  margin-left: $btn-icon-spacing;
+  margin-right: 0;
 }
 
 /* Modifiers (Cosmetic)
