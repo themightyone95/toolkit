@@ -3,6 +3,19 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.6.0
+
+> Woah! What the hell happened between `2.1.4` and `2.6.0`? 😱
+
+Chill out, there's nothing to worry about. ❄️
+
+We've just reverted the way we use [Lerna](https://github.com/lerna/lerna) within our monorepo…
+
+### Project
+
+* [Lerna](https://github.com/lerna/lerna) changed from `independent` to `fixed` for all Toolkit packages.
+
+
 ## 2.1.4
 
 ### Fixes

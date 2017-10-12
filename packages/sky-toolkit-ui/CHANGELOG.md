@@ -2,6 +2,16 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+## 2.6.0
+
+### Features
+
+* [Overlay] a new component for displaying contextual information in a full-screen window. [See `docs/` for usage](https://github.com/sky-uk/toolkit/blob/develop/packages/sky-toolkit-ui/docs/overlay.md).
+
+### Project
+
+* [Lerna](https://github.com/lerna/lerna) changed from `independent` to `fixed` for all Toolkit packages.
+
 
 ## 2.5.1
 
