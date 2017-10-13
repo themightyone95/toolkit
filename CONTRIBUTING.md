@@ -142,9 +142,9 @@ _Tabs navigation width issue with many tabs_.
    All commits pertaining to this issue must happen within this branch.
 4. All commits in this branch should begin with `[refs #00224]`: pad the issue
    number with leading zeroes until you’re at five (5) digits.
-     * Instead of running `git commit -m "<message>"`, stage your files as you
-       would normally, and run `git commit`. This will fire open your text
-       editor with the prepopulated template ready for you to fill out.
+    * Instead of running `git commit -m "<message>"`, stage your files as you
+      would normally, and run `git commit`. This will fire open your text
+      editor with the prepopulated template ready for you to fill out.
 6. Now your commits—based on the template—should resemble this:
 
         commit 1dcf5d4bc18d5fd3321f4c60d879cfd5d5e2dd1f
@@ -177,8 +177,8 @@ A more formalised and strict Git strategy means that
 ## Pull Requests
 
 1. Create a new local branch for your work.
-   * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
-     `tkt-00087`, `tkt-01209`.
+    * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
+      `tkt-00087`, `tkt-01209`.
 2. As early as possible, create a pull request against `develop`. Make sure you
    give enough information in the pull request description (utilising the
    template provided by default), and add the label `in progress` with any other
@@ -186,10 +186,10 @@ A more formalised and strict Git strategy means that
 3. Once any conflicts have been fixed and you’re ready for your code to be
    reviewed, remove the `in progress` label and add `reviews needed`.
 4. Request a code review from two or more developers.
-   * You’ll need at least **two** approvals on the pull request before being
-     able to merge, and **one of these approvals must be from a [core
-     maintainer](https://github.com/sky-uk/toolkit#maintainers)**.
-     * **N.B.** For major/breaking changes, you require **two core maintainer
+    * You’ll need at least **two** approvals on the pull request before being
+      able to merge, and **one of these approvals must be from a [core
+      maintainer](https://github.com/sky-uk/toolkit#maintainers)**.
+    * **N.B.** For major/breaking changes, you require **two core maintainer
        approvals**.
 5. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
    will merge the changes and apply appropriate versioning to release (see
@@ -226,29 +226,39 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 
 ## Releases
 
-1. Merge fully-approved PR into `develop`.
-2. Run `git checkout develop && git pull`.
-3. Run `git checkout master && git pull`.
-4. Merge `develop` into `master`.
-5. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
-   * Pro tip: use the following command to get a commit summary of changes.
+1. Ensure the fully-approved PR is up to date with `develop`.
+    * If necessary, run `git rebase develop` within the branch. **Avoid** using GitHub's "update branch" button as it leaves us with unhelpful merge commit messages.
+2. Merge fully-approved PR into `develop`.
+3. Run `git checkout develop && git pull`.
+4. Run `git checkout master && git pull && lerna bootstrap`.
+5. Run `git merge develop`.
+6. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
+    * Pro tip: use the following command to get a commit summary of changes.
 
-      ```
-      $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
-      ```
-6. Commit and push the `CHANGELOG.md` changes to `master`.
-7. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
-   * Upload these to s3 `sky.com/assets/[toolkit|toolkit-core]/v[version]` as
-     well as overriding `/latest` (see maintainers Slack channel).
-   * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
+        ```
+        $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
+        ```
+7. Commit and push the `CHANGELOG.md` changes to `master`.
+8. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
+    * Upload these to S3 (see maintainers Slack channel for bucket details):
+        1. Upload both to `sky.com/assets/[toolkit|toolkit-core]/v[version]`
+        2. Override both `/latest` 
+    * In the "Upload" modal of S3; leave steps 1 and 2 as their default settings. For step 3, you **must** ensure to set the following settings, then click "Save".
+
+        | *Header*         | *Value* |
+        |------------------|---------|
+        | Content-Encoding | gzip    |
+    * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
      run `npm run clean` and try again.
-8. Run `lerna publish`.
-   * Be sure to read and follow the wizard very carefully, making sure to use
-     the correct and appropriate patch/minor/major semver tag(s).
-9. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
+9. Run `lerna publish`.
+    * Be sure to read and follow the wizard very carefully, making sure to use
+      the correct and appropriate patch/minor/major semver tag(s).
+10. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
    check the tag exists.
-   * If the tag exists, congrats! Now create a [**new**
+    * If the tag exists, congrats! Now create a [**new**
      release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
      tag.
-   * If the tag doesn't exist, something went wrong.
-10. Communicate changes out on Slack.
+    * If the tag doesn't exist, something went wrong.
+11. Communicate changes out on Slack.
+12. Update our `develop` branch with `master`.
+    * Run `git checkout develop && git merge master && git push`
