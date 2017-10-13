@@ -191,7 +191,31 @@ A more formalised and strict Git strategy means that
       maintainer](https://github.com/sky-uk/toolkit#maintainers)**.
     * **N.B.** For major/breaking changes, you require **two core maintainer
        approvals**.
-5. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
+5. If your PR contains more than a few commits, consider rebasing them into
+   something more concise.
+
+   In most cases, another developer won't need to see the entire progress of
+   your contribution. Amending your commits will help to keep things tidy and
+   support our [Git workflow](#committing-workflow). Simply fixup/squash into a
+   sensibly-grouped commit/s.
+
+   For example:
+      * **Before**
+
+            13407f8 [refs #00297] Tweak sizing
+            c9a0dd1 [refs #00297] Further Amends
+            2ffdc23 [refs #00297] Amends
+            c21d4eb [refs #00297] Colour change
+            c3fee40 [refs #00297] New component
+            5471986 Publish
+
+      * In this case, Fixup/Squash your commits via `git rebase -i 5471986`
+      * **After**
+
+            c3fee40 [refs #00297] New component
+            5471986 Publish
+
+6. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
    will merge the changes and apply appropriate versioning to release (see
    below).
 
@@ -227,7 +251,9 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 ## Releases
 
 1. Ensure the fully-approved PR is up to date with `develop`.
-    * If necessary, run `git rebase develop` within the branch. **Avoid** using GitHub's "update branch" button as it leaves us with unhelpful merge commit messages.
+    * If necessary, run `git rebase develop` within the branch. **Avoid** using 
+      GitHub's "update branch" button as it leaves us with unhelpful merge 
+      commit messages.
 2. Merge fully-approved PR into `develop`.
 3. Run `git checkout develop && git pull`.
 4. Run `git checkout master && git pull && lerna bootstrap`.
@@ -243,21 +269,23 @@ the core maintainers or [Tom Davidson](@tom-davidson).
     * Upload these to S3 (see maintainers Slack channel for bucket details):
         1. Upload both to `sky.com/assets/[toolkit|toolkit-core]/v[version]`
         2. Override both `/latest` 
-    * In the "Upload" modal of S3; leave steps 1 and 2 as their default settings. For step 3, you **must** ensure to set the following settings, then click "Save".
+    * In the "Upload" modal of S3; leave steps 1 and 2 as their default
+      settings. For step 3, you **must** ensure to set the following settings,
+      then click "Save".
 
         | *Header*         | *Value* |
         |------------------|---------|
         | Content-Encoding | gzip    |
     * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
-     run `npm run clean` and try again.
+      run `npm run clean` and try again.
 9. Run `lerna publish`.
     * Be sure to read and follow the wizard very carefully, making sure to use
       the correct and appropriate patch/minor/major semver tag(s).
 10. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
-   check the tag exists.
+    check the tag exists.
     * If the tag exists, congrats! Now create a [**new**
-     release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
-     tag.
+      release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
+      tag.
     * If the tag doesn't exist, something went wrong.
 11. Communicate changes out on Slack.
 12. Update our `develop` branch with `master`.
