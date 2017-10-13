@@ -10,11 +10,60 @@ configuration.
 
 ## Quick Start
 
-Instantly grab a Toolkit-conformant [.scss template](https://git.io/template):
+Instantly grab a Toolkit-conformant [.scss template](https://github.com/sky-uk/toolkit/blob/master/_template.scss):
 
 ```bash
-curl -L git.io/template -o _<your-file-name>.scss
+curl -L https://raw.githubusercontent.com/sky-uk/toolkit/master/_template.scss -o _<your-file-name>.scss
 ```
+
+## Design Contributions
+
+When contributing a **new design** to Toolkit, you **must** adhere to the
+following checklist.
+
+These steps are in place to keep code and design quality to the highest 
+standard, whilst preserving Toolkit as the **single source of truth** for the
+Sky digital estate.
+
+Note: not all designs *need* to be re-usable. Just because a designer has
+created a new asset, this doesn't mean it needs to be made re-usable from the
+get-go. One-off designs are fine and aid continuous innovation.
+
+### Requirements
+
+- [ ] My new design has passed the Creative Review process, and has been
+      identified as a reusable pattern.
+
+  >What if I've identified a new pattern for re-use?
+
+  * Is it already in use at least 3 times? If so, raise for Creative Review.
+
+    Further reading: "[I made this. Does it go in the system?](https://medium.com/eightshapes-llc/i-made-this-does-it-go-in-the-system-3b67b9894531)"
+    *Nathan Curtis (2017)*.
+  * If not, continue developing and refining within your app (with reuse in
+    mind) until it qualifies for extraction later.
+
+- [ ] My new design exists within the Sketch assets.
+- [ ] My new design accounts for device size constraints.
+- [ ] My new design has guidelines for usage, written within `/docs` (as per the [template](https://github.com/sky-uk/toolkit/blob/develop/packages/sky-toolkit-ui/docs/_template.md)).
+- [ ] My new design is global/normalised, and not specific to any brand.
+- [ ] My new design includes full inline code documentation (as per the [template](https://github.com/sky-uk/toolkit/blob/master/_template.scss)).
+- [ ] My new design prioritises native browser interfaces over custom ones.
+- [ ] My new design conforms to the Toolkit [coding style](#coding-style).
+- [ ] My new design conforms to [WCAG 2.0 level AA Accessibility Guidelines](https://www.w3.org/TR/WCAG20/).
+- [ ] My new design prioritises [GPU-accelerated animation](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) where possible.
+
+**Our "Design Contributions" strategy is agreed between and approved by:**
+  * James Stevens (Director of Design)
+  * Rich Ogley (Head of Digital Design & UX)
+  * [Rob Leotta](https://github.com/robertleotta) (Head of UX)
+  * [Alan Abbott](https://github.com/apabbott) (Design Director)
+  * [Mike Gregory](https://github.com/mikejgregory) (Senior UI Designer)
+  * [Tom Davidson](https://github.com/Tom-Davidson) (Head of Technology)
+  * [Toolkit Maintainers](https://github.com/sky-uk/toolkit#maintainers)
+
+The Toolkit Maintainers and Design Team are here to help facilitate this process
+and offer guidance. If you have any questions or concerns please [talk to us](https://sky.slack.com/messages/design-systems)!
 
 ## Creating Issues
 
@@ -175,6 +224,9 @@ A more formalised and strict Git strategy means that
    branch. All work becomes centralised and easy to find.
 
 ## Pull Requests
+
+For new design features, please see the [Design Contribution]
+(#design-contributions) guidelines before continuing.
 
 1. Create a new local branch for your work.
     * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
