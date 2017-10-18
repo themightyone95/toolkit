@@ -72,9 +72,7 @@ What types of changes does your code introduce? Put an `x` in all the boxes that
 
 ## Checklist
 
-- [ ] All code includes full inline documentation (as per the [template](https://github.com/sky-uk/toolkit/blob/master/_template.scss)).
-- [ ] All code conforms to the Toolkit [coding style](https://github.com/sky-uk/toolkit/wiki/Coding-Style).
-- [ ] All code conforms to [WCAG 2.0 level AA Accessibility Guidelines](https://www.w3.org/TR/WCAG20/).
+- [ ] All **design and code** conforms to the [Design Contribution Guidelines](https://github.com/sky-uk/toolkit/blob/develop/CONTRIBUTING.md#design-contributions).
 - [ ] New functions and mixins have appropriate tests.
 - [ ] All new and existing tests passed.
 - [ ] I have added instructions on how to test my changes.

@@ -10,11 +10,60 @@ configuration.
 
 ## Quick Start
 
-Instantly grab a Toolkit-conformant [.scss template](https://git.io/template):
+Instantly grab a Toolkit-conformant [.scss template](https://github.com/sky-uk/toolkit/blob/master/_template.scss):
 
 ```bash
-curl -L git.io/template -o _<your-file-name>.scss
+curl -L https://raw.githubusercontent.com/sky-uk/toolkit/master/_template.scss -o _<your-file-name>.scss
 ```
+
+## Design Contributions
+
+When contributing a **new design** to Toolkit, you **must** adhere to the
+following checklist.
+
+These steps are in place to keep code and design quality to the highest 
+standard, whilst preserving Toolkit as the **single source of truth** for the
+Sky digital estate.
+
+Note: not all designs *need* to be re-usable. Just because a designer has
+created a new asset, this doesn't mean it needs to be made re-usable from the
+get-go. One-off designs are fine and aid continuous innovation.
+
+### Requirements
+
+- [ ] My new design has passed the Creative Review process, and has been
+      identified as a reusable pattern.
+
+  >What if I've identified a new pattern for re-use?
+
+  * Is it already in use at least 3 times? If so, raise for Creative Review.
+
+    Further reading: "[I made this. Does it go in the system?](https://medium.com/eightshapes-llc/i-made-this-does-it-go-in-the-system-3b67b9894531)"
+    *Nathan Curtis (2017)*.
+  * If not, continue developing and refining within your app (with reuse in
+    mind) until it qualifies for extraction later.
+
+- [ ] My new design exists within the Sketch assets.
+- [ ] My new design accounts for device size constraints.
+- [ ] My new design has guidelines for usage, written within `/docs` (as per the [template](https://github.com/sky-uk/toolkit/blob/develop/packages/sky-toolkit-ui/docs/_template.md)).
+- [ ] My new design is global/normalised, and not specific to any brand.
+- [ ] My new design includes full inline code documentation (as per the [template](https://github.com/sky-uk/toolkit/blob/master/_template.scss)).
+- [ ] My new design prioritises native browser interfaces over custom ones.
+- [ ] My new design conforms to the Toolkit [coding style](#coding-style).
+- [ ] My new design conforms to [WCAG 2.0 level AA Accessibility Guidelines](https://www.w3.org/TR/WCAG20/).
+- [ ] My new design prioritises [GPU-accelerated animation](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/) where possible.
+
+**Our "Design Contributions" strategy is agreed between and approved by:**
+  * James Stevens (Director of Design)
+  * Rich Ogley (Head of Digital Design & UX)
+  * [Rob Leotta](https://github.com/robertleotta) (Head of UX)
+  * [Alan Abbott](https://github.com/apabbott) (Design Director)
+  * [Mike Gregory](https://github.com/mikejgregory) (Senior UI Designer)
+  * [Tom Davidson](https://github.com/Tom-Davidson) (Head of Technology)
+  * [Toolkit Maintainers](https://github.com/sky-uk/toolkit#maintainers)
+
+The Toolkit Maintainers and Design Team are here to help facilitate this process
+and offer guidance. If you have any questions or concerns please [talk to us](https://sky.slack.com/messages/design-systems)!
 
 ## Creating Issues
 
@@ -142,9 +191,9 @@ _Tabs navigation width issue with many tabs_.
    All commits pertaining to this issue must happen within this branch.
 4. All commits in this branch should begin with `[refs #00224]`: pad the issue
    number with leading zeroes until you’re at five (5) digits.
-     * Instead of running `git commit -m "<message>"`, stage your files as you
-       would normally, and run `git commit`. This will fire open your text
-       editor with the prepopulated template ready for you to fill out.
+    * Instead of running `git commit -m "<message>"`, stage your files as you
+      would normally, and run `git commit`. This will fire open your text
+      editor with the prepopulated template ready for you to fill out.
 6. Now your commits—based on the template—should resemble this:
 
         commit 1dcf5d4bc18d5fd3321f4c60d879cfd5d5e2dd1f
@@ -176,9 +225,12 @@ A more formalised and strict Git strategy means that
 
 ## Pull Requests
 
+For new design features, please see the [Design Contribution]
+(#design-contributions) guidelines before continuing.
+
 1. Create a new local branch for your work.
-   * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
-     `tkt-00087`, `tkt-01209`.
+    * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
+      `tkt-00087`, `tkt-01209`.
 2. As early as possible, create a pull request against `develop`. Make sure you
    give enough information in the pull request description (utilising the
    template provided by default), and add the label `in progress` with any other
@@ -186,12 +238,36 @@ A more formalised and strict Git strategy means that
 3. Once any conflicts have been fixed and you’re ready for your code to be
    reviewed, remove the `in progress` label and add `reviews needed`.
 4. Request a code review from two or more developers.
-   * You’ll need at least **two** approvals on the pull request before being
-     able to merge, and **one of these approvals must be from a [core
-     maintainer](https://github.com/sky-uk/toolkit#maintainers)**.
-     * **N.B.** For major/breaking changes, you require **two core maintainer
+    * You’ll need at least **two** approvals on the pull request before being
+      able to merge, and **one of these approvals must be from a [core
+      maintainer](https://github.com/sky-uk/toolkit#maintainers)**.
+    * **N.B.** For major/breaking changes, you require **two core maintainer
        approvals**.
-5. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
+5. If your PR contains more than a few commits, consider rebasing them into
+   something more concise.
+
+   In most cases, another developer won't need to see the entire progress of
+   your contribution. Amending your commits will help to keep things tidy and
+   support our [Git workflow](#committing-workflow). Simply fixup/squash into a
+   sensibly-grouped commit/s.
+
+   For example:
+      * **Before**
+
+            13407f8 [refs #00297] Tweak sizing
+            c9a0dd1 [refs #00297] Further Amends
+            2ffdc23 [refs #00297] Amends
+            c21d4eb [refs #00297] Colour change
+            c3fee40 [refs #00297] New component
+            5471986 Publish
+
+      * In this case, Fixup/Squash your commits via `git rebase -i 5471986`
+      * **After**
+
+            c3fee40 [refs #00297] New component
+            5471986 Publish
+
+6. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
    will merge the changes and apply appropriate versioning to release (see
    below).
 
@@ -226,29 +302,43 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 
 ## Releases
 
-1. Merge fully-approved PR into `develop`.
-2. Run `git checkout develop && git pull`.
-3. Run `git checkout master && git pull`.
-4. Merge `develop` into `master`.
-5. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
-   * Pro tip: use the following command to get a commit summary of changes.
+1. Ensure the fully-approved PR is up to date with `develop`.
+    * If necessary, run `git rebase develop` within the branch. **Avoid** using 
+      GitHub's "update branch" button as it leaves us with unhelpful merge 
+      commit messages.
+2. Merge fully-approved PR into `develop`.
+3. Run `git checkout develop && git pull`.
+4. Run `git checkout master && git pull && lerna bootstrap`.
+5. Run `git merge develop`.
+6. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
+    * Pro tip: use the following command to get a commit summary of changes.
 
-      ```
-      $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
-      ```
-6. Commit and push the `CHANGELOG.md` changes to `master`.
-7. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
-   * Upload these to s3 `sky.com/assets/[toolkit|toolkit-core]/v[version]` as
-     well as overriding `/latest` (see maintainers Slack channel).
-   * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
-     run `npm run clean` and try again.
-8. Run `lerna publish`.
-   * Be sure to read and follow the wizard very carefully, making sure to use
-     the correct and appropriate patch/minor/major semver tag(s).
-9. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
-   check the tag exists.
-   * If the tag exists, congrats! Now create a [**new**
-     release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
-     tag.
-   * If the tag doesn't exist, something went wrong.
-10. Communicate changes out on Slack.
+        ```
+        $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
+        ```
+7. Commit and push the `CHANGELOG.md` changes to `master`.
+8. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
+    * Upload these to S3 (see maintainers Slack channel for bucket details):
+        1. Upload both to `sky.com/assets/[toolkit|toolkit-core]/v[version]`
+        2. Override both `/latest` 
+    * In the "Upload" modal of S3; leave steps 1 and 2 as their default
+      settings. For step 3, you **must** ensure to set the following settings,
+      then click "Save".
+
+        | *Header*         | *Value* |
+        |------------------|---------|
+        | Content-Encoding | gzip    |
+    * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
+      run `npm run clean` and try again.
+9. Run `lerna publish`.
+    * Be sure to read and follow the wizard very carefully, making sure to use
+      the correct and appropriate patch/minor/major semver tag(s).
+10. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
+    check the tag exists.
+    * If the tag exists, congrats! Now create a [**new**
+      release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
+      tag.
+    * If the tag doesn't exist, something went wrong.
+11. Communicate changes out on Slack.
+12. Update our `develop` branch with `master`.
+    * Run `git checkout develop && git merge master && git push`
