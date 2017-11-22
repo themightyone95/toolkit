@@ -111,16 +111,17 @@ $form-animation-speed: $global-animation-speed-fast;
  */
 .c-form-input {
   @include font($form-font-size, large);
+  @include interactable-vertical-spacing(true);
+  @include interactable-horizontal-spacing();
   display: inline-block;
-  padding: 0 $global-spacing-unit-small; /* [1] */
   margin-bottom: $global-spacing-unit-small;
-  height: 2.111em; /* [2] */
+  padding: $global-spacing-unit;
+  padding-right: $global-spacing-unit;
   width: 100%;
   background-color: $form-background;
   border: $form-border;
   border-radius: $global-border-radius;
   box-shadow: $form-shadow;
-  line-height: 2.111em; /* [2] */
   transition: box-shadow $form-animation-speed ease, border-color $form-animation-speed ease;
   outline: 0;
   -webkit-appearance: none;
@@ -135,14 +136,10 @@ $form-animation-speed: $global-animation-speed-fast;
 
 /**
  * For use on large text inputs such as textareas
- *
- * 1. As we no longer need to center our text, we can reset the line-height and
- *    use standard box-model padding.
  */
 .c-form-input--long {
-  height: 6em;
-  padding: $global-spacing-unit-small; /* [1] */
-  line-height: $global-line-height / $global-font-size; /* [1] */
+  @include interactable-vertical-spacing();
+  min-height: 6em;
 }
 
 /* Form Date Inputs
@@ -156,8 +153,9 @@ $form-animation-speed: $global-animation-speed-fast;
  */
 .c-form-date {
   @include font($form-font-size, large);
+  @include interactable-vertical-spacing();
+  @include interactable-horizontal-spacing();
   display: inline-block;
-  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
   margin-bottom: $global-spacing-unit-small;
   width: 100%;
   background-color: $form-background;
@@ -222,7 +220,6 @@ $form-animation-speed: $global-animation-speed-fast;
 .c-form-combo__btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  height: 2.111em; /* [1] */
   white-space: nowrap;
 }
 
@@ -233,8 +230,8 @@ $form-animation-speed: $global-animation-speed-fast;
 .c-form-combo__btn,
 .c-form-combo__input {
   @include font($form-font-size, large);
-  padding-top: $global-spacing-unit-tiny;
-  padding-bottom: $global-spacing-unit-tiny;
+  @include interactable-vertical-spacing();
+  @include interactable-horizontal-spacing();
 }
 
 /* Form Select Inputs

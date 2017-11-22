@@ -199,3 +199,41 @@
   bottom: $edge-position-offset;
   left: $edge-position-offset;
 }
+
+// @include interactable-vertical-spacing()
+// ==============================================
+//
+// Used to unify vertical spacing on our buttons, form components, dropdown
+// and acordion.
+
+@mixin interactable-vertical-spacing($use-line-height: false) {
+  @if $use-line-height {
+    // Sets component height based on height and line-height to prevent
+    // issues with inputs on IE and Firefox where padding is ignored.
+    height: convert-to-em($global-spacing-unit-large);
+    line-height: convert-to-em($global-spacing-unit-large);
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @else {
+    // Default method of vertical spacing using line-height and padding.
+    line-height: convert-to-em(30px); // based on icon height
+    padding-bottom: convert-to-em(4px); // 5px - border-width
+    padding-top: convert-to-em(4px); // 5px - border-width
+  }
+}
+
+// @include interactable-horizontal-spacing()
+// ==============================================
+
+@mixin interactable-horizontal-spacing($has-icon: false) {
+  padding-left: $global-spacing-unit;
+  @if $has-icon {
+    padding-right: $global-spacing-unit;
+  }
+
+  @else {
+    padding-right: $global-spacing-unit-large;
+  }
+}

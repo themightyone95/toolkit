@@ -47,9 +47,10 @@ $dropdown-icon-size: 15px;
  */
 .c-dropdown__toggle {
   @include font(text-body); /* [1] */
+  @include interactable-vertical-spacing();
+  @include interactable-horizontal-spacing(true);
   display: block; /* [2] */
   position: relative;
-  padding: $global-spacing-unit-tiny ($global-spacing-unit*1.5 + $dropdown-icon-size) $global-spacing-unit-tiny $global-spacing-unit-small; /* [3] */
   font-weight: bold;
   text-align: left;
   border: $dropdown-border;

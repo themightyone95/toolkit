@@ -38,9 +38,10 @@ $btn-animation-speed-fast: $global-animation-speed-fast !default;
  * 14. Remove browser outline styles.
  */
 .c-btn {
+  @include interactable-vertical-spacing();
+  @include interactable-horizontal-spacing();
   display: inline-block; /* [1] */
   margin: 0; /* [2] */
-  padding: $btn-padding-y - $btn-border-width  $btn-padding-x - $btn-border-width; /* [3] */
   vertical-align: middle; /* [4] */
   font: inherit; /* [5] */
   font-size: $btn-font-size; /* [6] */
