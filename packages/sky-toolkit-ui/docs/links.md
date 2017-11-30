@@ -29,10 +29,33 @@ The default `sky-toolkit-core` styling provides a minimal branded link with
 <a href="#">This is a default link</a>
 ```
 
-`.c-link` Applies the branded link style to an alternative element such as a `<button>`. 
+`.c-link` Applies the branded link style to an alternative element such as a
+`<button>`.
+
+**Note:** you will need to apply this extra class if you plan to use the back
+and external link styles on buttons.  
 
 ```html
 <button class="c-link">This is a Button styled as a link</button>
+```
+
+---
+
+## Back
+
+The `.c-link-back` class from `sky-toolkit-ui` utilises the same default
+link styling, with an additional backward-facing chevron indicator.
+
+```html
+<a href="#" class="c-link-back">This is a back link</a>
+```
+
+### Back (Invert)
+
+We use this inverted back link when placed over darker backgrounds.
+
+```html { "theme": "dark" }
+<a href="#" class="c-link-back c-link--back">This is a back link</a>
 ```
 
 ---
