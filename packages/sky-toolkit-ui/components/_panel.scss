@@ -45,13 +45,46 @@ $panel-spacing: $global-spacing-unit * 3;
   padding-bottom: $panel-spacing;
 }
 
+/* Panel Navigation
+  ---------------------------------- */
+
+/**
+ * Panel Back & Toggle - Shared Positioning
+ *
+ * 1. Position buttons at the top of the panel.
+ */
+.c-panel__back,
+.c-panel__toggle {
+  font-size: font-size(text-body);
+  position: absolute; /* [1] */
+  top: $global-spacing-unit; /* [1] */
+}
+
+/**
+ * Panel Back
+ *
+ * Used for navigating backwards in a panel journey.
+ *
+ * This should be applied as a BEM Mix alongside `.c-link .c-link-back`.
+ * e.g. `<button class="c-panel__back c-link c-link-back">Back</button>`
+ *
+ * 1. Position the button in top right of panel
+ * 2. Provide spacing for cross icon
+ * 3. Inherit the font colour for light and dark panels.
+ * 4. Offset cross icon to align with text
+ */
+.c-panel__back {
+  left: $global-spacing-unit; /* [1] */
+  padding-left: 0; /* [2] */
+}
+
 /**
  * Panel Toggle
  *
  * Used for closing the panel on completion of a journey.
  *
- * This should be applied as a BEM Mix alongside `.c-link-faux`.
- * e.g. `<span class="c-link-faux c-panel__toggle">Select</span>`
+ * This should be applied as a BEM Mix alongside `.c-link`.
+ * e.g. `<button class="c-panel__toggle c-link">Select</button>`
  *
  * 1. Position the button in top right of panel
  * 2. Provide spacing for cross icon
@@ -59,9 +92,6 @@ $panel-spacing: $global-spacing-unit * 3;
  * 4. Offset cross icon to align with text
  */
 .c-panel__toggle {
-  font-size: font-size(text-body);
-  position: absolute; /* [1] */
-  top: $global-spacing-unit; /* [1] */
   right: $global-spacing-unit; /* [1] */
   padding-right: $panel-icon-size; /* [2] */
   color: inherit; /* [3] */
@@ -93,6 +123,9 @@ $panel-spacing: $global-spacing-unit * 3;
 
 /**
  * Dark-themed panels
+ *
+ * Note: For `.c-link-back` you will need to apply an additional class of
+ *       `.c-link-back--invert` to achieve darker-themed styling.
  */
 .c-panel--dark {
   background-color: $panel-background-color-dark;
