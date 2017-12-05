@@ -45,7 +45,7 @@ tile and title to be placed below.
 
 ```html { "container": "tile" }
 <article class="c-tile c-tile--square">
-  <a class="c-tile__link" href="#">
+  <a class="c-tile__link c-shine-context" href="#">
     <div class="c-tile__content">
       <div class="c-tile__media">
         <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
@@ -53,6 +53,12 @@ tile and title to be placed below.
       <div class="c-tile__body c-tile__caption">
         <p class="c-tile__title c-heading-delta">Tile Title</p>
       </div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--top c-shine">
+      <div class="c-shine__rail"></div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+      <div class="c-shine__rail"></div>
     </div>
   </a>
 </article>
@@ -69,7 +75,7 @@ title to be placed at the bottom.
 
 ```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--full">
-  <a class="c-tile__link" href="#">
+  <a class="c-tile__link c-shine-context" href="#">
     <div class="c-tile__content">
       <div class="c-tile__media">
         <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example-full.png" />
@@ -79,6 +85,12 @@ title to be placed at the bottom.
           <p class="c-tile__title c-heading-delta">Tile Title</p>
         </div>
       </div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--top c-shine">
+      <div class="c-shine__rail"></div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+      <div class="c-shine__rail"></div>
     </div>
   </a>
 </article>
@@ -111,7 +123,7 @@ element it will reposition this to the left.
 
 ```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--collapsible">
-  <a class="c-tile__link" href="#">
+  <a class="c-tile__link c-shine-context" href="#">
     <div class="c-tile__content">
       <div class="c-tile__media">
         <img class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
@@ -119,6 +131,12 @@ element it will reposition this to the left.
       <div class="c-tile__body c-tile__caption">
         <p class="c-tile__title c-heading-delta">Tile Title</p>
       </div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--top c-shine">
+      <div class="c-shine__rail"></div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+      <div class="c-shine__rail"></div>
     </div>
   </a>
 </article>
@@ -130,15 +148,35 @@ For tiles requiring branded hover states, simply include the name of the channel
 in the format of the gradient names defined in `sky-toolkit-core`; such as 
 `.c-tile--sky-atlantic`.
 
+For channel-themed tiles, you may also want to include optional elements for 
+additional information such as the channel logo and sponsor brand:
+
 ```html { "container": "tile" }
 <article class="c-tile c-tile--square c-tile--sky-atlantic">
-  <a class="c-tile__link" href="#">
+  <a class="c-tile__link c-shine-context" href="#">
     <div class="c-tile__content">
       <div class="c-tile__media">
         <img class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
+        <img src="https://www.sky.com/assets/toolkit/docs/tile/example-channel.png" alt="Sky Atlantic" class="c-tile__channel">
       </div>
       <div class="c-tile__body c-tile__caption">
         <p class="c-tile__title c-heading-delta">Sky Atlantic</p>
+      </div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--top c-shine">
+      <div class="c-shine__rail"></div>
+    </div>
+    <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+      <div class="c-shine__rail"></div>
+    </div>
+  </a>
+  <a class="c-tile__sponsor" href="#1">
+    <div class="o-flag o-flag--reverse o-flag--tiny">
+      <div class="o-flag__img">
+        <img src="https://www.sky.com/assets/toolkit/docs/placeholder.png" class="c-tile__sponsor-img" alt="Brand Logo" />
+      </div>
+      <div class="o-flag__body u-text-right">
+        Sponsored by <span class="u-hide-visually">Brand Name</span>
       </div>
     </div>
   </a>
@@ -156,7 +194,7 @@ We can programmatically apply a has focus class to Tiles by adding the
 
 ```html { "container": "tile" }
 <article class="c-tile c-tile--square has-focus">
-  <a class="c-tile__link" href="#">
+  <a class="c-tile__link c-shine-context" href="#">
     <div class="c-tile__content">
       <div class="c-tile__media">
         <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
@@ -179,7 +217,7 @@ in combination with a panel.
 <div class="o-layout o-layout--center">
   <div class="o-layout__item u-width-1/2@large">
     <article class="c-tile c-tile--square is-selected">
-      <a class="c-tile__link" href="#">
+      <a class="c-tile__link c-shine-context" href="#">
         <div class="c-tile__content">
           <div class="c-tile__media">
             <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
@@ -187,6 +225,12 @@ in combination with a panel.
           <div class="c-tile__body c-tile__caption">
             <p class="c-tile__title c-heading-delta">Tile Title</p>
           </div>
+        </div>
+        <div class="c-tile__shine c-tile__shine--top c-shine">
+          <div class="c-shine__rail"></div>
+        </div>
+        <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+          <div class="c-shine__rail"></div>
         </div>
       </a>
     </article>
@@ -217,7 +261,7 @@ the tile we can use the `.c-tile--dark` class to match the tile indicator to the
 <div class="o-layout o-layout--center">
   <div class="o-layout__item u-width-1/2@large">
     <article class="c-tile c-tile--dark c-tile--square is-selected">
-      <a class="c-tile__link" href="#">
+      <a class="c-tile__link c-shine-context" href="#">
         <div class="c-tile__content">
           <div class="c-tile__media">
             <img alt="Example image" class="c-tile__poster" src="https://www.sky.com/assets/toolkit/docs/tile/example.jpg" />
@@ -225,6 +269,12 @@ the tile we can use the `.c-tile--dark` class to match the tile indicator to the
           <div class="c-tile__body c-tile__caption">
             <p class="c-tile__title c-heading-delta">Tile Title</p>
           </div>
+        </div>
+        <div class="c-tile__shine c-tile__shine--top c-shine">
+          <div class="c-shine__rail"></div>
+        </div>
+        <div class="c-tile__shine c-tile__shine--bottom c-shine c-shine--rev">
+          <div class="c-shine__rail"></div>
         </div>
       </a>
     </article>
