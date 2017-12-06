@@ -82,12 +82,12 @@ $overlay-header-height-small: 60px;
  * 2.  Make the content scrollable if it overflows
  */
 .c-overlay__content {
-  margin-top: $overlay-header-height-small; /* [1] */
+  padding-top: $overlay-header-height-small; /* [1] */
   height: 100%; /* [2] */
   overflow-y: scroll; /* [2] */
 
   @include mq($from: medium) {
-    margin-top: $overlay-header-height-large; /* [1] */
+    padding-top: $overlay-header-height-large; /* [1] */
   }
 }
 
