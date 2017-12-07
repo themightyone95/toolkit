@@ -3,5 +3,10 @@
   "packages": [
     "packages/*"
   ],
+  "commands": {
+    "publish": {
+      "exact": true
+    }
+  },
   "version": "2.8.0"
 }
