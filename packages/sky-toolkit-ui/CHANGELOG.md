@@ -2,6 +2,13 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+## 2.8.1
+
+### Fixes
+
+* [Overlay] Fixes overlay content being cropped off.
+
+
 ## 2.8.0
 
 ### Features
