@@ -156,7 +156,8 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  * take up the lower 50% of the tile.
  */
 .c-tile__caption {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   height: 45%;
   z-index: z-index(2);
   text-align: left;
