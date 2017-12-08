@@ -18,6 +18,8 @@ $tile-gradient-caption-hover: "highlight";
 $tile-padding: $global-spacing-unit-small !default;
 $tile-shadow: 0 1px 10px 0 rgba(color(black), 0.2) !default;
 $tile-shadow-hover: 0 15px 20px -8px rgba(color(black), 0.2) !default;
+$tile-sponsor-height: 20px;
+$tile-sponsor-padding: $tile-border-width + 5px;
 
 // Array of gradient names to generate specific brand themes for Tiles.
 // By default all themes are generated.
@@ -154,7 +156,8 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  * take up the lower 50% of the tile.
  */
 .c-tile__caption {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   height: 45%;
   z-index: z-index(2);
   text-align: left;
@@ -220,6 +223,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  * `c-tile--square` modifier
  */
 .c-tile__media {
+  position: relative;
   overflow: hidden;
   display: block;
   height: 55.5%; // Fixes issue with rounding down of height leaving a gap.
@@ -236,6 +240,54 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
   height: auto; /* [1] */
   transition: transform $tile-animation-speed-slow ease;
   will-change: transform;
+}
+
+/**
+ * Tile Channel
+ *
+ * A channel logo that sits above the bottom-left of the poster, unaffected by
+ * the scale animation.
+ */
+.c-tile__channel {
+  bottom: $global-spacing-unit-small;
+  height: $global-spacing-unit;
+  left: $global-spacing-unit-small;
+  width: auto;
+  position: absolute;
+  z-index: z-index(1);
+}
+
+/**
+ * Tile Sponsor
+ *
+ * A dedicated area to display the sponsor brand of a show or channel.
+ * It should sit adjacent to the `c-tile__link`, linking off to a separate page.
+ *
+ * Note: Don't remove the brand name and rely on the image within the
+ *       "Sponsored by ×" text.
+ *       Use `<span class="u-hide-visually">×</span>` to hide the brand name.
+ */
+.c-tile__sponsor {
+  font-size: font-size(text-smallprint);
+  color: inherit;
+  bottom: $tile-sponsor-padding;
+  height: $global-spacing-unit;
+  left: $tile-sponsor-padding;
+  right: $tile-sponsor-padding;
+  width: auto;
+  position: absolute;
+  z-index: z-index(2);
+  outline: none;
+}
+
+/**
+ * Tile Sponsor Image
+ *
+ * Icon/Logo of the sponsor brand, used purely for decoration.
+ * Should be applied directly to the `<img>` within `.o-flag__img`.
+ */
+.c-tile__sponsor-img {
+  height: $tile-sponsor-height;
 }
 
 /* Interaction
@@ -533,7 +585,8 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
   @each $brand in $tile-themes {
     @if map-has-key($gradients, $brand) {
       .c-tile--#{$brand} {
-        .c-tile__link:hover {
+        .c-tile__link:hover,
+        .c-tile__link:hover + .c-tile__sponsor {
           color: color(white);
         }
 

@@ -50,6 +50,8 @@
  * Layout...............Grid-like layout mechanism for arranging components.
  *                      Complemented by our width utility classes in order to
  *                      create fluid and responsive page layouts.
+ * Flag.................Places any image-like content next to any text-like
+ *                      content, with flexibility on vertical alignment.
  * Media Object.........Abstraction for placing image- and text-like content
  *                      side by side.
  * Tables...............Slightly more opinionated and structural styles for
@@ -108,6 +110,7 @@
 // Objects
 @import "supercell/objects.layout";
 @import "objects/container";
+@import "objects/flag";
 @import "objects/media";
 @import "objects/tables";
 @import "objects/list-bare";
