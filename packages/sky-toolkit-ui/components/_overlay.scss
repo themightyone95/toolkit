@@ -48,12 +48,14 @@ $overlay-header-height-small: 60px;
  * only a close button, but could be given extra children for some journeys.
  *
  * 1.  Fix the height so we can determine how much to pad the top of the content
+ * 2.  Ensure overlay header remains above overlay content
  */
 .c-overlay__header {
   top: 0;
   height: $overlay-header-height-small; /* [1] */
   padding: 0 $global-spacing-unit-small;
   text-align: right;
+  z-index: z-index(2); /* [2] */
 
   @include mq($from: medium) {
     height: $overlay-header-height-large; /* [1] */
@@ -80,11 +82,14 @@ $overlay-header-height-small: 60px;
  *
  * 1.  Pad the top of the content to allow for the overlay header
  * 2.  Make the content scrollable if it overflows
+ * 3.  Ensure overlay content remains under overlay content
  */
 .c-overlay__content {
   padding-top: $overlay-header-height-small; /* [1] */
   height: 100%; /* [2] */
   overflow-y: scroll; /* [2] */
+  position: relative;
+  z-index: z-index(1); /* [3] */
 
   @include mq($from: medium) {
     padding-top: $overlay-header-height-large; /* [1] */
