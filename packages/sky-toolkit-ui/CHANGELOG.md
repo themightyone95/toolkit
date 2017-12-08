@@ -2,6 +2,27 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+
+## 2.9.0
+
+### Features
+
+* [Links] New `.c-link-back` component, utilising a similar chevron icon to
+  `.c-link-external`.
+* [Panel] New `.c-panel__back` element to indicate backwards actions in panels,
+  utilising our new `.c-link-back` as a BEM mix.
+* [Tile]
+  * New `.c-tile__channel` element for channel logo placement.
+  * New `.c-tile__sponsor` element for brand sponsor placement.
+  * See `docs/` for usage examples.
+
+### Fixes
+
+* [Docs]
+  * Add Shine to Tile markup examples.
+  * Update Calendar example with internal UX phrasing.
+
+
 ## 2.8.1
 
 ### Fixes

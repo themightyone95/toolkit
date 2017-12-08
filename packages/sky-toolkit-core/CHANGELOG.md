@@ -3,6 +3,16 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.9.0
+
+### Features
+
+* [Objects]
+  * New `o-flag` object for placing any image-like content next to any text-like
+    content. Unlike `o-media`, the Flag Object has greater control of vertical
+    alignment.
+
+
 ## 2.7.0
 
 ### Fixes
