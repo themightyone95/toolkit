@@ -302,25 +302,30 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 
 ## Releases
 
+>If you want to help make a start at automating this process, **please** do ([#125](https://github.com/sky-uk/toolkit/issues/125)).
+
 1. Ensure the fully-approved PR is up to date with `develop`.
     * If necessary, run `git rebase develop` within the branch. **Avoid** using 
       GitHub's "update branch" button as it leaves us with unhelpful merge 
       commit messages.
-2. Merge fully-approved PR into `develop`.
+2. Merge the fully-approved PR into `develop` via the "Merge pull request" button.
+    * If handling multiple PRs, go back to Step 1 until all are merged. Then continue to Step 3.
 3. Run `git checkout develop && git pull`.
-4. Run `git checkout master && git pull && lerna bootstrap`.
+4. Run `git checkout master && git pull`.
 5. Run `git merge develop`.
-6. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
+6. Run `npm i && lerna bootstrap`.
+7. Include all new functional changes in the appropriate `CHANGELOG.md`(s).
     * Pro tip: use the following command to get a commit summary of changes.
 
         ```
         $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
         ```
-7. Commit and push the `CHANGELOG.md` changes to `master`.
-8. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
-    * Upload these to S3 (see maintainers Slack channel for bucket details):
-        1. Upload both to `sky.com/assets/[toolkit|toolkit-core]/v[version]`
-        2. Override both `/latest` 
+8. Commit and push the `CHANGELOG.md` changes to `master`.
+   * Don't worry about issue references here, a simple `"Update CHANGELOG"` or `"Update CHANGELOGs"` will do.
+9. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
+    * Upload the assets of the updated packages to S3 (see maintainers Slack channel for bucket details):
+        1. Upload to `sky.com/assets/[toolkit|toolkit-core]/v[version]`.
+        2. Override `/latest`.
     * In the "Upload" modal of S3; leave steps 1 and 2 as their default
       settings. For step 3, you **must** ensure to set the following settings,
       then click "Save".
@@ -328,17 +333,18 @@ the core maintainers or [Tom Davidson](@tom-davidson).
         | *Header*         | *Value* |
         |------------------|---------|
         | Content-Encoding | gzip    |
+      (If you can't see this option, you may need to scroll down within the modal)
     * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
       run `npm run clean` and try again.
-9. Run `lerna publish`.
+10. Run `lerna publish`.
     * Be sure to read and follow the wizard very carefully, making sure to use
       the correct and appropriate patch/minor/major semver tag(s).
-10. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
+11. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
     check the tag exists.
     * If the tag exists, congrats! Now create a [**new**
       release](https://github.com/sky-uk/toolkit/releases/new) that utilises that
       tag.
     * If the tag doesn't exist, something went wrong.
-11. Communicate changes out on Slack.
-12. Update our `develop` branch with `master`.
+12. Communicate changes out on Slack.
+13. Update our `develop` branch with `master`.
     * Run `git checkout develop && git merge master && git push`
