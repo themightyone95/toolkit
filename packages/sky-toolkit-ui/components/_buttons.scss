@@ -108,8 +108,8 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
    =========================================== */
 
 /**
-* For buttons that identify as the primary action.
-*/
+ * For buttons that identify as the primary action.
+ */
 .c-btn--primary {
   color: color(white);
   background-color: color(brand);
@@ -127,8 +127,8 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 }
 
 /**
-* For regular buttons or buttons that identify as a secondary actions.
-*/
+ * For regular buttons or buttons that identify as a secondary actions.
+ */
 .c-btn--secondary {
   color: color(brand);
   background-color: transparent;
@@ -147,9 +147,9 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 }
 
 /**
-* For regular buttons or buttons that identify as a secondary actions.
-* e.g. buttons on a dark panel
-*/
+ * For regular buttons or buttons that identify as a secondary actions.
+ * e.g. buttons on a dark panel
+ */
 .c-btn--secondary-invert {
   color: color(white);
   background-color: transparent;
@@ -186,9 +186,9 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 }
 
 /**
-* For buttons whose state is toggled when a related form or field contains
-* an error or multiple errors.
-*/
+ * For buttons whose state is toggled when a related form or field contains
+ * an error or multiple errors.
+ */
 .c-btn.is-error,
 .is-error .c-btn {
   &,
@@ -203,14 +203,14 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
 }
 
 /**
-* For inputs used as a select action (`.c-select`).
-* This should be applied as a BEM Mix [A] alongside `.c-select__btn`.
-* e.g. `<span class="c-btn  c-btn--select  c-select__btn">Select</span>`
-*
-* A. https://en.bem.info/forum/4/
-*
-* 1. This should be the same value as the icon width used in _select.scss
-*/
+ * For inputs used as a select action (`.c-select`).
+ * This should be applied as a BEM Mix [A] alongside `.c-select__btn`.
+ * e.g. `<span class="c-btn  c-btn--select  c-select__btn">Select</span>`
+ *
+ * A. https://en.bem.info/forum/4/
+ *
+ * 1. This should be the same value as the icon width used in _select.scss
+ */
 .c-btn--select {
   padding-left: 40px;/* [1] */
   padding-right: 40px;/* [1] */
@@ -224,16 +224,16 @@ $btn-icon-spacing: $global-spacing-unit-small !default;
    =========================================== */
 
 /**
-* For buttons that need to display full-width.
-*/
+ * For buttons that need to display full-width.
+ */
 .c-btn--full {
   display: block;
   width: 100%;
 }
 
 /**
-* For buttons that need to display full-width on small devices only.
-*/
+ * For buttons that need to display full-width on small devices only.
+ */
 .c-btn--full\@small {
   @include mq($until: medium) {
     display: block;
