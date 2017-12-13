@@ -15,7 +15,6 @@ contributors:
   - steveduffin
   - mrdinsdale
   - skitson
-  - danieljbryson
 layout: component
 ---
 

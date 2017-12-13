@@ -14,7 +14,6 @@ dependencies:
   - sky-toolkit-core
 contributors:
   - joebell93
-  - danieljbryson
 layout: component
 ---
 

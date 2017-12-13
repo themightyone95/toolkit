@@ -14,11 +14,9 @@ dependencies:
   - sky-toolkit-core
 contributors:
   - joebell93
-  - csswizardry
   - aaronthomas
   - mrdinsdale
   - steveduffin
-  - danieljbryson
 layout: component
 ---
 
@@ -122,4 +120,3 @@ additional `.c-btn__icon--right` modifier class.
   Icon (Right) Button<img class="c-btn__icon c-btn__icon--right" src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg" alt="Example Icon" />
 </button>
 ```
-

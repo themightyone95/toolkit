@@ -17,7 +17,6 @@ contributors:
   - joebell93
   - mrdinsdale
   - skitson
-  - danieljbryson
 layout: component
 ---
 

@@ -14,7 +14,6 @@ dependencies:
 contributors:
   - joebell93
   - mrdinsdale
-  - danieljbryson
 layout: component
 ---
 
