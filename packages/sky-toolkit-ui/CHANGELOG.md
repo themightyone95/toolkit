@@ -2,11 +2,25 @@
 
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
+
+## 2.10.0
+
+### Features
+
+* [Buttons] New `.c-btn__icon` element to enable icon placement within buttons.
+
+### Fixes
+
+* [Docs] Typo in `.c-link-back` example markup.
+
+
 ## 2.9.1
 
-### Fix
+### Fixes
 
-* [Overlay] Fixes a problem where the content would scroll over the header if it's content (a hero for example) creates a new stacking context.
+* [Overlay] Fixes a problem where the content would scroll over the header if
+  it's content (a hero for example) creates a new stacking context.
+
 
 ## 2.9.0
 

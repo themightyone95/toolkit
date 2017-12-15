@@ -3,6 +3,13 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.10.0
+
+### Features
+
+* [Gradients] New `sky-spectrum` gradient to replicate the brand logo.
+
+
 ## 2.9.0
 
 ### Features
