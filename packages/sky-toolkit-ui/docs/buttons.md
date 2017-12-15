@@ -95,3 +95,31 @@ style.
 ```html
 <button class="c-btn c-btn--primary is-error">Error button</button>
 ```
+
+## Base
+
+### Icon
+
+An icon can be placed to the **left** of a button's text by using the
+`.c-btn__icon` element class.
+
+**Note:** To avoid spacing issues, there should be **no** empty space character
+between the text and icon.
+
+```html
+<button class="c-btn c-btn--primary">
+  <img class="c-btn__icon" src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg" alt="Example Icon" />Icon Button
+</button>
+```
+
+#### Icon Right
+
+An icon can also be placed to the **right** of a button's text by using the
+additional `.c-btn__icon--right` modifier class.
+
+```html
+<button class="c-btn c-btn--primary">
+  Icon (Right) Button<img class="c-btn__icon c-btn__icon--right" src="https://www.sky.com/assets/toolkit/docs/buttons/example.svg" alt="Example Icon" />
+</button>
+```
+
