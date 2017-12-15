@@ -14,7 +14,6 @@ dependencies:
   - sky-toolkit-core
 contributors:
   - joebell93
-  - danieljbryson
 layout: component
 ---
 
@@ -55,7 +54,7 @@ link styling, with an additional backward-facing chevron indicator.
 We use this inverted back link when placed over darker backgrounds.
 
 ```html { "theme": "dark" }
-<a href="#" class="c-link-back c-link--back">This is a back link</a>
+<a href="#" class="c-link-back c-link-back--invert">This is a back link</a>
 ```
 
 ---

@@ -15,9 +15,7 @@ dependencies:
 contributors:
   - joebell93
   - aaronthomas
-  - csswizardry
   - mrdinsdale
-  - danieljbryson
 layout: component
 ---
 
