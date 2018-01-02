@@ -1,9 +1,9 @@
 ---
-title: Objects
+title: Flag
 introduction: |
-  A collection of abstract, non-cosmetic design patterns for a wide-range of
-  use-cases.
-source: sky-toolkit-core/objects/
+  The Flag Object places any image-like content next to any text-like content,
+  with flexibility on vertical alignment.
+source: sky-toolkit-core/objects/flag
 dependencies:
   - sky-toolkit-core
 contributors:
@@ -11,13 +11,10 @@ contributors:
 layout: component
 ---
 
-# Objects
+# Flag
 
-## Flag
-
-The Flag Object shares a similar structure to the Media Object, placing any
-image-like content next to any text-like content, but with greater control on
-vertical alignment.
+The Flag Object shares a similar structure to the Media Object, but with greater
+control on vertical alignment.
 
 For further reading, see [Harry Roberts' article](https://csswizardry.com/2013/05/the-flag-object/).
 
@@ -32,9 +29,9 @@ For further reading, see [Harry Roberts' article](https://csswizardry.com/2013/0
 </div>
 ```
 
-### Modifiers
+## Modifiers
 
-#### Alignment
+### Alignment
 
 By default, the Flag Object vertically aligns its image and body to the middle.
 This can be easily overridden using the modifiers below:
@@ -63,7 +60,7 @@ This can be easily overridden using the modifiers below:
 </div>
 ```
 
-#### Spacing
+### Spacing
 
 By default, the Flag Object adds a gutter to the value of our 
 `$global-spacing-unit`. This can be increased, reduced or removed.
@@ -113,7 +110,7 @@ will be applied to the opposite side.
 </div>
 ```
 
-#### Order
+### Order
 
 You can even flip the order of the Flag Object completely, with the option to
 make use of text-alignment classes from `sky-toolkit-core/utilities`.
