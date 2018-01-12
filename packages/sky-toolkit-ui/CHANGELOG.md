@@ -3,6 +3,13 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.11.0
+
+### Enhancements
+
+* [Docs] Content re-structured to mimic file structure.
+
+
 ## 2.10.0
 
 ### Features

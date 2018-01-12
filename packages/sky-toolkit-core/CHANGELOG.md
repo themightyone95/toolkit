@@ -3,6 +3,13 @@
 `sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.11.0
+
+### Features
+
+* [Docs] New documentation for settings, tools, objects and utilities.
+
+
 ## 2.10.0
 
 ### Features
