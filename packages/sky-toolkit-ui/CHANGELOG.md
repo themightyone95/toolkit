@@ -3,6 +3,20 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.12.0
+
+### Features
+
+* [Card] Add `--static` modifier to prevent hover/focus interaction.
+  This is temporary behaviour and will be refactored as default in
+  `sky-toolkit-ui@3.0.0`.
+
+
+### Fixes
+
+* [Tabs] Scope the Tabs active state to the direct child to avoid leakage.
+
+
 ## 2.11.0
 
 ### Enhancements
