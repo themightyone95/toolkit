@@ -339,7 +339,7 @@ $tabs-container-width: $global-container-width;
   position: relative;
   z-index: z-index(1);
 
-  .c-tabs__body {
+  > .c-tabs__body {
     opacity: 1;
     visibility: visible;
     transition-delay: $tabs-animation-speed; /* [1] */
