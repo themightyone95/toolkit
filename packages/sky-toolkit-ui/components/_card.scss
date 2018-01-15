@@ -7,6 +7,7 @@
 
 // Settings
 $card-animation-speed: $global-animation-speed-fast;
+$card-border-color: color(grey-10);
 $card-border-color-hover: #dfdfdf;
 $card-offset: 6px;
 $card-shadow-container-height: $global-spacing-unit-small;
@@ -38,7 +39,7 @@ $card-shadow-active:0 ($card-offset * 2) 18px 0 rgba(color(black), 0.25);
   transform-style: none;
   will-change: transform;
   background-color: color(white);
-  border: $global-border-width solid color(grey-10);
+  border: $global-border-width solid $card-border-color;
   transition: transform ease $card-animation-speed;
 
   /**
@@ -143,5 +144,37 @@ $card-shadow-active:0 ($card-offset * 2) 18px 0 rgba(color(black), 0.25);
   &::before,
   &::after {
     content: normal;
+  }
+}
+
+/* Modifiers
+  ============================================ */
+
+/**
+ * Static cards
+ *
+ * An optional modifier to remove all hover and focus effects from the card
+ *
+ * 1. Show the default card shadow.
+ * 2. Hide the active card shadow.
+ */
+.c-card--static {
+  will-change: auto;
+
+  @include hocus() {
+    /*! autoprefixer: off */
+    border-color: $card-border-color;
+    -ms-transform: none;
+    transform: none;
+    -ms-transform-style: none;
+    transform-style: none;
+
+    &::before {
+      opacity: 1; /* [1] */
+    }
+
+    &::after {
+      opacity: 0; /* [2] */
+    }
   }
 }
