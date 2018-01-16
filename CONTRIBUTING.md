@@ -166,13 +166,13 @@ imagine that `git branch` leaves you looking at this:
 $ git branch
   develop
   master
-* tkt-00224
-  tkt-00220
-  tkt-00209
-  tkt-00141
+* tkt-224
+  tkt-220
+  tkt-209
+  tkt-141
 ```
 
-If I run `ghi 220` I soon find that branch `tkt-00220` relates to issue #220,
+If I run `ghi 220` I soon find that branch `tkt-220` relates to issue #220,
 _Tabs navigation width issue with many tabs_.
 
 ### Committing Workflow
@@ -186,11 +186,11 @@ _Tabs navigation width issue with many tabs_.
         $ git pull
 3. Create a new branch named after your issue:
 
-        $ git checkout -b tkt-00224
+        $ git checkout -b tkt-224
 
    All commits pertaining to this issue must happen within this branch.
-4. All commits in this branch should begin with `[refs #00224]`: pad the issue
-   number with leading zeroes until you’re at five (5) digits.
+4. All commits in this branch should begin with the issue number,
+   e.g. `[refs #224]`.
     * Instead of running `git commit -m "<message>"`, stage your files as you
       would normally, and run `git commit`. This will fire open your text
       editor with the prepopulated template ready for you to fill out.
@@ -200,7 +200,7 @@ _Tabs navigation width issue with many tabs_.
         Author: Harry Roberts <csswizardry@gmail.com>
         Date:   Wed, 21 Jun 2017 10:08:36 +0100
 
-            [refs #00224] Add Git workflow documentation
+            [refs #224] Add Git workflow documentation
 
             Though relatively straightforward, our Git workflow is pretty
             involved. I’ve made my best attempt at documenting the setup and
@@ -216,7 +216,7 @@ A more formalised and strict Git strategy means that
    we wanted to see all of the commits that are related to a specific body of
    work, it’s now as simple as:
 
-        $ git log --grep='refs #00235'
+        $ git log --grep='refs #235'
 3. **We can easily locate work pertaining to an issue by simply matching issue
    numbers to branch names.** Imagine a colleague was working on an issue but
    then suddenly fell ill and you needed to pick up where they left off. Now all
@@ -229,8 +229,8 @@ For new design features, please see the [Design Contribution]
 (#design-contributions) guidelines before continuing.
 
 1. Create a new local branch for your work.
-    * This branch should be named `tkt-<issue numner>`, e.g. `tkt-00215`,
-      `tkt-00087`, `tkt-01209`.
+    * This branch should be named `tkt-<issue numner>`, e.g. `tkt-215`,
+      `tkt-87`, `tkt-1209`.
 2. As early as possible, create a pull request against `develop`. Make sure you
    give enough information in the pull request description (utilising the
    template provided by default), and add the label `in progress` with any other
@@ -254,17 +254,17 @@ For new design features, please see the [Design Contribution]
    For example:
       * **Before**
 
-            13407f8 [refs #00297] Tweak sizing
-            c9a0dd1 [refs #00297] Further Amends
-            2ffdc23 [refs #00297] Amends
-            c21d4eb [refs #00297] Colour change
-            c3fee40 [refs #00297] New component
+            13407f8 [refs #297] Tweak sizing
+            c9a0dd1 [refs #297] Further Amends
+            2ffdc23 [refs #297] Amends
+            c21d4eb [refs #297] Colour change
+            c3fee40 [refs #297] New component
             5471986 Publish
 
       * In this case, Fixup/Squash your commits via `git rebase -i 5471986`
       * **After**
 
-            c3fee40 [refs #00297] New component
+            c3fee40 [refs #297] New component
             5471986 Publish
 
 6. One of the [core maintainers](https://github.com/sky-uk/toolkit#maintainers)
@@ -302,7 +302,8 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 
 ## Releases
 
->If you want to help make a start at automating this process, **please** do ([#125](https://github.com/sky-uk/toolkit/issues/125)).
+>If you want to help make a start at automating this process, **please** do
+([#125](https://github.com/sky-uk/toolkit/issues/125)).
 
 1. Ensure the fully-approved PR is up to date with `develop`.
     * If necessary, run `git rebase develop` within the branch. **Avoid** using 
