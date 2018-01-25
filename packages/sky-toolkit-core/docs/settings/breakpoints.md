@@ -14,12 +14,13 @@ related:
 # Breakpoints
 
 Our global breakpoints are stored in the `$mq-breakpoints` map, and can be used
-in media queries via the external `sass-mq` dependency (included by default).
-For usage guidelines, see [`sass-mq`'s documentation](http://sass-mq.github.io/sass-mq/).
+in media queries via the external [`sass-mq`](http://sass-mq.github.io/sass-mq/)
+dependency (included by default). For usage guidelines, see
+[`sass-mq`'s documentation](http://sass-mq.github.io/sass-mq/).
 
 These breakpoints can be found across the entire Toolkit project, and are
 often represented by `@breakpoint-name` in various utilities and components.
 
-| Map               | Source                                                                                         |
-|-------------------|------------------------------------------------------------------------------------------------|
+| Map               | Source                                                                    |
+|-------------------|---------------------------------------------------------------------------|
 | `$mq-breakpoints` | [sky-toolkit-core/settings/breakpoints](../../settings/_breakpoints.scss) |

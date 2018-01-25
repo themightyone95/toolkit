@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/objects/container
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -18,7 +16,7 @@ maximum width, whilst keeping everything to the center of the viewport.
 You can also access this max-width value via `$global-container-width` from 
 [sky-toolkit-core/settings/globals](../settings/globals.md).
 
-```html
+```html { "render": false }
 <div class="o-container">
   Some content
 </div>

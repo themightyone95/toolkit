@@ -18,7 +18,7 @@ Rounding numbers in Sass is a pain. Toolkit surfaces three functions written by 
 
 Round a number to specified digits.
 
-```scss
+```scss { "render": false }
 $foo: decimal-round(0.333);    // => 0
 $foo: decimal-round(0.333, 1); // => 0.3
 $foo: decimal-round(0.333, 2); // => 0.33
@@ -31,7 +31,7 @@ $foo: decimal-round(0.666, 2); // => 0.67
 
 Ceil a number to specified digits.
 
-```scss
+```scss { "render": false }
 $foo: decimal-ceil(0.333);    // => 1
 $foo: decimal-ceil(0.333, 1); // => 0.4
 $foo: decimal-ceil(0.333, 2); // => 0.34
@@ -44,7 +44,7 @@ $foo: decimal-ceil(0.666, 2); // => 0.67
 
 Floor a number to specified digits.
 
-```scss
+```scss { "render": false }
 $foo: decimal-floor(0.333);    // => 0
 $foo: decimal-floor(0.333, 1); // => 0.3
 $foo: decimal-floor(0.333, 2); // => 0.33
@@ -52,6 +52,8 @@ $foo: decimal-floor(0.666);    // => 0
 $foo: decimal-floor(0.666, 1); // => 0.6
 $foo: decimal-floor(0.666, 2); // => 0.66
 ```
+
+---
 
 ## Maps
 
@@ -63,7 +65,7 @@ written by [Hugo Giraudel](https://github.com/HugoGiraudel) to make map access a
 
 Access nested map values.
 
-```scss
+```scss { "render": false }
 $menu:(
   spam: (
     eggs: ham,
@@ -79,7 +81,7 @@ $breakfast: map-get-deep($menu, spam, eggs); // => ham
 
 Check for keys in nested maps.
 
-```scss
+```scss { "render": false }
 $menu:(
   spam: (
     eggs: ham,
@@ -93,6 +95,8 @@ $breakfast: map-has-keys-deep($menu, spam, eggs); // => true
 $breakfast: map-has-keys-deep($menu, spam, spam); // => false
 ```
 
+---
+
 ## Map Shortcuts
 
 ### Color
@@ -103,6 +107,8 @@ See [sky-toolkit-core/docs/settings/colors](../settings/colors.md) for usage.
 
 See [sky-toolkit-core/docs/settings/z-index](../settings/z-index.md) for usage.
 
+---
+
 ## Conversion
 
 ### Convert to EM
@@ -110,7 +116,7 @@ See [sky-toolkit-core/docs/settings/z-index](../settings/z-index.md) for usage.
 Converts any `px` or `rem` value to `em` based on the project's
 `$global-font-size`.
 
-```scss
+```scss { "render": false }
 $foo: convert-to-em(18px); // => 1em
 $foo: convert-to-em(26px); // => 1.444444444em
 $foo: convert-to-em(2rem); // => 2em
@@ -120,7 +126,7 @@ $foo: convert-to-em(2rem); // => 2em
 
 Reverse a list of values.
 
-```scss
+```scss { "render": false }
 $foo: reverse(1,2,3,4);       // => 4,3,2,1
 $foo: reverse(a 1, b 2, c 3); // => c 3, b 2, a 1
 ```
@@ -129,6 +135,6 @@ $foo: reverse(a 1, b 2, c 3); // => c 3, b 2, a 1
 
 Remove the unit from a value.
 
-```scss
+```scss { "render": false }
 $foo: strip-unit(20px); // => 20
 ```

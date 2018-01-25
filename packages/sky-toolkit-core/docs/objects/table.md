@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/objects/tables
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 

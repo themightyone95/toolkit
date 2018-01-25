@@ -6,11 +6,16 @@ source: sky-toolkit-core/settings/globals
 dependencies:
   - sky-toolkit-core
 layout: component
+related:
+  - sky-toolkit-core/objects/container
+  - sky-toolkit-core/utilities/spacing
 ---
 
 # Globals
 
 ## Spacing
+
+Exposed in [sky-toolkit-core/utilities/spacing](../../utilities/_spacing.scss).
 
 | Variable                       | Value         |
 |--------------------------------|---------------|
@@ -19,11 +24,17 @@ layout: component
 | `$global-spacing-unit-small`   | ½ Default     |
 | `$global-spacing-unit-large`   | 2 × Default   |
 
+---
+
 ## Container
+
+Exposed in [sky-toolkit-core/objects/container](../../objects/_container.scss).
 
 | Variable                       | Value         |
 |--------------------------------|---------------|
 | `$global-container-width`      | Default       |
+
+---
 
 ## Border
 
@@ -32,6 +43,8 @@ layout: component
 | `$global-border-width`         | Default       |
 | `$global-border-radius`        | Default       |
 
+---
+
 ## Animation
 
 | Variable                       | Value         |
@@ -39,6 +52,8 @@ layout: component
 | `$global-animation-speed`      | Default       |
 | `$global-animation-speed-fast` | ½ Default     |
 | `$global-animation-speed-slow` | 2 × Default   |
+
+---
 
 ## Shadow
 

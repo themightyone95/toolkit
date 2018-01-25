@@ -6,8 +6,6 @@ introduction: |
 source: sky-toolkit-core/objects/flag
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -28,6 +26,8 @@ For further reading, see [Harry Roberts' article](https://csswizardry.com/2013/0
   </div>
 </div>
 ```
+
+---
 
 ## Modifiers
 
@@ -138,5 +138,3 @@ make use of text-alignment classes from `sky-toolkit-core/utilities`.
   </div>
 </div>
 ```
-
-

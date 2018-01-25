@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/utilities/overflow
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 related:
   - sky-toolkit-core/generic/overflow
@@ -23,7 +21,7 @@ To avoid this problem, Toolkit hides horizontal overflow by default in
 To override this default behaviour for individual use cases, we provide the
 following utility:
 
-```html
+```html { "render": false }
 <div class="u-overflow-x-scroll">
   I'm an element with a scrollable x-axis.
 </div>

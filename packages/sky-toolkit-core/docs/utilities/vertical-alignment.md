@@ -11,8 +11,6 @@ introduction: |
 source: sky-toolkit-core/utilities/vertical-alignment
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -24,7 +22,7 @@ center, we provide a `.u-vertical-align-center` class.
 **Note**: When using `.o-layout`, vertical alignment can be achieved with the
 provided modifiers.
 
-```html
+```html { "render": false }
 <div class="u-vertical-align-center">I'm vertically centered</div>
 ```
 
@@ -33,7 +31,7 @@ provided modifiers.
 If the vertical alignment renders on half a pixel, it can cause visual issues.
 This can fixed by using the optional `-parent` class to `preserve-3d`:
 
-```html
+```html { "render": false }
 <div class="u-vertical-align-parent">
   <div class="u-vertical-align-center">I'm vertically centered (with a parent)</div>
 </div>

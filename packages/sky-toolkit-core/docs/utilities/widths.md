@@ -7,8 +7,6 @@ introduction: |
 source: sky-toolkit-core/utilities/widths
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 related:
   - supercell

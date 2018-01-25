@@ -14,14 +14,14 @@ related:
 
 ## Palette
 
-| Map          | Source                                                                                            |
-|--------------|---------------------------------------------------------------------------------------------------|
+| Map          | Source                                                                |
+|--------------|-----------------------------------------------------------------------|
 | `$gradients` | [sky-toolkit-core/settings/gradients](../../settings/_gradients.scss) |
 
 ## Directions
 
-| Map                    | Source                                                                                            |
-|------------------------|---------------------------------------------------------------------------------------------------|
+| Map                    | Source                                                                |
+|------------------------|-----------------------------------------------------------------------|
 | `$gradient-directions` | [sky-toolkit-core/settings/gradients](../../settings/_gradients.scss) |
 
 ---
@@ -38,7 +38,7 @@ found in [sky-toolkit-core/tools/gradients](../../tools/_gradients.scss).
 Individual stops from a gradient in our palette can be accessed via the
 `gradient-color()` function.
 
-```scss
+```scss { "render": false }
 // To output the color stop (`x%`, `start` or `end`) of a desired gradient `key`.
 
 .foo {
@@ -53,7 +53,7 @@ Individual stops from a gradient in our palette can be accessed via the
 To set one of the gradients in our palette as a background, use the
 `@include gradient-background()` mixin.
 
-```scss
+```scss { "render": false }
 // To output a background gradient and color fallback of desired gradient `key`.
 
 .foo {
@@ -73,7 +73,7 @@ To set one of the gradients in our palette as a background, use the
 To set one of the gradients in our palette as a text fill, use the
 `@include gradient-text()` mixin.
 
-```scss
+```scss { "render": false }
 // To output a text gradient and color fallback of desired gradient `key`.
 
 .foo {
