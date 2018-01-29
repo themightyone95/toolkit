@@ -18,8 +18,8 @@ real fast; leading to dreaded `z-index: 999999999999;` hotfixes.
 Keeping our values in a map helps to keep things consistent and easier to
 maintain:
 
-| Map        | Source                                                                                          |
-|------------|-------------------------------------------------------------------------------------------------|
+| Map        | Source                                                            |
+|------------|-------------------------------------------------------------------|
 | `$z-index` | [sky-toolkit-core/settings/z-index](../../settings/_z-index.scss) |
 
 ---
@@ -29,7 +29,7 @@ maintain:
 z-index values from our map can be accessed via the `z-index()` function from
 [sky-toolkit-core/tools/functions](../../tools/_functions.scss).
 
-```scss
+```scss { "render": false }
 // To output the color of a desired `key`.
 
 .foo {

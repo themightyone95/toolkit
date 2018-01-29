@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/utilities/hide
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 related:
   - sky-toolkit-core/tools/mixins 
@@ -22,9 +20,11 @@ Visually hide content, leaving it accessible to screen readers and ATs.
 
 Further reading: [Jonathan Snook's 'Hiding Content for Accessibility'](http://snook.ca/archives/html_and_css/hiding-content-for-accessibility).
 
-```html
+```html { "render": false }
 <span class="u-hide-visually">I'm visually hidden</span>
 ```
+
+---
 
 ## Hide Completely
 
@@ -33,6 +33,6 @@ and ATs.
 
 **Note**: This is also provided as a mixin in [sky-toolkit-core/tools/mixins](../../utilities/_hide.scss).
 
-```html
+```html { "render": false }
 <span class="u-hide-completely">I'm completely hidden</span>
 ```

@@ -15,8 +15,8 @@ related:
 
 ## Palette
 
-| Map       | Source                                                                                         |
-|-----------|------------------------------------------------------------------------------------------------|
+| Map       | Source                                                          |
+|-----------|-----------------------------------------------------------------|
 | `$colors` | [sky-toolkit-core/settings/colors](../../settings/_colors.scss) |
 
 ---
@@ -26,7 +26,7 @@ related:
 Colors from our palette can be accessed via the `color()` function from
 [sky-toolkit-core/docs/tools/functions](../tools/functions.md).
 
-```scss
+```scss { "render": false }
 // To output the color of a desired `key`.
 
 .foo {

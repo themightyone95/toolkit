@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/objects/lists
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -28,6 +26,8 @@ Remove indents and bullet points from any list.
 </ul>
 ```
 
+---
+
 ## List Block
 
 Display any list of items as a collection of stacked blocks.
@@ -39,6 +39,8 @@ Display any list of items as a collection of stacked blocks.
   <li>Item 3</li>
 </ul>
 ```
+
+---
 
 ## List Inline
 
@@ -59,7 +61,7 @@ Display any list of items as a single line.
 Reduce the inline spacing by half.
 
 ```html
-<ul class="o-list-inline o-list--narrow">
+<ul class="o-list-inline o-list-inline--narrow">
   <li class="o-list-inline__item">Item 1</li>
   <li class="o-list-inline__item">Item 2</li>
   <li class="o-list-inline__item">Item 3</li>
@@ -71,7 +73,7 @@ Reduce the inline spacing by half.
 Double the inline spacing.
 
 ```html
-<ul class="o-list-inline o-list--wide">
+<ul class="o-list-inline o-list-inline--wide">
   <li class="o-list-inline__item">Item 1</li>
   <li class="o-list-inline__item">Item 2</li>
   <li class="o-list-inline__item">Item 3</li>
@@ -83,7 +85,7 @@ Double the inline spacing.
 Remove all inline spacing.
 
 ```html
-<ul class="o-list-inline o-list--flush">
+<ul class="o-list-inline o-list-inline--flush">
   <li class="o-list-inline__item">Item 1</li>
   <li class="o-list-inline__item">Item 2</li>
   <li class="o-list-inline__item">Item 3</li>

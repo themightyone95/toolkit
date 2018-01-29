@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/utilities/spacing
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 related:
   - sky-toolkit-core/settings/spacing
@@ -53,6 +51,8 @@ Applies spacing to the **outside** of the box-model.
 <div class="u-margin-right">Default Right Margin</div>
 <div class="u-margin-bottom-large">Large Bottom Margin</div>
 ```
+
+---
 
 ## Padding
 

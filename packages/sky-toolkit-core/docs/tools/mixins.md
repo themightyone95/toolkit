@@ -15,7 +15,7 @@ layout: component
 If you've got project-specific colours that need sharing and you want to make
 use of the `color()` function, use the following mixin:
 
-```scss
+```scss { "render": false }
 @include add-color(bar, #C0FFEE);
 
 .foo {
@@ -23,12 +23,14 @@ use of the `color()` function, use the following mixin:
 }
 ```
 
+---
+
 ## Focus Styles
 
 Generates a consistent outline shadow for use on `:focus` or class-based 
 `.has-focus` states.
 
-```scss
+```scss { "render": false }
 .foo {
   @include focus-styles();
 }
@@ -40,18 +42,22 @@ Generates a consistent outline shadow for use on `:focus` or class-based
 }
 ```
 
+---
+
 ## Hocus
 
 Not to be confused with the 1993 comedy 'Hocus Pocus', Hocus allows you to set `:hover` and
 `:focus` styles in one go.
 
-```scss
+```scss { "render": false }
 .foo {
   @include hocus() {
     text-decoration: wavy underline;
   }
 }
 ```
+
+---
 
 ## Hide Visually
 
@@ -61,11 +67,13 @@ Visually hide content, leaving it accessible to screen readers and ATs.
 
 Further reading: [Jonathan Snook's 'Hiding Content for Accessibility'](http://snook.ca/archives/html_and_css/hiding-content-for-accessibility).
 
-```scss
+```scss { "render": false }
 .foo {
   @include hide-visually();
 }
 ```
+
+---
 
 ## Hide Completely
 
@@ -74,11 +82,13 @@ and ATs.
 
 **Note**: This is also provided as a utility class in [sky-toolkit-core/utilities/hide](../../utilities/_hide.scss).
 
-```scss
+```scss { "render": false }
 .foo {
   @include hide-completely();
 }
 ```
+
+---
 
 ## Clearfix
 
@@ -86,11 +96,13 @@ Clear any floated elements within a container.
 
 **Note**: This is also provided as a utility class in [sky-toolkit-core/utilities/clearfix](../../utilities/_clearfix.scss).
 
-```scss
+```scss { "render": false }
 .foo {
   @include clearfix();
 }
 ```
+
+---
 
 ## Responsivize
 
@@ -105,7 +117,7 @@ all breakpoints **and** each of them specifically.
 
 For example, defining a class that applies at the `small` breakpoint only:
 
-```scss
+```scss { "render": false }
 .foo {
   @include responsivize(small) {
     color: red;
@@ -122,7 +134,7 @@ For example, defining a class that applies at the `small` breakpoint only:
 
 and for defining a class that applies at `small` and `medium` breakpoints only:
 
-```scss
+```scss { "render": false }
 .foo {
   @include responsivize(small, medium) {
     color: red;
@@ -143,6 +155,8 @@ and for defining a class that applies at `small` and `medium` breakpoints only:
 }
 ```
 
+---
+
 ## Edge Position
 
 To simplify and avoid repeated use of individual edge positioning (`top`,
@@ -150,7 +164,7 @@ To simplify and avoid repeated use of individual edge positioning (`top`,
 will offset all edges by that value. Passing in no arguments will set all edges
 to zero.
 
-```scss
+```scss { "render": false }
 .foo {
   @include edge-positioning(5px);
 }
@@ -164,6 +178,8 @@ to zero.
 }
 ```
 
+---
+
 ## Height-sizing
 
 Fixed height design is generally frowned upon, but for consistency's sake, it's
@@ -175,7 +191,7 @@ mixin helps us to set a common height on elements based on our [`text-body`'s
 2. `padding` - outputs height-sizing with `padding` that mimics the `fixed` 
    option.
 
-```scss
+```scss { "render": false }
 .foo {
   @include height-sizing(fixed);
 }

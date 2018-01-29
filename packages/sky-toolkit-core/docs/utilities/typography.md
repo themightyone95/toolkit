@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/utilities/typography
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -19,10 +17,12 @@ typography utilities:
 
 ```html
 <p class="u-text-left">I'm a left-aligned sentence.</p>
-<p class="u-text-right">I'm a center-aligned sentence.</p>
+<p class="u-text-center">I'm a center-aligned sentence.</p>
 <p class="u-text-right">I'm a right-aligned sentence.</p>
 <p class="u-text-justify">I'm a justified sentence.</p>
 ```
+
+---
 
 ## Style
 
@@ -34,6 +34,8 @@ or ATs, we provide the following classes:
 <p class="u-text-bold">I'm a visually bold sentence.</p>
 <p class="u-text-italic">I'm a visually italic sentence.</p>
 ```
+
+---
 
 ## Line Length
 

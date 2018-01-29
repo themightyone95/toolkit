@@ -5,8 +5,6 @@ introduction: |
 source: sky-toolkit-core/utilities/fill
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
@@ -14,7 +12,7 @@ layout: component
 
 Absolutely expand an element to completely "fill" its parent element.
 
-```html
+```html { "render": false }
 <div class="u-fill-absolute">
   ...
 </div>
