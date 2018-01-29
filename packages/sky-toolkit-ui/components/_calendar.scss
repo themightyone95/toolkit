@@ -129,11 +129,14 @@ $calendar-navigation-modifiers: (
  * Calendar Navigation - Icon
  *
  * Applied directly to the SVG icon element
+ * 1. Cater for approach of using currentColor on SVGs in consuming apps.
+ * 2. Retain backwards compatibility
  */
 .c-calendar__nav-icon {
-  width: 8px;
-  height: 13px;
-  fill: color(brand);
+  width: $global-spacing-unit;
+  height: $global-spacing-unit;
+  color: color(brand); /* [1] */
+  fill: color(brand); /* [2] */
 }
 
 /**
