@@ -3,6 +3,19 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
 
 
+## 2.13.0
+
+### Features
+
+* [Price] Add `--offer` modifier.
+
+### Enhancements
+
+* [Calendar] Align icon size with `$global-spacing-unit`, provide `color`
+  property for further modification.
+* [Overlay] Add inertial touch scrolling for webkit browsers.  
+
+
 ## 2.12.0
 
 ### Features
@@ -10,7 +23,6 @@
 * [Card] Add `--static` modifier to prevent hover/focus interaction.
   This is temporary behaviour and will be refactored as default in
   `sky-toolkit-ui@3.0.0`.
-
 
 ### Fixes
 
