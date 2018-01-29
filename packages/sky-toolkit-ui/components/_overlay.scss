@@ -83,6 +83,7 @@ $overlay-header-height-small: 60px;
  * 1.  Pad the top of the content to allow for the overlay header
  * 2.  Make the content scrollable if it overflows
  * 3.  Ensure overlay content remains under overlay content
+ * 4.  Give inertial scrolling to scrollable content sitting within the overlay
  */
 .c-overlay__content {
   padding-top: $overlay-header-height-small; /* [1] */
@@ -90,6 +91,7 @@ $overlay-header-height-small: 60px;
   overflow-y: scroll; /* [2] */
   position: relative;
   z-index: z-index(1); /* [3] */
+  -webkit-overflow-scrolling: touch; /* [4] */
 
   @include mq($from: medium) {
     padding-top: $overlay-header-height-large; /* [1] */
