@@ -23,6 +23,7 @@ $price-footnote-spacing: $global-spacing-unit-tiny;
 .c-price-container {
   position: relative;  /* [1] */
   display: inline-block; /* [2] */
+  background: hotpink;
 }
 
 /**
@@ -32,7 +33,6 @@ $price-footnote-spacing: $global-spacing-unit-tiny;
  */
 .c-price__symbol {
   margin-left: $price-footnote-spacing;
-  background: hotpink;
 }
 
 /* Modifiers
