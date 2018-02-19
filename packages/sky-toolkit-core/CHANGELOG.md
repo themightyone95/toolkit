@@ -1,6 +1,15 @@
 # Changelog
 
-`sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
+`sky-toolkit-core` follows [Semantic Versioning](http://semver.org) to help
+manage the impact of releasing new library versions.
+
+
+## 2.14.0
+
+### Features
+
+* [Utilities] New `.u-overflow-hidden` utility. Use-cases include "locking" the
+  page during full-screen interactions.
 
 
 ## 2.13.0

@@ -1,6 +1,15 @@
 # Changelog
 
-`sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage the impact of releasing new library versions.
+`sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
+the impact of releasing new library versions.
+
+
+## 2.14.0
+
+### Features
+
+* [Modal] New component for displaying contextual information that is not suited
+  to being displayed inline via a `.c-panel` or other component.
 
 
 ## 2.13.0
