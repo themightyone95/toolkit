@@ -294,8 +294,8 @@ feba9a8 Use a clearfix mixin instead of @\extends
 If you run into any trouble or need support getting to grips with Toolkit,
 reach out to one of the maintainers:
 
-| [![Joe Bell](https://avatars.githubusercontent.com/joebell93?s=100)<br />Joe Bell](https://github.com/joebell93)<br /><sub>💻</sub> | [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/skitson?s=100)<br />Sam Kitson](https://github.com/skitson)<br /><sub>💻</sub> | [![Mike Gregory](https://avatars.githubusercontent.com/mikejgregory?s=100)<br />Mike Gregory](https://github.com/mikejgregory)<br/><sub>🎨</sub> |
-| :---: | :---: | :---: | :---: | :---: |
+| [![Joe Bell](https://avatars.githubusercontent.com/joebell93?s=100)<br />Joe Bell](https://github.com/joebell93)<br /><sub>💻</sub> | [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/skitson?s=100)<br />Sam Kitson](https://github.com/skitson)<br /><sub>💻</sub> | [![Luke Whitehouse](https://avatars.githubusercontent.com/lukewhitehouse?s=100)<br />Luke Whitehouse](https://github.com/lukewhitehouse)<br/><sub>💻</sub> | [![Mike Gregory](https://avatars.githubusercontent.com/mikejgregory?s=100)<br />Mike Gregory](https://github.com/mikejgregory)<br/><sub>🎨</sub> |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 ### Champions
 
