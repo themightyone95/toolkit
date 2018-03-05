@@ -11,8 +11,9 @@ $accordion-background: transparent !default;
 $accordion-border-width: 1px;
 $accordion-border: $accordion-border-width solid color(grey-20) !default;
 $accordion-border-radius: $global-border-radius !default;
-$accordion-icon-size: 20px !default;
 $accordion-spacing: $global-spacing-unit - $accordion-border-width;
+$accordion-icon-size: 20px !default;
+$accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
 
 /* Base
   ============================================ */
@@ -64,9 +65,9 @@ $accordion-spacing: $global-spacing-unit - $accordion-border-width;
  */
 .c-accordion__label {
   @include font(text-body); /* [1] */
-  @include height-sizing(fixed);
+  @include height-sizing(padding);
   padding-left: $accordion-spacing;
-  padding-right: $accordion-spacing;
+  padding-right: $accordion-icon-offset;
   display: block; /* [2] */
   position: relative; /* [2] */
   font-weight: bold; /* [1] */
