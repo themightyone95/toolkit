@@ -421,7 +421,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   border: solid $form-border-width*2 transparent;
 
   .c-form-checkbox--radio & {
-    background-image: none;
+    content: normal;
   }
 }
 
