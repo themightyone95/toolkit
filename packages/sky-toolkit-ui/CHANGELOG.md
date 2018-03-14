@@ -4,6 +4,15 @@
 the impact of releasing new library versions.
 
 
+## 2.15.0
+
+### Fixes
+
+* [Accordion] Improve handling of long Accordion labels.
+* [Forms] Reset icon psuedo element for `.c-form-checkbox--radio` inputs instead
+  of resetting the background-image.
+
+
 ## 2.14.0
 
 ### Features
