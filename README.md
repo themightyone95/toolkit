@@ -237,10 +237,46 @@ lerna bootstrap
 After running these commands, you should have all the relevant code and its
 dependencies installed and linked up ready to go…
 
-### Compiling CSS
+### Preview 🎨
 
-To compile changes across the packages into a single `build/toolkit.css` file,
-run the following command:
+> Note: further enhancements to preview can be found in [#386](https://github.com/sky-uk/toolkit/issues/386)
+
+The fastest way to develop Toolkit components is to use **Preview**:
+
+```bash
+npm run preview
+```
+
+Running this command will fire up a hot reloading local environment that renders
+all of our components (WIP) onto a single page:
+* Markup – sourced from fenced code blocks within Markdown from
+           `packages/*/docs/`.
+* Styles - sourced from SCSS in `packages/`. Additional/experimental styles can
+           be applied in `preview/scss/`.
+
+#### Adding New Components
+
+> Note: currently only supported for `sky-toolkit-ui` components.
+
+To render your new component in the preview environment:
+
+Within `packages/sky-toolkit-ui/`:
+
+1. Add your component's import to `_all.scss`:
+    ```scss
+    @import "components/<component>";
+    ```
+2. Create a `<component>.md` within `docs/`.
+   If you're stuck, check out the provided `_template.md`.
+
+Within `preview/js/data.js`:
+
+1. Add your `'<component>'` to the `components` array.
+
+### Manually Compiling CSS
+
+To manually compile changes across the packages into a single
+`build/toolkit.css` file, run the following command:
 
 ```bash
 npm run build
