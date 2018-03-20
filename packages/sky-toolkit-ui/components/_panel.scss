@@ -28,12 +28,9 @@ $panel-spacing: $global-spacing-unit * 3;
  * 1. Break the panel outside of current container (typically `o-container`).
  */
 .c-panel {
-  position: relative; /* [1] */
-  left: 50%; /* [1] */
-  margin-left: -50vw; /* [1] */
+  @include breakout();
   max-height: 0;
   overflow: hidden;
-  width: 100vw; /* [1] */
   background: $panel-background-color;
   box-shadow: $panel-shadow;
   transition: $global-animation-speed linear;

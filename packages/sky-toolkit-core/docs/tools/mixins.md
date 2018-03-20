@@ -25,6 +25,18 @@ use of the `color()` function, use the following mixin:
 
 ---
 
+## Breakout
+
+Breakout of a parent element's `max-width` to fill the entire viewport width.
+
+```scss { "render": false }
+.foo {
+  @include breakout();
+}
+```
+
+---
+
 ## Focus Styles
 
 Generates a consistent outline shadow for use on `:focus` or class-based 

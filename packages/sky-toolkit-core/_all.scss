@@ -63,6 +63,8 @@
  * List-inline..........Force a list of items to all sit side-by-side.
  *
  * UTILITIES
+ * Breakout.............Utility class to breakout of a parent element's
+                        `max-width`.
  * Clearfix.............Utility class for applying a clearfix to an element.
  * Hide.................Helper classes for hiding content in different ways.
  * Typography...........A suite of helper classes for manipulating typographical
@@ -118,6 +120,7 @@
 @import "objects/list-inline";
 
 // Utilities
+@import "utilities/breakout";
 @import "utilities/clearfix";
 @import "utilities/hide";
 @import "utilities/typography";

@@ -19,7 +19,7 @@ const format = () => {
 
     const containerClasses = container => {
       const classes = {
-        flush: 'u-break-out qa-container-flush',
+        flush: 'u-breakout qa-container-flush',
         tile: 'c-example--tile qa-container-tile',
       };
 
