@@ -469,7 +469,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 .c-form-select__dropdown {
   .is-error &,
   &.is-error,
-  &:invalid {
+  &:invalid:not(:required) {
     border-color: color(error);
 
     &:focus {
@@ -485,7 +485,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 .c-form-checkbox__caption {
   .is-error &,
   &.is-error,
-  &:invalid {
+  &:invalid:not(:required) {
     &::before {
       border-color: color(error);
     }
