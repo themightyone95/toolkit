@@ -42,7 +42,7 @@ which would live within the recommended structure:
         <label class="c-form-label" for="f-firstname">
           First name <abbr title="This field is required" class="c-form-required">*</abbr>
         </label>
-        <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" />
+        <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" required />
       </li>
       <li class="c-form-list__item">
         <!-- Input, label etc. -->
@@ -89,7 +89,7 @@ as credit card inputs.
   <label class="c-form-label" for="f-firstname">
     First name <abbr title="This field is required" class="c-form-required">*</abbr>
   </label>
-  <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" aria-describedby="f-firstname-smallprint" />
+  <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" aria-describedby="f-firstname-smallprint" required />
   <p id="f-firstname-smallprint" class="c-text-smallprint" >This is smallprint explaining how this input field works and suggests what the user might enter into it.</p>
 </li>
 
@@ -97,7 +97,7 @@ as credit card inputs.
   <label class="c-form-label" for="f-email">
     Email <abbr title="This field is required" class="c-form-required">*</abbr>
   </label>
-  <input type="email" class="c-form-input" placeholder="e.g. joe@bloggs.com" name="f-email" id="f-email" />
+  <input type="email" class="c-form-input" placeholder="e.g. joe@bloggs.com" name="f-email" id="f-email" required />
 </li>
 
 <li class="c-form-list__item">
@@ -106,16 +106,16 @@ as credit card inputs.
   </label>
   <div class="o-layout o-layout--narrow">
     <div class="o-layout__item u-width-1/4@medium">
-      <input type="text" class="c-form-input c-form-inline__field" placeholder="1234" name="f-inline" id="f-inline-a" />
+      <input type="text" class="c-form-input c-form-inline__field" placeholder="1234" name="f-inline" id="f-inline-a" required />
     </div>
     <div class="o-layout__item u-width-1/4@medium">
-      <input type="text" class="c-form-input c-form-inline__field" placeholder="5678" name="f-inline" id="f-inline-b" />
+      <input type="text" class="c-form-input c-form-inline__field" placeholder="5678" name="f-inline" id="f-inline-b" required />
     </div>
     <div class="o-layout__item u-width-1/4@medium">
-      <input type="text" class="c-form-input c-form-inline__field" placeholder="9101" name="f-inline" id="f-inline-c" />
+      <input type="text" class="c-form-input c-form-inline__field" placeholder="9101" name="f-inline" id="f-inline-c" required />
     </div>
     <div class="o-layout__item u-width-1/4@medium">
-      <input type="text" class="c-form-input c-form-inline__field" placeholder="2134" name="f-inline" id="f-inline-d">
+      <input type="text" class="c-form-input c-form-inline__field" placeholder="2134" name="f-inline" id="f-inline-d" required />
     </div>
   </div>
 </li>
@@ -322,9 +322,9 @@ usually the `.c-form-list__item`. This will apply error styles to all contents
 
 <li class="c-form-list__item is-error">
   <label class="c-form-label" for="f-firstname">
-    First name
+    First name <abbr title="This field is required" class="c-form-required">*</abbr>
   </label>
-  <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" aria-describedby="f-firstname-smallprint" />
+  <input type="text" class="c-form-input" placeholder="e.g. Joe" name="f-firstname" id="f-firstname" aria-describedby="f-firstname-smallprint" required />
 </li>
 
 <!-- Within .c-form-list -->
