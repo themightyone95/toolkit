@@ -83,11 +83,11 @@ $test-module-area: "Tools / Gradients /";
 @include test-module("#{$test-module-area} @mixin gradient-background") {
   @include test("should return a vertical linear gradient for the given key when no direction is set") {
     @include assert("compiles vertical linear gradient") {
-      @include input() {
+      @include output() {
         @include gradient-background(sky-1);
       }
 
-      @include expect() {
+      @include contains() {
         background-color: #079ef8;
         background-image: -webkit-linear-gradient(top, #0080df 0%, #079ef8 100%);
         background-image: -moz-linear-gradient(top, #0080df 0%, #079ef8 100%);
@@ -99,11 +99,11 @@ $test-module-area: "Tools / Gradients /";
 
   @include test("should return a vertical linear gradient for the given key when a vertical direction is set") {
     @include assert("compiles vertical linear gradient") {
-      @include input() {
+      @include output() {
         @include gradient-background(sky-1, "vertical");
       }
 
-      @include expect() {
+      @include contains() {
         background-color: #079ef8;
         background-image: -webkit-linear-gradient(top, #0080df 0%, #079ef8 100%);
         background-image: -moz-linear-gradient(top, #0080df 0%, #079ef8 100%);
@@ -115,11 +115,11 @@ $test-module-area: "Tools / Gradients /";
 
   @include test("should return a radial gradient for the given key when a radial direction is set") {
     @include assert("compiles radial linear gradient") {
-      @include input() {
+      @include output() {
         @include gradient-background(sky-1, "radial");
       }
 
-      @include expect() {
+      @include contains() {
         background-color: #079ef8;
         background-image: -webkit-radial-gradient(center, ellipse cover, #079ef8 0%, #0080df 100%);
         background-image: -moz-radial-gradient(center, ellipse cover, #079ef8 0%, #0080df 100%);
@@ -131,11 +131,11 @@ $test-module-area: "Tools / Gradients /";
 
   @include test("should return the correct fallback color if set") {
     @include assert("compiles vertical linear gradient") {
-      @include input() {
+      @include output() {
         @include gradient-background(sky-1, "vertical", color(grey-50));
       }
 
-      @include expect() {
+      @include contains() {
         background-color: #222;
         background-image: -webkit-linear-gradient(top, #0080df 0%, #079ef8 100%);
         background-image: -moz-linear-gradient(top, #0080df 0%, #079ef8 100%);
@@ -152,11 +152,11 @@ $test-module-area: "Tools / Gradients /";
 @include test-module("#{$test-module-area} @mixin gradient-text") {
   @include test("with key and direction") {
     @include assert("sets correct values") {
-      @include input() {
+      @include output() {
         @include gradient-text(sky-1, horizontal);
       }
 
-      @include expect() {
+      @include contains() {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-transform: translate3d(0, 0, 0);
@@ -170,11 +170,11 @@ $test-module-area: "Tools / Gradients /";
 
   @include test("with key, direction and fallback") {
     @include assert("sets correct values") {
-      @include input() {
+      @include output() {
         @include gradient-text(sky-1, radial, color(brand));
       }
 
-      @include expect() {
+      @include contains() {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-transform: translate3d(0, 0, 0);

@@ -7,24 +7,28 @@ $test-module-area: "Tools / Panels /";
 @include test-module("#{$test-module-area} @mixin panel-indicator") {
   @include test("should add panel indicator") {
     @include assert("sets default theme by default") {
-      @include input() {
+      @include output() {
         @include panel-indicator();
       }
 
-      @include expect() {
-        background-color: #fff;
-        box-shadow: inset 11px 11px 11px -11px #9f9f9f;
+      @include contains() {
+        &::after {
+          background-color: #fff;
+          box-shadow: inset 11px 11px 11px -11px #9f9f9f;
+        }
       }
     }
 
     @include assert("sets dark theme if specified") {
-      @include input() {
+      @include output() {
         @include panel-indicator("dark");
       }
 
-      @include expect() {
-        background-color: #222;
-        box-shadow: inset 11px 11px 11px -11px #000;
+      @include contains() {
+        &::after {
+          background-color: #222;
+          box-shadow: inset 11px 11px 11px -11px #000;
+        }
       }
     }
   }
