@@ -10,7 +10,7 @@ $test-module-area: "Tools / Divider /";
 @include test-module("#{$test-module-area} @mixin divider-gradient") {
   @include test("should return a divider gradient for the bottom edge for when no direction is set") {
     @include assert("compiles divider gradient for the bottom edge") {
-      @include input() {
+      @include output() {
         @include divider-gradient();
       }
 
@@ -27,7 +27,7 @@ $test-module-area: "Tools / Divider /";
 
   @include test("should return a divider gradient for the right edge when a right direction is set") {
     @include assert("compiles divider gradient for the right edge") {
-      @include input() {
+      @include output() {
         @include divider-gradient(right);
       }
 
@@ -44,7 +44,7 @@ $test-module-area: "Tools / Divider /";
 
   @include test("should return a custom divider gradient for the right edge when a right direction and color is set") {
     @include assert("compiles a custom divider gradient for the right edge") {
-      @include input() {
+      @include output() {
         @include divider-gradient(right, #bada55);
       }
 
@@ -66,7 +66,7 @@ $test-module-area: "Tools / Divider /";
 @include test-module("#{$test-module-area} @mixin divider-shadow") {
   @include test("should return a divider shadow for the bottom edge for when no direction is set") {
     @include assert("compiles divider shadow for the bottom edge") {
-      @include input() {
+      @include output() {
         @include divider-shadow();
       }
 
@@ -82,7 +82,7 @@ $test-module-area: "Tools / Divider /";
 
   @include test("should return a divider shadow for the right edge when a right direction is set") {
     @include assert("compiles divider shadow for the right edge") {
-      @include input() {
+      @include output() {
         @include divider-shadow(right);
       }
 
@@ -98,7 +98,7 @@ $test-module-area: "Tools / Divider /";
 
   @include test("should return a custom divider shadow for the right edge when a right direction and color is set") {
     @include assert("compiles a custom divider shadow for the right edge") {
-      @include input() {
+      @include output() {
         @include divider-shadow(right, #bada55);
       }
 
