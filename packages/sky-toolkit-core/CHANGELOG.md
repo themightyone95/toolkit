@@ -4,6 +4,21 @@
 manage the impact of releasing new library versions.
 
 
+## 2.16.0
+
+### Features
+
+* [Tools] New `breakout()` mixin to "breakout" of a parent element's `max-width`
+  to fill the entire viewport width.
+* [Utilities] New `.u-breakout` utility, a class-based implementation of the
+  `breakout()` mixin.
+
+### Dependencies
+
+* [[sass-true](https://github.com/oddbird/true)] bumped with tests updated to
+  the new syntax.
+
+
 ## 2.14.0
 
 ### Features

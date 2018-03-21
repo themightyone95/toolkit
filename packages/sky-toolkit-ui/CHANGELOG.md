@@ -4,6 +4,13 @@
 the impact of releasing new library versions.
 
 
+## 2.16.0
+
+### Fixes
+
+* [Forms] Fix error styling conflicts between `:required` and `:invalid` inputs.
+
+
 ## 2.15.0
 
 ### Fixes
