@@ -8,7 +8,6 @@
 // Settings
 $hero-border-width: 5px;
 $hero-border-color: rgba(color(white), 0.3);
-$hero-text-shadow: 0 0 25px rgba(color(black), 0.25), 1px 1px 1px rgba(color(black), 0.5);
 $hero-overlap: 10vh;
 
 // Dependencies (Optional)
@@ -88,7 +87,7 @@ $hero-overlap: 10vh;
   bottom: 0;
   width: 100%;
   padding: $global-spacing-unit 0;
-  text-shadow: $hero-text-shadow;
+  text-shadow: $global-text-shadow;
 }
 
 /**

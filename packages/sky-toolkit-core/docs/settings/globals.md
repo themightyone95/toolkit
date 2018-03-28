@@ -66,3 +66,4 @@ Exposed in [sky-toolkit-core/objects/container](../../objects/_container.scss).
 | `$global-shadow-blur`          | Default       | 
 | `$global-shadow-spread`        | Default       |
 | `$global-shadow`               | All of above  |
+| `$global-text-shadow`          | All of above  |
