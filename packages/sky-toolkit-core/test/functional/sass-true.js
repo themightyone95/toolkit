@@ -1,5 +1,6 @@
-var path = require('path');
-var sassTrue = require('sass-true');
+import path from 'path';
 
-var sassFile = path.join(__dirname, '_all.scss');
-sassTrue.runSass({file: sassFile, includePaths: ['node_modules/'], precision: 9}, describe, it);
+import sassTrue from 'sass-true';
+
+const sassFile = path.join(__dirname, '_all.scss');
+sassTrue.runSass({ file: sassFile, includePaths: ['node_modules/'], precision: 9 }, describe, it);

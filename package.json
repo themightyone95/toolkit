@@ -26,8 +26,7 @@
     "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch"
   },
   "eslintIgnore": [
-    "node_modules/",
-    "packages/"
+    "node_modules/"
   ],
   "devDependencies": {
     "@sky-uk/eslint-config-sky": "22.0.0",
