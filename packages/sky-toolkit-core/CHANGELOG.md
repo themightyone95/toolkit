@@ -4,6 +4,14 @@
 manage the impact of releasing new library versions.
 
 
+## 2.17.0
+
+### Features
+
+* [Settings] New `$global-text-shadow` variable for consistent text-shadows
+  across Toolkit/external use.
+
+
 ## 2.16.0
 
 ### Features

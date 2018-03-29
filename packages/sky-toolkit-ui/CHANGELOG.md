@@ -4,6 +4,14 @@
 the impact of releasing new library versions.
 
 
+## 2.17.0
+
+### Features
+
+* [Hero] Caption now uses the new `$global-text-shadow` variable from
+  `sky-toolkit-core@2.17.0`.
+
+
 ## 2.16.0
 
 ### Fixes
