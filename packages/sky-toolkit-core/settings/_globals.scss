@@ -46,3 +46,5 @@ $global-shadow-blur: 10px;
 $global-shadow-spread: 0;
 
 $global-shadow: unquote($global-shadow-x + " " + $global-shadow-y + " " + $global-shadow-blur + " " + $global-shadow-spread + " " + rgba($global-shadow-color, $global-shadow-intensity));
+
+$global-text-shadow: 0 0 25px rgba($global-shadow-color, 0.25), 1px 1px 1px rgba($global-shadow-color, 0.5);
