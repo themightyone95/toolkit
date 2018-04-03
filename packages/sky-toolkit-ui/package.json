@@ -10,7 +10,7 @@
   },
   "homepage": "http://sky.com/toolkit",
   "scripts": {
-    "test": "mocha ./test/functional/sass-true.js"
+    "test": "mocha --compilers js:babel-core/register ./test/functional/sass-true.js"
   },
   "dependencies": {
     "sky-toolkit-core": "2.17.0"
