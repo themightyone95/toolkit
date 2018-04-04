@@ -109,6 +109,22 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   margin-bottom: $global-spacing-unit-tiny;
 }
 
+/**
+ * By default we visually hide legend elements. Apply this class in cases where
+ * you need to show it, ie: as part of a radio button group.
+ */
+.c-form-legend--show {
+  border: none !important;
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  padding: 0 !important;
+  position: static !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
 /* Form Text Inputs
   ---------------------------------- */
 
