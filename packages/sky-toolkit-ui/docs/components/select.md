@@ -57,6 +57,17 @@ the radio input's checked state being switched.
 
 ## States
 
+### Disabled
+
+By adding `.is-disabled` to `.c-select__btn`, the hoverstate is not applied and `c-btn.is-disabled` styling is applied.
+
+```html
+<label class="c-select">
+  <input type="checkbox" disabled class="c-select__input">
+  <span class="c-btn c-btn--select c-select__btn is-disabled">Disabled</span>
+</label>
+```
+
 ### Selected
 
 By adding `.is-selected` to `.c-select__input`, the tick icon becomes a cross icon.
@@ -67,6 +78,6 @@ input represents a selected option.
 ```html
 <label class="c-select">
   <input type="checkbox" class="c-select__input is-selected">
-  <span class="c-btn c-btn--select c-select__btn">Select</span>
+  <span class="c-btn c-btn--select c-select__btn">Selected</span>
 </label>
 ```

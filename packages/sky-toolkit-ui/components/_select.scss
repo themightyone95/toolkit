@@ -101,11 +101,11 @@ $select-animation-speed: $global-animation-speed-fast !default;
     @include focus-styles();
   }
 
-  &:hover + .c-select__btn {
+  &:hover + .c-select__btn:not(.is-disabled) {
     border-color: color(highlight);
   }
 
-  &:checked + .c-select__btn {
+  &:checked + .c-select__btn:not(.is-disabled) {
     border-color: color(brand);
 
     &::after {
@@ -122,14 +122,16 @@ $select-animation-speed: $global-animation-speed-fast !default;
 .c-select__btn:hover,
 .c-select__input:active + .c-select__btn,
 .c-select__input:checked + .c-select__btn {
-  padding-left: $select-icon-width / 2;
-  padding-right: $select-icon-width / 2 + $select-icon-width;
+  &:not(.is-disabled) {
+    padding-left: $select-icon-width / 2;
+    padding-right: $select-icon-width / 2 + $select-icon-width;
 
-  &::after {
-    /*! autoprefixer: off */
-    -ms-transform: translate(0, 0);
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+    &::after {
+      /*! autoprefixer: off */
+      -ms-transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
   }
 }
 
