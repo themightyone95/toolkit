@@ -4,6 +4,13 @@
 manage the impact of releasing new library versions.
 
 
+## 2.18.0
+
+### Enhancements
+
+* Conform all JavaScript to `eslint-config-sky`.
+
+
 ## 2.17.0
 
 ### Features
