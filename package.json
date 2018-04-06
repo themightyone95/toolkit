@@ -11,8 +11,8 @@
     "clean": "touch build/tmp.css && rm build/*.css",
     "nuke": "npm run clean && rm -rf node_modules/ && lerna clean",
     "watch": "node-sass $npm_package_config_precision --output-style expanded -w $npm_package_config_paths build.scss build/toolkit.css",
-    "lint": "npm run lint:css & npm run lint:js",
-    "lint:css": "stylelint '**/*.scss' --syntax scss",
+    "lint": "npm run lint:scss && npm run lint:js",
+    "lint:scss": "stylelint '**/*.scss' --syntax scss",
     "lint:js": "eslint .",
     "build": "node-sass $npm_package_config_precision --output-style expanded $npm_package_config_paths build.scss build/toolkit.css",
     "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build.scss build/toolkit.min.css",
@@ -25,6 +25,10 @@
     "gzip": "gzip -6 build/toolkit{,-core}.min.css && mv build/toolkit-core.min.css.gz build/toolkit-core.min.css && mv build/toolkit.min.css.gz build/toolkit.min.css",
     "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "eslintIgnore": [
     "node_modules/"
   ],
