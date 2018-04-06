@@ -302,9 +302,6 @@ the core maintainers or [Tom Davidson](@tom-davidson).
 
 ## Releases
 
->If you want to help make a start at automating this process, **please** do
-([#125](https://github.com/sky-uk/toolkit/issues/125)).
-
 1. Ensure the fully-approved PR is up to date with `develop`.
     * If necessary, run `git rebase develop` within the branch. **Avoid** using 
       GitHub's "update branch" button as it leaves us with unhelpful merge 
@@ -321,25 +318,23 @@ the core maintainers or [Tom Davidson](@tom-davidson).
         ```
         $ git log --oneline <last tag>.. -- packages/sky-toolkit-[core|ui]/
         ```
-8. Commit and push the `CHANGELOG.md` changes to `master`.
+8. Commit the `CHANGELOG.md` changes to `master`.
    * Don't worry about issue references here, a simple `"Update CHANGELOG"` or `"Update CHANGELOGs"` will do.
-9. Run `npm run dist` to generate `toolkit.min.css` and `toolkit-core.min.css`.
-    * Upload the assets of the updated packages to S3 (see maintainers Slack channel for bucket details):
-        1. Upload to `sky.com/assets/[toolkit|toolkit-core]/v[version]`.
-        2. Override `/latest`.
-    * In the "Upload" modal of S3; leave steps 1 and 2 as their default
-      settings. For step 3, you **must** ensure to set the following settings,
-      then click "Save".
-
-        | *Header*         | *Value* |
-        |------------------|---------|
-        | Content-Encoding | gzip    |
-      (If you can't see this option, you may need to scroll down within the modal)
-    * N.B. If your CSS doesn’t seem to be compiling with the expected changes,
-      run `npm run clean` and try again.
-10. Run `lerna publish`.
+9. Run `lerna publish`.
     * Be sure to read and follow the wizard very carefully, making sure to use
       the correct and appropriate patch/minor/major semver tag(s).
+10. Check the compiled assets have been published via CircleCI to S3 (this may
+    take a few minutes to propagate):
+    * For releases and pre-releases:
+        * [sky.com/assets/toolkit-core/v[version]/toolkit-core.min.css](
+          https://www.sky.com/assets/toolkit-core/v[version]/toolkit-core.min.css)
+        * [sky.com/assets/toolkit/v[version]/toolkit.min.css](
+          https://www.sky.com/assets/toolkit/v[version]/toolkit.min.css)
+    * For releases:
+        * [sky.com/assets/toolkit-core/latest/toolkit-core.min.css](
+          https://www.sky.com/assets/toolkit-core/latest/toolkit-core.min.css)
+        * [sky.com/assets/toolkit/latest/toolkit.min.css](
+          https://www.sky.com/assets/toolkit/latest/toolkit.min.css)
 11. Go to [Toolkit/Releases](https://github.com/sky-uk/toolkit/releases), and
     check the tag exists.
     * If the tag exists, congrats! Now create a [**new**

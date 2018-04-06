@@ -17,12 +17,11 @@
     "build": "node-sass $npm_package_config_precision --output-style expanded $npm_package_config_paths build.scss build/toolkit.css",
     "minify:toolkit": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths build.scss build/toolkit.min.css",
     "minify:toolkit-core": "node-sass $npm_package_config_precision --output-style compressed $npm_package_config_paths --include-path packages/sky-toolkit-core/node_modules/ packages/sky-toolkit-core/_all.scss build/toolkit-core.min.css",
-    "dist": "npm run clean && npm run minify:toolkit-core && npm run minify:toolkit && npm run gzip",
+    "minify": "npm run clean && npm run minify:toolkit-core && npm run minify:toolkit",
     "test:preview": "mocha --compilers js:babel-core/register ./preview/test/**/*.spec.js",
     "test:toolkit-core": "cd packages/sky-toolkit-core && npm run test && cd -",
     "test:toolkit-ui": "cd packages/sky-toolkit-ui && npm run test && cd -",
     "test": "npm run test:preview && npm run test:toolkit-core && npm run test:toolkit-ui",
-    "gzip": "gzip -6 build/toolkit{,-core}.min.css && mv build/toolkit-core.min.css.gz build/toolkit-core.min.css && mv build/toolkit.min.css.gz build/toolkit.min.css",
     "preview": "webpack-dev-server -d --hot --config preview/webpack.config.js --watch"
   },
   "pre-commit": [
