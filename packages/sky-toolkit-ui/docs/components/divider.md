@@ -54,6 +54,28 @@ and wrapped around content.
 </div>
 ```
 
+### Subsection
+
+Provides a horizontal subsection divider **without** a prominent shadow.
+
+```html
+<hr class="c-divider c-divider--sub" />
+```
+
+Subsection dividers can be aligned via additional modifiers:
+
+#### Align Left
+
+```html
+<hr class="c-divider c-divider--sub c-divider--align-left" />
+```
+
+#### Align Right
+
+```html
+<hr class="c-divider c-divider--sub c-divider--align-right" />
+```
+
 ## Spacing
 
 Extra spacing can be applied on any edge with the spacing utility classes.
