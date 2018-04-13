@@ -104,7 +104,7 @@
     @return $map;
   }
 
-  @warn "Unknown keys of `#{$keys...}` in the defined map";
+  @warn "Unknown keys of `#{$keys}` in the defined map";
   @return null;
 }
 
