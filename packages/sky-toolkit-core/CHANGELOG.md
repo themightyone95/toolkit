@@ -4,6 +4,14 @@
 manage the impact of releasing new library versions.
 
 
+## 2.19.0
+
+### Features
+
+* [Divider] New `align-left` and `align-right` options for
+  `@include divider-gradient()`.
+
+
 ## 2.18.0
 
 ### Enhancements

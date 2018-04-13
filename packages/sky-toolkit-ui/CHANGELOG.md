@@ -4,6 +4,15 @@
 the impact of releasing new library versions.
 
 
+## 2.19.0
+
+### Features
+
+* [Dividers] New `.c-divider--sub` modifier to remove the shadow from dividers
+  for use in subsections. Subsection dividers can be aligned via the additional
+  `.c-divider--align-left` and `.c-divider--align-right` modifiers.
+
+
 ## 2.18.0
 
 ### Fixes
