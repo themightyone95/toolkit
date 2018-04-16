@@ -4,6 +4,16 @@
 manage the impact of releasing new library versions.
 
 
+## 2.19.1
+
+### Fixes
+
+* [Functions] Remove spread operator from `map-get-deep()`.
+
+  `@warn` statement does not support the use of spread operators and caused
+  issues with some SASS parsers.
+
+
 ## 2.19.0
 
 ### Features
