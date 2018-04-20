@@ -7,6 +7,8 @@ const components = [
   'forms',
   'hero',
   'links',
+  'modal',
+  'overlay',
   'panel',
   'select',
   'shine',

@@ -20,7 +20,7 @@ layout: component
 
 By default, the Modal component is centered to the middle of the viewport, wrapped within the `c-modal-cover` component. Within the Modal itself, it's Close button is positioned at the top of the Modal, above any content the consumer adds.
 
-```html
+```html { "container": [ "flush", "overlay" ] }
 <aside class="c-modal-cover" role="dialog" aria-label="A label describing the Modal's current content" tabIndex="-1">
   <div class="c-modal">
     <div class="u-text-right">
@@ -42,7 +42,7 @@ There are some use cases where you would want to show the close button, but with
 so, use the existing `.u-hide-visually` utility provided in `sky-toolkit-core`. This ensures the
 label is still accessible to screen readers, but does not display in the browser.
 
-```html
+```html { "container": [ "flush", "overlay" ] }
 <aside class="c-modal-cover" role="dialog" aria-label="A label describing the Modal's current content" tabIndex="-1">
   <div class="c-modal">
     <div class="u-text-right">
@@ -62,7 +62,7 @@ label is still accessible to screen readers, but does not display in the browser
 
 When using the Modal you will want to ensure that viewport scrolling is locked. To do so you can append the existing `.u-overflow-hidden` utility provided in `sky-toolkit-core` to your `<html>` tag.
 
-```html
+```html { "render": false }
 <html class="u-overflow-hidden">
   <head></head>
   <body></body>

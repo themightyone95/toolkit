@@ -34,7 +34,7 @@ entire viewport.
 The footer is an optional addition, which is typically used for rendering a primary call to action
 button.
 
-```html
+```html { "container": [ "flush", "overlay" ] }
 <article class="c-overlay">
   <header class="c-overlay__header">
     <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">
@@ -59,7 +59,7 @@ You can optionally display the close button on the left side of the header by pa
 `.c-overlay--close-left` modifier. This is only to be used if extra contextal components need to be
 rendered in the right side of the header, such as a basket or continue button.
 
-```html
+```html { "container": [ "flush", "overlay" ] }
 <article class="c-overlay c-overlay--close-left">
   <header class="c-overlay__header">
     <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">
@@ -82,7 +82,7 @@ There are some use cases where you would want to show the close button, but with
 so, use the existing `.u-hide-visually` utility provided in `sky-toolkit-core`. This ensures the
 label is still accessible to screen readers, but does not display in the browser.
 
-```html
+```html { "container": [ "flush", "overlay" ] }
 <article class="c-overlay c-overlay--close-left">
   <header class="c-overlay__header">
     <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">

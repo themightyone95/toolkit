@@ -8,6 +8,23 @@
 // Components
 // ==============================================
 
+.c-example {
+  margin-bottom: $global-spacing-unit;
+}
+
 .c-example--tile {
   max-width: 26em;
+}
+
+.c-example--overlay {
+  position: relative;
+  height: 100vh;
+  background-image: url("https://www.sky.com/assets/toolkit/docs/overlay/homepage.jpg");
+  background-size: cover;
+  background-position: top center;
+
+  .c-overlay,
+  .c-modal-cover {
+    position: absolute;
+  }
 }
