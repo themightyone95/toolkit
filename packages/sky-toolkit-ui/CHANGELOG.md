@@ -4,6 +4,13 @@
 the impact of releasing new library versions.
 
 
+## 2.20.0
+
+### Dependencies
+
+* [sky-toolkit-core](https://github.com/sky-uk/toolkit/blob/master/packages/sky-toolkit-core) updated to `2.20.0`.
+
+
 ## 2.19.1
 
 ### Dependencies

@@ -4,6 +4,14 @@
 manage the impact of releasing new library versions.
 
 
+## 2.20.0
+
+### Enhancements
+
+* [Settings] Add `!default` flag to `$gradient-directions` map to allow for
+  extension of Gradient Directions
+
+
 ## 2.19.1
 
 ### Fixes
