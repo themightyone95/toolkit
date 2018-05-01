@@ -70,10 +70,14 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
   padding-right: $accordion-icon-offset;
   display: block; /* [2] */
   position: relative; /* [2] */
+  width: 100%;
+  text-align: left;
   font-weight: bold; /* [1] */
   color: color(text); /* [3] */
   outline: 0; /* [4] */
   cursor: pointer; /* [4] */
+  border: 0;
+  background-color: $accordion-background;
 
   @include hocus() {
     text-decoration: underline;
