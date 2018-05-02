@@ -4,6 +4,14 @@
 the impact of releasing new library versions.
 
 
+## 2.21.0
+
+### Enhancements
+
+* [Accordion] Additional styles to support the use of `<a>` or `<button>` for
+  Accordion labels. Going forwards, `<button>` is encouraged.
+
+
 ## 2.20.0
 
 ### Dependencies
