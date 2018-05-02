@@ -28,10 +28,18 @@ declare global {
 
   namespace StencilComponents {
     interface SkyButton {
-      'className': string;
-      'content': string;
+      'ariaLabel': string;
+      'dataAttributes': any;
+      'href': string;
+      'iconPos': string;
+      'iconSrc': string;
+      'innerClass': string;
       'modifier': string;
-      'stateModifier': string;
+      'onClick': any;
+      'state': string;
+      'target': string;
+      'text': string;
+      'tooltip': boolean;
     }
   }
 
@@ -54,10 +62,57 @@ declare global {
   }
   namespace JSXElements {
     export interface SkyButtonAttributes extends HTMLAttributes {
+      'ariaLabel'?: string;
+      'dataAttributes'?: any;
+      'href'?: string;
+      'iconPos'?: string;
+      'iconSrc'?: string;
+      'innerClass'?: string;
+      'modifier'?: string;
+      'onClick'?: any;
+      'state'?: string;
+      'target'?: string;
+      'text'?: string;
+      'tooltip'?: boolean;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface SkyPanel {
+      'className': string;
+      'modifier': string;
+      'stateModifier': string;
+      'text': string;
+    }
+  }
+
+  interface HTMLSkyPanelElement extends StencilComponents.SkyPanel, HTMLStencilElement {}
+
+  var HTMLSkyPanelElement: {
+    prototype: HTMLSkyPanelElement;
+    new (): HTMLSkyPanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'sky-panel': HTMLSkyPanelElement;
+  }
+  interface ElementTagNameMap {
+    'sky-panel': HTMLSkyPanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'sky-panel': JSXElements.SkyPanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface SkyPanelAttributes extends HTMLAttributes {
       'className'?: string;
-      'content'?: string;
       'modifier'?: string;
       'stateModifier'?: string;
+      'text'?: string;
     }
   }
 }
