@@ -36,9 +36,8 @@
         // Append ordered values to stop list
         $gradient-color-stops: append($gradient-color-stops, ($value $reversed-position), comma);
       }
-    }
-    // By default, append a list of color stops for each percentage key.
-    @else {
+    } @else {
+      // By default, append a list of color stops for each percentage key.
       @each $position, $value in $gradient {
         $gradient-color-stops: append($gradient-color-stops, ($value $position), comma);
       }
@@ -67,9 +66,7 @@
 
   @if not $fallback {
     $fallback: $fallback-default;
-  }
-  // Check validity of custom defined fallback color.
-  @else if type-of($fallback) != color {
+  } @else if type-of($fallback) != color {
     @warn "#{$fallback} is not a valid color, falling back to last color in gradient";
     $fallback: $fallback-default;
   }
@@ -171,14 +168,10 @@
       background-image: -moz-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
       background-image: -o-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
       background-image: #{$direction-type}-gradient(#{$direction-standard}, $gradient-color-stops);
-    }
-
-    @else {
+    } @else {
       @warn "`#{$direction}` is not a valid direction, see toolkit-core/tools/gradients for available options.";
     }
-  }
-
-  @else {
+  } @else {
     @warn "Unknown `#{$key}` in $gradients.";
   }
 }
@@ -240,14 +233,10 @@
       background-image: -webkit-#{$direction-type}-gradient(#{$direction-legacy}, $gradient-color-stops);
       background-size: 100%;
       /* stylelint-enable */
-    }
-
-    @else {
+    } @else {
       @warn "`#{$direction}` is not a valid direction, see toolkit-core/tools/gradients for available options.";
     }
-  }
-
-  @else {
+  } @else {
     @warn "Unknown `#{$key}` in $gradients.";
   }
 }

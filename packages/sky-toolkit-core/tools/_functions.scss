@@ -172,9 +172,7 @@
 
   @if unit($value) == "rem" {
     @return strip-unit($value) * 1em;
-  }
-
-  @else {
+  } @else {
     @warn "Value must be em or px.";
   }
 }
@@ -206,9 +204,7 @@
 @function strip-unit($num) {
   @if type_of($num) == number {
     @return $num / ($num * 0 + 1);
-  }
-
-  @else {
+  } @else {
     @warn "Value must be a number i.e. 12, 24px etc.";
   }
 }

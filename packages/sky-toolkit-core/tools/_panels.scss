@@ -66,9 +66,7 @@
       background-color: $indicator-arrow-color;
       box-shadow: inset $indicator-arrow-size / 2 $indicator-arrow-size / 2 $indicator-arrow-size / 2 (-$indicator-arrow-size / 2) #9f9f9f; /* [5] */
     }
-  }
-
-  @else if $theme == "dark" {
+  } @else if $theme == "dark" {
     &::before {
       box-shadow: 5px 5px 8px color(grey-50); /* [4] */
     }
@@ -77,9 +75,7 @@
       background-color: color(grey-50);
       box-shadow: inset $indicator-arrow-size / 2 $indicator-arrow-size / 2 $indicator-arrow-size / 2 (-$indicator-arrow-size / 2) color(black); /* [5] */
     }
-  }
-
-  @else {
+  } @else {
     @warn "`#{$theme}` is not a valid theme, it must be `default` or `dark`.";
   }
 

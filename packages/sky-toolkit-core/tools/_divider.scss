@@ -88,9 +88,7 @@
     }
 
     background: linear-gradient(#{$direction-standard}, $color-points);
-  }
-
-  @else {
+  } @else {
     @warn "`#{$direction}` is not a valid direction.";
   }
 }
@@ -153,9 +151,7 @@
     }
 
     background: radial-gradient(#{$standard}, $color-points);
-  }
-
-  @else {
+  } @else {
     @warn "`#{$direction}` is not a valid direction.";
   }
 }

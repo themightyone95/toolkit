@@ -596,9 +596,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
           @include gradient-background($brand);
         }
       }
-    }
-
-    @else {
+    } @else {
       @warn "Unknown `#{$brand}` in $gradients. Please check this brand is available.";
     }
   }
