@@ -20,7 +20,6 @@
 // `_gradient-color-stops(sky-cinema, reverse)` = `#cb0033 0%, #903 100%`
 //
 @function _gradient-color-stops($key, $modifier: null) {
-  // Check gradient exists in `$gradients`
   @if map-has-key($gradients, $key) {
     $gradient: map-get($gradients, $key);
     // Create blank list to store color points
@@ -89,7 +88,6 @@
 //    - `start` the first defined percentage value
 //    - `end` the last defined percentage value
 @function gradient-color($key, $color-stop: end) {
-  // Check the specified gradient exists in `$gradients`.
   @if map-has-key($gradients, $key) {
     // Store the available color stop keys (e.g. 0%, 50%, 100%)
     $color-stop-keys: map-keys(map-get($gradients, $key));
@@ -143,10 +141,8 @@
 @mixin gradient-background($key, $direction:"vertical", $fallback: null) {
   @if map-has-key($gradients, $key) {
 
-    // Fetch a list of the gradient's color stops from `$gradients`.
     $gradient-color-stops: _gradient-color-stops($key);
 
-    // Check if direction exists in direction map.
     @if map-has-key($gradient-directions, $direction) {
       // Fetch the direction map settings and assign to variables.
       $direction-legacy: map-get-deep($gradient-directions, $direction, legacy);
