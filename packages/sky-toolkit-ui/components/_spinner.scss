@@ -30,7 +30,7 @@ $spinner-transition-delay: $global-animation-speed;
   width: 1em; /* [1] */
   height: 1em; /* [1] */
   font-size: $spinner-size; /* [1] */
-  color: #0072c9; /* [2] */
+  color: color(brand); /* [2] */
   border: 0.08em solid; /* [3] */
   border-color: transparent currentColor currentColor; /* [2][4] */
   vertical-align: middle;
