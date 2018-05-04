@@ -19,9 +19,10 @@ $overlay-header-height-small: 60px;
  * The overlay fills the entire viewport, and the content within it is scrollable.
  *
  * 1.  Fill the entire viewport
- * 2.  Ensure overlay is layered on top of the rest of the document. The `5` value allows room to
- *     layer other elements higher within the overlay itself, while ensuring it's high enough to
- *     trump anything that needs to stay below.
+ * 2.  Ensure overlay is layered on top of the rest of the document. The `5`
+ *     value allows room to layer other elements higher within the overlay
+ *     itself, while ensuring it's high enough to trump anything that needs to
+ *     stay below.
  */
 .c-overlay {
   @include edge-position(); /* [1] */
@@ -44,8 +45,9 @@ $overlay-header-height-small: 60px;
 /**
  * Overlay Header
  *
- * The fixed header of the overlay, which sits at the top of the viewport. It typically contains
- * only a close button, but could be given extra children for some journeys.
+ * The fixed header of the overlay, which sits at the top of the viewport. It
+ * typically contains only a close button, but could be given extra children for
+ * some journeys.
  *
  * 1.  Fix the height so we can determine how much to pad the top of the content
  * 2.  Ensure overlay header remains above overlay content
@@ -66,8 +68,9 @@ $overlay-header-height-small: 60px;
 /**
  * Overlay Footer
  *
- * The fixed footer of the overlay, which sits at the bottom of the viewport. It typically contains
- * a call to action button, but could also be given other children for some journeys.
+ * The fixed footer of the overlay, which sits at the bottom of the viewport. It
+ * typically contains a call to action button, but could also be given other
+ * children for some journeys.
  */
 .c-overlay__footer {
   bottom: 0;
@@ -78,7 +81,8 @@ $overlay-header-height-small: 60px;
 /**
  * Overlay content
  *
- * The scrollable content area of the overlay, this is an open canvas to be filled with any content.
+ * The scrollable content area of the overlay, this is an open canvas to be
+ * filled with any content.
  *
  * 1.  Pad the top of the content to allow for the overlay header
  * 2.  Make the content scrollable if it overflows
@@ -101,8 +105,9 @@ $overlay-header-height-small: 60px;
 /**
  * Overlay close button
  *
- * The button to close the overlay. This usually sits at the right side of the overlay header, but
- * can be displayed to the left with the `c-overlay--close-left` modifier below.
+ * The button to close the overlay. This usually sits at the right side of the
+ * overlay header, but can be displayed to the left with the
+ * `.c-overlay--close-left` modifier below.
  *
  * 1.  Just a tad spacing between the icon and the label
  * 2.  Vertically align the icon with the close button label
@@ -128,10 +133,10 @@ $overlay-header-height-small: 60px;
   ============================================ */
 
 /**
- * Optionally display the close button on the left. Used when extra children need to be added to
- * the right of the overlay header (e.g. baskets, continue button etc.)
+ * Optionally display the close button on the left. Used when extra children
+ * need to be added to the right of the overlay header (e.g. baskets, continue
+ * button etc.)
  */
-
 .c-overlay--close-left {
   .c-overlay__header {
     text-align: left;
@@ -140,6 +145,5 @@ $overlay-header-height-small: 60px;
   .c-overlay__close-icon {
     margin-left: 0;
     margin-right: $global-spacing-unit-small;
-
   }
 }

@@ -25,7 +25,7 @@ $panel-spacing: $global-spacing-unit * 3;
  *
  * Panels are used to convey extra information and minimise screen space.
  *
- * 1. Break the panel outside of current container (typically `o-container`).
+ * 1. Break the panel outside of current container (typically `.o-container`).
  */
 .c-panel {
   @include breakout();
@@ -65,10 +65,8 @@ $panel-spacing: $global-spacing-unit * 3;
  * This should be applied as a BEM Mix alongside `.c-link .c-link-back`.
  * e.g. `<button class="c-panel__back c-link c-link-back">Back</button>`
  *
- * 1. Position the button in top right of panel
+ * 1. Position the button in top left of panel
  * 2. Provide spacing for cross icon
- * 3. Inherit the font colour for light and dark panels.
- * 4. Offset cross icon to align with text
  */
 .c-panel__back {
   left: $global-spacing-unit; /* [1] */

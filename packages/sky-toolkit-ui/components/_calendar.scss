@@ -6,12 +6,12 @@
 @import "sky-toolkit-core/tools";
 
 // Settings
-// 1. Size of each individual day - should be divisible by two to ensure no sup-pixel rendering issues
-// 2. Size of the navigation buttons, should also be divisible by two
-// 3. Speed to animate elements such as hover on the navigiton and days
+// 1. Size of each individual day - should be divisible by two to ensure no
+//    sub-pixel rendering issues.
+// 2. Size of the navigation buttons, should also be divisible by two.
 $calendar-day-size: 38px; // 1
 $calendar-nav-width: 44px; // 2
-$calendar-animation-speed: 0.25s; // 3
+$calendar-animation-speed: 0.25s;
 
 // Navigation Modifiers and their Additional Settings
 $calendar-navigation-modifiers: (
@@ -31,8 +31,9 @@ $calendar-navigation-modifiers: (
 /**
  * Calendar Container
  *
- * 1. Recomended max-size for calendar, accounting for padding
- * 2. Provide spacing either side of the calendar that allows room for transformed navigation buttons
+ * 1. Recommended max-size for calendar, accounting for padding
+ * 2. Provide spacing either side of the calendar that allows room for
+ *    transformed navigation buttons
  */
 .c-calendar-container {
   max-width: 380px; /* [1] */
@@ -46,7 +47,7 @@ $calendar-navigation-modifiers: (
 /**
  * Calendar
  *
- * 1. Postioning for navigation
+ * 1. Positioning for navigation
  * 2. Align tablet columns so they have equal spacing on outer sides
  * 3. Anything smaller results in dates being obscured
  */
@@ -155,10 +156,6 @@ $calendar-navigation-modifiers: (
 
 /**
  * Calendar Month
- *
- * 1. Postioning for navigation
- * 2. Align tablet columns so they have equal spacing on outer sides
- * 3. Anything smaller results in dates being obscured
  */
 .c-calendar__month {
   margin-bottom: 0;
@@ -193,9 +190,8 @@ $calendar-navigation-modifiers: (
  *
  * 1. Half the height to give vertical alignment of text
  * 2. Box shadow helps smooth what can look like a pixelated border
- * 3. Animate the scaling hover effect
- * 4. Reset shadow as silky smooth on retina / HD Displays
- * 5. Reduced focus style shadow to prevent overlaps or cutoffs
+ * 3. Reset shadow as silky smooth on retina / HD Displays
+ * 4. Reduced focus style shadow to prevent overlaps or cutoffs
  */
 .c-calendar__day {
   /*! autoprefixer: off */
@@ -213,7 +209,7 @@ $calendar-navigation-modifiers: (
   box-shadow: inset 0 0 0 1px rgba(color(brand), 0.2); /* [2] */
   color: color(brand);
   -webkit-transition: background $calendar-animation-speed, color $calendar-animation-speed, transform $calendar-animation-speed;
-  transition: background $calendar-animation-speed, color $calendar-animation-speed, transform $calendar-animation-speed; /* [3] */
+  transition: background $calendar-animation-speed, color $calendar-animation-speed, transform $calendar-animation-speed;
 
   /* Box-shadow to smooth pixel border is hidden on high resolution displays */
   /* stylelint-disable indentation, media-feature-name-no-unknown */
@@ -224,7 +220,7 @@ $calendar-navigation-modifiers: (
     only screen and (min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
-      box-shadow: none; /* [4] */
+      box-shadow: none; /* [3] */
   }
   /* stylelint-enable */
 
@@ -236,7 +232,7 @@ $calendar-navigation-modifiers: (
   }
 
   &:focus {
-    box-shadow: 0 1px 3px rgba(color(black), 0.4), 0 1px 3px 3px rgba(color(highlight), 0.75); /* [5] */
+    box-shadow: 0 1px 3px rgba(color(black), 0.4), 0 1px 3px 3px rgba(color(highlight), 0.75); /* [4] */
   }
 
   &:hover {

@@ -23,22 +23,20 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
  *
  * Accordions are useful for grouping content whilst saving screen space.
  *
- * 1. Allows styling of box-model properties and absolute potitioning of child/
+ * 1. Allows styling of box-model properties and absolute positioning of child/
  *    pseudo-elements.
- * 2. Sets outer border and "curved" edges.
  */
 .c-accordion {
   display: block; /* [1] */
   position: relative; /* [1] */
-  border: $accordion-border; /* [2] */
-  border-radius: $accordion-border-radius; /* [2] */
+  border: $accordion-border;
+  border-radius: $accordion-border-radius;
 }
 
 /**
  * Accordion Section
  *
  * Accordion sections wrap the label and content into a single container.
- * A bottom border is used to indicate a break between each section.
  */
 .c-accordion__section {
   border-bottom: $accordion-border;
@@ -57,25 +55,23 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
  *
  * Accordion labels provide context on the group and also toggles content.
  *
- * 1. Set the label's font properties.
- * 2. Allows styling of box-model properties and absolute potitioning of child/
+ * 1. Allows styling of box-model properties and absolute positioning of child/
  *    pseudo-elements.
- * 3. Overwrite default link styles.
- * 4. Overwrite browser interaction styles to hide outline and show pointer.
+ * 2. Overwrite browser interaction styles to hide outline and show pointer.
  */
 .c-accordion__label {
-  @include font(text-body); /* [1] */
+  @include font(text-body);
   @include height-sizing(padding);
   padding-left: $accordion-spacing;
   padding-right: $accordion-icon-offset;
-  display: block; /* [2] */
-  position: relative; /* [2] */
+  display: block; /* [1] */
+  position: relative; /* [1] */
   width: 100%;
   text-align: left;
-  font-weight: bold; /* [1] */
-  color: color(text); /* [3] */
-  outline: 0; /* [4] */
-  cursor: pointer; /* [4] */
+  font-weight: bold;
+  color: color(text);
+  outline: 0; /* [2] */
+  cursor: pointer; /* [2] */
   border: 0;
   background-color: $accordion-background;
 
@@ -89,13 +85,11 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
    * Accordion icons provide an extra form of 'toggle' indication.
    *
    * 1. Allows for absolute positioning from the top and right of the label.
-   * 2. Sets the icon size.
-   * 3. Sets background-image to the icon as Base64.
-   * 4. Prevents the pseudo-element partially blocking the label's click events.
-   * 5. Sets a starting position for the icon's movement.
+   * 2. Sets background-image to the icon as Base64.
+   * 3. Prevents the pseudo-element partially blocking the label's click events.
+   * 4. Sets a starting position for the icon's movement.
    *    translateY is required to align the absolute icon to 50% of the height.
    *    translateZ is required to prevent pixel jumps in webkit browsers.
-   * 6. Animates the transform property on transition.
    */
   &::after {
     /*! autoprefixer: off */
@@ -103,16 +97,16 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
     position: absolute; /* [1] */
     top: 50%; /* [1] */
     right: $accordion-spacing; /* [1] */
-    width: $accordion-icon-size; /* [2] */
-    height: $accordion-icon-size; /* [2] */
+    width: $accordion-icon-size;
+    height: $accordion-icon-size;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAjCAMAAAAT1/wYAAAAdVBMVEUAAABKSkpKSkpLS0tQUFBdXV1KSkpQUFBVVVVKSkpKSkpMTExQUFBPT09LS0tKSkpLS0tLS0tKSkpKSkpLS0tMTExMTExMTExKSkpKSkpLS0tLS0tMTExLS0tMTExLS0tKSkpLS0tKSkpKSkpMTExLS0tKSkrnsYtxAAAAJnRSTlMA5vneFwbUEQzz6zAkG+7Z0My8V1AsKCDCsamiQTs1xrZ7bl1KR017H3MAAAEmSURBVEjHpZTpkoIwEAY/DAIKaLi8ULzz/o+4aGZrateVYdz+laTopioJAKjLGB8RlzV6Ls4V8Ud+4dwFqFyPDfV+aB9mBeMeRKHaj56igXVc0PvOIl340TLX+PnSW4sUQkH2+8Lcz8x6rL823pinft5wQec3IFaBXwmyMX72/fQKEAqCL68y8rsyQ+vNsN+QbzJhZ16Q9zvns3kHn3g+eDu6d34n3LkwGi50M/5uhguzA/7gIPhCQfKJ2FJhj1/sybex/J/iwqtfkC8XJneAuU/Yl0iOVLjx2o38Y4IRJBsq1CBq8jfkKwo6nwslFSr0VOSX5OsKOp+ZnpzneqXBaQoV0637wZZ8fYF9dWHH/o59fYF9faH1fsu+lvbp4x+cg+CMQb4AGyJC1Gj68gAAAAAASUVORK5CYII="); /* [3] */
-    background-repeat: no-repeat; /* [3] */
-    background-size: contain; /* [3] */
-    background-position: center center; /* [3] */
-    pointer-events: none; /* [4] */
-    -ms-transform: translateY(-50%) rotate(0); /* [5] */
-    transform: translateY(-50%) rotate(0); /* [5] */
-    transition: transform $accordion-animation-speed ease; /* [6] */
+    background-repeat: no-repeat; /* [2] */
+    background-size: contain; /* [2] */
+    background-position: center center; /* [2] */
+    pointer-events: none; /* [3] */
+    -ms-transform: translateY(-50%) rotate(0); /* [4] */
+    transform: translateY(-50%) rotate(0); /* [4] */
+    transition: transform $accordion-animation-speed ease;
   }
 }
 
@@ -121,10 +115,9 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
  *
  * The content for an accordion section, which is displayed on toggle.
  *
- * 1. Allows styling of box-model properties and absolute potitioning of child/
+ * 1. Allows styling of box-model properties and absolute positioning of child/
  *    pseudo-elements.
  * 2. Allows for the content to be completely hidden when toggled off.
- * 3. Animates the opacity and height properties on transition.
  */
 .c-accordion__content {
   display: block; /* [1] */
@@ -133,7 +126,7 @@ $accordion-icon-offset: $accordion-spacing * 2 + $accordion-icon-size;
   overflow: hidden; /* [2] */
   opacity: 0; /* [2] */
   height: 0; /* [2] */
-  transition: opacity $accordion-animation-speed ease, height $accordion-animation-speed ease; /* [3] */
+  transition: opacity $accordion-animation-speed ease, height $accordion-animation-speed ease;
 }
 
 /**

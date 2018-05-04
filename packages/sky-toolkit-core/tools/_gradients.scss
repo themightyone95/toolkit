@@ -10,11 +10,11 @@
 
 // Function to return the gradient color points in a format usable by
 // `linear-gradient` and other gradient mixins.
-
+//
 // `_gradient-color-stops()` takes two arguments:
 //   - $key - The gradient key i.e. `sky-arts`
 //   - $modifier - To reverse the gradient direction set this to 'invert'
-
+//
 // Example output:
 // `_gradient-color-stops(sky-cinema)` = `#903 0%, #cb0033 100%`
 // `_gradient-color-stops(sky-cinema, reverse)` = `#cb0033 0%, #903 100%`
@@ -54,11 +54,11 @@
 
 // Function to automate selecting a fallback value for our gradient mixins,
 // handling the logic of selecting a value if a valid colour is not supplied.
-
+//
 // `_gradient-fallback()` takes two arguments:
 //   - $key - The gradient key i.e. `sky-arts`
 //   - $fallback - The supplied fallback color to check
-
+//
 @function _gradient-fallback($key, $fallback:null) {
   // Set default fallback value
   $fallback-default: gradient-color($key, end);
@@ -87,6 +87,8 @@
 //    - `×%` specific percentage value
 //    - `start` the first defined percentage value
 //    - `end` the last defined percentage value
+//
+// See `docs/` for usage.
 @function gradient-color($key, $color-stop: end) {
   @if map-has-key($gradients, $key) {
     // Store the available color stop keys (e.g. 0%, 50%, 100%)
@@ -122,22 +124,17 @@
 // ------------------------------------
 
 // Mixin to generate complete background gradients. Uses values from our
-// `$gradients` map in `settings/_colors.scss`.
-//
-// Example usage:
-//
-//   html {
-//     @include gradient-background(sky-sports, vertical);
-//   }
+// `$gradients` map in `settings/colors`.
 //
 // OPTIONS
-// - key: Name of gradient (see toolkit-core/settings/_colors.scss)
+// - key: Name of gradient
 // - direction:
 //    - "vertical" top to bottom gradient
 //    - "vertical-invert" bottom to top gradient
 //    - "horizontal" left to right gradient
 //    - "radial" center to edge gradient
-
+//
+// See `docs/` for usage.
 @mixin gradient-background($key, $direction:"vertical", $fallback: null) {
   @if map-has-key($gradients, $key) {
 
@@ -184,17 +181,8 @@
 //    - "vertical-invert" bottom to top gradient
 //    - "horizontal" left to right gradient
 //    - "radial" center to edge gradient
-
-// Example usage:
-//    .grad-text {
-//        @include text-gradient(sky-1, horizontal);
-//    }
-
-// Use of existing gradients with alternative fallback colour:
-//    .grad-text {
-//      @include gradient-text(sky-1, vertical, color(brand));
-//    }
-
+//
+// See `docs/` for usage.
 @mixin gradient-text($key, $direction: horizontal, $fallback: null) {
   @if map-has-key($gradients, $key) {
     @if map-has-key($gradient-directions, $direction) {

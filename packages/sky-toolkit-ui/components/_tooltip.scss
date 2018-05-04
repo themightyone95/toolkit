@@ -64,7 +64,7 @@ $tooltip-z-base: z-index(8);
    *
    * 1. Position marker centrally below trigger and above content
    * 2. Because marker is rotated, we need to double the size to give true size
-   * 3. Marker needs it's own shadow with negative spread to only show on one side
+   * 3. Marker needs its own shadow with negative spread to only show on 1 side
    * 4. Subtle border to make marker more defined on white backgrounds
    */
   .c-tooltip__trigger::after {
@@ -91,10 +91,11 @@ $tooltip-z-base: z-index(8);
    * The bubble of content that appears when triggered
    *
    * 1. Layer above whitewash
-   * 2. On mobile we need full width; we use left and right positioning to achieve
+   * 2. On mobile we need full width; we use left and right positioning to
+   *    achieve
    * 3. Position left aligned beneath the trigger
-   * 4. Take away the margin bottom on the last child, helps prevent unwanted paragraph
-   *    margins
+   * 4. Take away the margin bottom on the last child, helps prevent unwanted
+   *    paragraph margins
    */
   .c-tooltip__content {
     @include font(text-body);
