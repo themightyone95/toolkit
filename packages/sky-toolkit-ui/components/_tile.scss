@@ -66,10 +66,13 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  *
  * The inner container of the tile provides the background gradient and extra
  * positioning for square tiles
+ *
+ * 1. Defensively clip overflowing text that can't be handled because of absolute
+ *    positioning
  */
 .c-tile__content {
   position: relative;
-  overflow: hidden; // Defensively clip overflowing text that can't be handled because of absolute positioning
+  overflow: hidden; /* [1] */
 
   > :last-child {
     margin-bottom: 0;
@@ -82,7 +85,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  * All Tiles utilise a `.c-tile__body` to wrap the main content area.
  * Split Template Tiles utilise `.c-tile__body .c-tile__caption`.
  *
- * This allows us to use Pseudo Elemtents to build the Tile gradient background,
+ * This allows us to use Pseudo Elements to build the Tile gradient background,
  * allowing for easy z-indexing and avoiding issues with nested content.
  */
 .c-tile__body,
@@ -301,7 +304,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
  *
  * Outline is set to "none" to utilise the `.has-focus` state on `c-tile`.
  *
- * 1. Reset .c-tile__link styling on <button> elements allowing more
+ * 1. Reset `.c-tile__link` styling on <button> elements allowing more
  *    semantic usage.
  */
 .c-tile__link {
@@ -352,7 +355,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
      */
     .c-tile__body::after,
     .c-tile__caption::after {
-      opacity: 1; // Set hover opacity
+      opacity: 1;
     }
 
     /**
@@ -380,8 +383,8 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
 /**
  * Tile Shine
  *
- * Tile shine to be applied to a .c-shine component to give the correct positioning
- * when used on a Tile.
+ * Tile shine to be applied to a .c-shine component to give the correct
+ * positioning when used on a Tile.
  *
  * The shine hover effect can then be applied by using `.c-shine-context`
  * alongside `.c-tile__link`.
@@ -549,7 +552,7 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
     }
 
     /**
-     * Caption positionined absolutely to prevent text overflowing media height.
+     * Caption positioned absolutely to prevent text overflowing media height.
      */
     .c-tile__caption {
       position: absolute;
@@ -590,15 +593,13 @@ $tile-themes: "sky-1", "sky-account", "sky-atlantic", "sky-arts", "sky-box-sets"
           color: color(white);
         }
 
-        // Set up style overides
+        // Set up style overrides
         .c-tile__body::after {
           /*! autoprefixer: off */
           @include gradient-background($brand);
         }
       }
-    }
-
-    @else {
+    } @else {
       @warn "Unknown `#{$brand}` in $gradients. Please check this brand is available.";
     }
   }

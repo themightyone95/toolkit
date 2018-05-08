@@ -31,16 +31,14 @@ $hero-overlap: 10vh;
  *
  * 1. Allows for absolute positioning of borders and content.
  * 2. Default height for stretched content, min-height for scaled/fixed content.
- * 3. Default text color, this should be customised with a modifier class.
- * 4. Hero images set via background-image should cover and center.
  */
 .c-hero {
   position: relative; /* [1] */
   height: 60vh; /* [2] */
   min-height: 20em; /* [2] */
-  color: color(white); /* [3] */
-  background-position: center; /* [4] */
-  background-size: cover; /* [4] */
+  color: color(white);
+  background-position: center;
+  background-size: cover;
 
   /**
    * Hero (Top & Bottom Border)

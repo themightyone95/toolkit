@@ -12,15 +12,7 @@
 // ------------------------------------
 
 // Round a number to specified digits.
-//
-// For example:
-//   decimal-round(0.333)    => 0
-//   decimal-round(0.333, 1) => 0.3
-//   decimal-round(0.333, 2) => 0.33
-//   decimal-round(0.666)    => 1
-//   decimal-round(0.666, 1) => 0.7
-//   decimal-round(0.666, 2) => 0.67
-//
+// See `docs/` for usage.
 @function decimal-round ($number, $digits: 0, $mode: round) {
   $n: 1;
   // $number must be a number
@@ -57,15 +49,7 @@
 // ------------------------------------
 
 // Ceil a number to specified digits.
-//
-// For example:
-//   decimal-ceil(0.333)    => 1
-//   decimal-ceil(0.333, 1) => 0.4
-//   decimal-ceil(0.333, 2) => 0.34
-//   decimal-ceil(0.666)    => 1
-//   decimal-ceil(0.666, 1) => 0.7
-//   decimal-ceil(0.666, 2) => 0.67
-//
+// See `docs/` for usage.
 @function decimal-ceil ($number, $digits: 0) {
   @return decimal-round($number, $digits, ceil);
 }
@@ -74,15 +58,7 @@
 // ------------------------------------
 
 // Floor a number to specified digits.
-//
-// For example:
-//   decimal-floor(0.333)    => 0
-//   decimal-floor(0.333, 1) => 0.3
-//   decimal-floor(0.333, 2) => 0.33
-//   decimal-floor(0.666)    => 0
-//   decimal-floor(0.666, 1) => 0.6
-//   decimal-floor(0.666, 2) => 0.66
-//
+// See `docs/` for usage.
 @function decimal-floor ($number, $digits: 0) {
   @return decimal-round($number, $digits, floor);
 }
@@ -95,6 +71,7 @@
 
 // Access nested map values.
 // @author Hugo Giraudel (with modifications)
+// See `docs/` for usage.
 @function map-get-deep($map, $keys...) {
   @if map-has-keys-deep($map, $keys...) {
     @each $key in $keys {
@@ -113,6 +90,7 @@
 
 // Check for keys in nested maps.
 // @author Hugo Giraudel
+// See `docs/` for usage.
 @function map-has-keys-deep($map, $keys...) {
   @each $key in $keys {
     @if not map-has-key($map, $key) {
@@ -124,20 +102,14 @@
   @return true;
 }
 
-// Map Shorcuts
+// Map Shortcuts
 // ==============================================
 
 // color()
 // ------------------------------------
 
 // Function to get color from `$colors` instead of using `map-get`.
-//
-// Usage:
-//
-//   .foo {
-//     color: color(<key>);
-//   }
-//
+// See `docs/` for usage.
 @function color($key) {
   @return map-get-deep($colors, $key);
 }
@@ -146,13 +118,7 @@
 // ------------------------------------
 
 // Function to get value from `$z-index` instead of using `map-get`.
-//
-// Usage:
-//
-//   .foo {
-//     z-index: z-index(<key>);
-//   }
-//
+// See `docs/` for usage.
 @function z-index($key) {
   @return map-get-deep($z-index, $key);
 }
@@ -163,8 +129,8 @@
 // convert-to-em()
 // ------------------------------------
 
-// Function to remove the unit from a value to em i.e. strip-unit(30px) would
-// return 1.5em assuming $global-font-size was 20px.
+// Converts any `px` or `rem` value to `em`.
+// See `docs/` for usage.
 @function convert-to-em($value, $base-font-size: $global-font-size) {
   @if unit($value) == "px" {
     @return (strip-unit($value / $base-font-size)) * 1em;
@@ -172,9 +138,7 @@
 
   @if unit($value) == "rem" {
     @return strip-unit($value) * 1em;
-  }
-
-  @else {
+  } @else {
     @warn "Value must be em or px.";
   }
 }
@@ -182,12 +146,8 @@
 // reverse()
 // ------------------------------------
 
-// Function to reverse list of values
-//
-// Example:
-//    reverse(1,2,3,4) => 4,3,2,1
-//    reverse(a 1, b 2, c 3) => c 3, b 2, a 1
-//
+// Function to reverse list of values.
+// See `docs/` for usage.
 @function reverse($list) {
   $reversed-list: ();
 
@@ -201,14 +161,12 @@
 // strip-unit()
 // ------------------------------------
 
-// Function to remove the unit from a value
-// i.e. strip-unit(20px) would return 20.
+// Function to remove the unit from a value.
+// See `docs/` for usage.
 @function strip-unit($num) {
   @if type_of($num) == number {
     @return $num / ($num * 0 + 1);
-  }
-
-  @else {
+  } @else {
     @warn "Value must be a number i.e. 12, 24px etc.";
   }
 }

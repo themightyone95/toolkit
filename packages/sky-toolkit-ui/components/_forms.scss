@@ -38,7 +38,6 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 
 /**
  * All form fields should be presented in a list so that
- *
  *   a) they are easier to navigate using a screenreader;
  *   b) if CSS fails to load for any reason, the user is still presented with a
  *      well-formatted list of fields.
@@ -116,8 +115,10 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
  * All text-like form inputs require a class of `.c-form-input`: we do not use
  * selectors like `input[type="text"] {}`.
  *
- * 1. Fix for IE 10/11 removing vertical padding from inputs which was being ignored.
- * 2. Padding added via line-height/height to re-center text for all browsers (38px to account for border).
+ * 1. Fix for IE 10/11 removing vertical padding from inputs which was being
+ *    ignored.
+ * 2. Padding added via line-height/height to re-center text for all browsers
+ *    (38px to account for border).
  */
 .c-form-input {
   @include font($form-font-size, large);
@@ -138,11 +139,10 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
     box-shadow: $form-shadow-focus;
     outline: none;
   }
-
 }
 
 /**
- * For use on large text inputs such as textareas
+ * For use on large text inputs such as `<textarea>`
  *
  * 1. As we no longer need to center our text, we can reset the line-height and
  *    use standard box-model padding.
@@ -202,7 +202,6 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 /**
  * Text and button combo pairs
  */
-
 .c-form-combo {
   display: table;
   width: 100%;
@@ -222,10 +221,6 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   border-bottom-right-radius: 0;
   border-right: 0;
 }
-
-/*
- * 1. Brings combo button height in line with input height (38px to account for 2px border).
- */
 
 .c-form-combo__btn {
   border-top-left-radius: 0;
@@ -258,7 +253,8 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   /**
    * Gradient to hide the overflow of long labels
    *
-   * 1. Hidden by default, shown on browsers that support pointer-events using feature detection
+   * 1. Hidden by default, shown on browsers that support pointer-events using
+   *    feature detection
    * 2. Stretch to full height on the right (taking into account border width)
    * 3. The gradient always starts before the select icon appears.
    */
@@ -439,7 +435,6 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
  *
  * 1. Double up the selector’s specificity in order to override some hangover
  *    from Normalize.css.
- *
  */
 .c-form-required {
   color: color(error);
@@ -455,7 +450,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 
 /**
  * Errors are handled by adding the .is-error class to the field's parent –
- * usually the .c-form-list__item.
+ * usually the `.c-form-list__item`.
  */
 .is-error {
   color: color(error);

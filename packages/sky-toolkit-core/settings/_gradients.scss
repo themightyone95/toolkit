@@ -2,19 +2,8 @@
 // SETTINGS / #GRADIENTS
 // =============================================================================
 
-// Our brand and project gradients are held in maps. To access them we have
-// a collection of functions and mixins including:
-//
-// `gradient-color(sky-1, 100%)` function returns a single color
-// value from a gradient.
-//
-// `@include gradient-background(sky-cinema, vertical, color(grey-40))` to set
-// a background gradient.
-//
-// `@include gradient-text(sky-arts, vertical, color(brand))` to set a
-// text gradient effect.
-//
-// For more information on available options see `tools/gradients`
+// Our brand and project gradients are held in maps.
+// Access these using tools from `tools/gradients`.
 $gradients: (
   default: (
     0%:   #f2f2f5,
@@ -89,7 +78,7 @@ $gradients: (
   ),
   tile: (
     50%:  #fff,
-    100%: #e6e6ea,
+    100%: #e6e6ea
   )
 ) !default;
 

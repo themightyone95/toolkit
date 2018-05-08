@@ -9,15 +9,16 @@
 // ------------------------------------
 
 // Function to get font-size from `$text` instead of using `map-get`.
+// See `docs/` for usage.
 @function font-size($key, $variant:large) {
   @return map-get-deep($text, $key, $variant, font-size);
-  // @return _text-map-get(font-size, $key, $variant);
 }
 
 // line-height()
 // ------------------------------------
 
 // Function to get line-height from `$text` instead of using `map-get`.
+// See `docs/` for usage.
 @function line-height($key, $variant:large) {
   @return map-get-deep($text, $key, $variant, line-height);
 }
@@ -29,21 +30,8 @@
 // ------------------------------------
 
 // Create a fully formed type style (sizing and line-height) by passing in a
-// single value, e.g:
-//
-// .foo {
-//   @include font(text-body);
-// }
-//
-// This will generate a rem-based font-size with its pixel fallback and
-// line-height, e.g:
-//
-// .foo {
-//   font-size: 18px;
-//   font-size: 1rem;
-//   line-height: 1.4;
-// }
-
+// single value.
+// See `docs/` for usage.
 @mixin font($key, $variant:large) {
   $font-size: font-size($key, $variant);
 
@@ -55,18 +43,7 @@
 // ------------------------------------
 
 // Generates a rem-based font-size with its pixel fallback e.g:
-//
-// .foo {
-//     @include rem(20px);
-// }
-//
-// Will output:
-//
-// .foo {
-//   font-size: 18px;
-//   font-size: 1rem;
-// }
-
+// See `docs/` for usage.
 @mixin rem($value) {
   @if unit($value) != "px" {
     @warn "Value must by a px unit";

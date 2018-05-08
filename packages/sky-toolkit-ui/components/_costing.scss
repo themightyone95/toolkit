@@ -102,7 +102,7 @@ $costing-spacing: $global-spacing-unit-tiny;
  */
 .c-costing--offer {
   /**
-   * Apply offer colors to relevent elements
+   * Apply offer colors to relevant elements
    */
   .c-costing__price,
   .c-price__symbol {
@@ -132,7 +132,7 @@ $costing-spacing: $global-spacing-unit-tiny;
 .c-costing--small {
   /**
    *  1. On smaller costs, suffixes don't display beneath fractional values, so
-   *     we realign line-height and create additonal spacing
+   *     we realign line-height and create additional spacing
    */
   .c-costing__price {
     @include rem(22px);
@@ -159,11 +159,11 @@ $costing-spacing: $global-spacing-unit-tiny;
 /**
  * Footnote Marker
  *
- * Various accommodations to the footnote symbol based on the costing modifers
+ * Various accommodations to the footnote symbol based on the costing modifiers
  */
 .c-costing__price--footnote {
   /**
-   * The symbol itself is adjacent to the element with modifers, hence the use
+   * The symbol itself is adjacent to the element with modifiers, hence the use
    * of '+'
    * 1. Potential use of prefix text limits space above values
    * 2. Unset any bolding applied to parent item
@@ -178,7 +178,7 @@ $costing-spacing: $global-spacing-unit-tiny;
       -------------------------------- */
 
     /**
-     * @at-root and #{&} allow us to combine modifer selectors with
+     * @at-root and #{&} allow us to combine modifier selectors with
      * 'c-costing__price--footnote' and apply to 'c-price__symbol'
      */
 

@@ -21,10 +21,10 @@ $link-faux-border-radius: $global-border-radius;
  * for cosmetic reasons, Link (Faux) should be used.
  *
  * 1. Reset browser styles.
- * 2. Tidy aligment for when the button size needs to be modified.
+ * 2. Tidy alignment for when the button size needs to be modified.
  * 3. Make buttons inherit font styles (necessary when styling `input`s as
  *    buttons).
- * 4. Base transparent background-color for modifers to alter.
+ * 4. Base transparent background-color for modifiers to alter.
  * 5. Force all button-styled elements to appear clickable.
  * 6. Mimic link underline.
  */
@@ -52,11 +52,9 @@ $link-faux-border-radius: $global-border-radius;
    *
    * To protect the Link (Faux) box-model, a pseudo-element with negative margins
    * is used to create the "button" focus appearance.
-   *
-   * 1.  Remove browser outline styles.
    */
   &:focus {
-    outline: 0; /* [1] */
+    outline: 0;
 
     &::before {
       @include edge-position(-$link-faux-padding);

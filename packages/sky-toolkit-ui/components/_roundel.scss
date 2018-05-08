@@ -21,9 +21,9 @@ $roundel-icon-size-small: 20px;
 /**
  * Roundel
  *
- * For inputs used as a radio button (`.c-roundel`) to allow the selection of a product variant.
- * The overall wrapper for the roundel component
- * Is rendered as a <label> element.
+ * For inputs used as a radio button (`.c-roundel`) to allow the selection of a
+ * product variant.
+ * The overall wrapper for the roundel component is rendered as a <label>.
  */
 .c-roundel {
   cursor: pointer;
@@ -34,14 +34,15 @@ $roundel-icon-size-small: 20px;
 /**
  * Roundel Icon
  *
- * Roundel's can also make use of icons as well as colours and text based labels.
+ * Roundels can also make use of icons as well as colours and text based labels.
  * This class should be applied to the path of the SVG that you are using.
  *
  * 1. In order to ensure the icon is central to the Roundel, we set a vertical
  *    align property.
  * 2. There is an issue in Safari mobile where the default icon size was causing
- *    the component's height to extend to create more of an oval shape. The solution
- *    here is to set a consistent height/width value for mobile devices.
+ *    the component's height to extend to create more of an oval shape. The
+ *    solution here is to set a consistent height/width value for mobile
+ *    devices.
  */
 .c-roundel__icon {
   /*! autoprefixer: off */
@@ -64,12 +65,13 @@ $roundel-icon-size-small: 20px;
  *
  * The <input> radio element that is responsible for the selection
  *
- * 1. We use the hide-visually() mixin to hide the html input element from the user
- *    but the input remains functional when the user selects a roundel.
- * 2. Due to issues with 'janking' on the border, the blue highlight as set via a :before
- *    selector which allows greater flexibility when applying a transition to the opacity
- *    of the highlight.
- * 3. Override default styles for .c-roundel__label to indicate the selected state.
+ * 1. We use the hide-visually() mixin to hide the html input element from the
+ *    user but the input remains functional when the user selects a roundel.
+ * 2. Due to issues with 'janking' on the border, the blue highlight as set via
+ *    a `::before` selector which allows greater flexibility when applying a
+ *    transition to the opacity of the highlight.
+ * 3. Override default styles for `.c-roundel__label` to indicate the selected
+ *    state.
  */
 .c-roundel__input {
   @include hide-visually(); /* [1] */
@@ -101,15 +103,13 @@ $roundel-icon-size-small: 20px;
  *
  * 1. In order to offset the border we need to apply top and left properties.
  *    This is why we have -1px values for both.
- *
- * 2. As briefly covered earlier in the file we achieve the blue highlight with styles
- *    via the :before selector. This means we can deliver a smoother experience with
- *    transition of the highlight. By default opacity is always 0, this changes to 1
- *    when the user checks the roundel.
- *
- * 3. The ::after selector is required here as an alternative to a previous
+ * 2. As briefly covered earlier in the file we achieve the blue highlight with
+ *    styles via the `::before` selector. This means we can deliver a smoother
+ *    experience with transition of the highlight. By default opacity is always
+ *    0, this changes to 1 when the user checks the roundel.
+ * 3. The `::after` selector is required here as an alternative to a previous
  *    implementation of the border property against the base of the
- *    .c-roundel__option  component. This style handles the inner white border.
+ *    `.c-roundel__option` component. This style handles the inner white border.
  */
 .c-roundel__option {
   /*! autoprefixer: off */
@@ -167,8 +167,8 @@ $roundel-icon-size-small: 20px;
  *
  * The label is to present a variant to the user.
  * For example, this could be a storage option e.g. 32GB or a colour.
- * The .c-roundel__label is a child of .c-roundel__option which sits within
- * the .c-roundel element (the main wrapper for an individual roundel).
+ * The `.c-roundel__label` is a child of `.c-roundel__option` which sits within
+ * the `.c-roundel` element (the main wrapper for an individual roundel).
  *
  * For example:
  * <div class="c-roundel">
@@ -178,12 +178,9 @@ $roundel-icon-size-small: 20px;
  *   </div>
  * </div>
  *
- *
- * 1. By default the background colour for .c-roundel__label is white. But if we are rendering a
- *    colour-picker, toolkit-react will set an inline style which equates to the provided colour.
- *
- * 2. Roundel Colour Selectors need to have their label styled differently to accomodate a quirk
- *    within Safari. We get around this issue by using absolute positioning rather than relative.
+ * 1. Roundel Colour Selectors need to have their label styled differently to
+ *    accommodate a quirk within Safari. We get around this issue by using
+ *    absolute positioning rather than relative.
  */
 .c-roundel__label {
   @include font(text-smallprint);
@@ -191,7 +188,7 @@ $roundel-icon-size-small: 20px;
   display: table-cell;
   vertical-align: middle;
   border-radius: 50%;
-  background-color: color(white); /* [1] */
+  background-color: color(white);
   text-align: center;
   text-transform: uppercase;
   border: 4px solid transparent;
@@ -204,7 +201,7 @@ $roundel-icon-size-small: 20px;
   }
 }
 
-/* [2] */
+/* [1] */
 .c-roundel--color {
   .c-roundel__label {
     height: 100%;
@@ -218,9 +215,8 @@ $roundel-icon-size-small: 20px;
 /**
  * Roundel Group
  *
- * The wrapper which sits above a collection of roundels. Use this wrapper component
- * when you wish to display multiple roundels. This prevents the application of
- * margin-right to a single roundel, which would not be necessary in this scenario.
+ * The wrapper which sits above a collection of roundels. Use this wrapper
+ * component when you wish to display multiple roundels.
  */
 .c-roundel-group {
   .c-roundel {

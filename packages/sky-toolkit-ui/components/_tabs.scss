@@ -24,7 +24,7 @@ $tabs-container-width: $global-container-width;
  * Note: Appropriate containers are provided with the component, and should not
  *       be placed within `o-container`.
  *
- * 1. Compliment Toolkit's Vertical Rhythm.
+ * 1. Vertical Rhythm.
  * 2. Align Header content to center.
  */
 .c-tabs {
@@ -51,7 +51,7 @@ $tabs-container-width: $global-container-width;
   margin: 0 auto $global-spacing-unit auto;
 
   /**
-   * From `medium` screens upwards, sretch to the size of contents, but no
+   * From `medium` screens upwards, stretch to the size of contents, but no
    * larger than the container.
    */
   @include mq($from: medium) {
@@ -81,7 +81,7 @@ $tabs-container-width: $global-container-width;
   /**
    * Tabs Divider - Gradient Border and Shadow
    *
-   * Shared pseudo-element stucture.
+   * Shared pseudo-element structure.
    */
   &::before,
   &::after {
@@ -292,7 +292,7 @@ $tabs-container-width: $global-container-width;
  * Tabs Article
  *
  * The individual articles of Tabs.
- * Each article is stacked on top of eachother until activated.
+ * Each article is stacked on top of each other until activated.
  */
 .c-tabs__article {
   position: absolute;

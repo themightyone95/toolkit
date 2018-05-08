@@ -2,11 +2,13 @@
 // TOOLS / #DIVIDER
 // =============================================================================
 
-// _divider-gradient-color-points()
+// Private / Framework Only
 // ==============================================
 
-// Framework-only function to return a direction's gradient color points.
+// _divider-gradient-color-points()
+// ------------------------------------
 
+// Return a direction's gradient color points.
 @function _divider-gradient-color-points($direction, $color) {
   @if $direction == "align-left" or $direction == "align-right" {
     @return $color, rgba($color, 0);
@@ -32,11 +34,10 @@
 //    - "right" Creates a vertical gradient for the right side
 //    - "bottom" Creates a horizontal gradient for the bottom edge
 //    - "left" Creates a vertical gradient for the left side
-
+//
 @mixin divider-gradient($direction: "bottom", $color: color(grey-20)) {
   // The direction map stores values for the direction for both legacy prefixed
   // and standard gradients for the divider line.
-
   $directions: (
     top: (
       legacy: "left",
@@ -70,7 +71,6 @@
     ),
   );
 
-  // Check if direction exists in direction map:
   @if map-has-key($directions, $direction) {
     // Fetch both the legacy and standard versions for given direction
     $direction-legacy: map-get-deep($directions, $direction, legacy);
@@ -88,9 +88,7 @@
     }
 
     background: linear-gradient(#{$direction-standard}, $color-points);
-  }
-
-  @else {
+  } @else {
     @warn "`#{$direction}` is not a valid direction.";
   }
 }
@@ -114,11 +112,10 @@
 //    - "right" Creates a faux-shadow radial gradient for the right side
 //    - "bottom" Creates a faux-shadow radial gradient for the bottom edge
 //    - "left" Creates a faux-shadow radial gradient for the left side
-
+//
 @mixin divider-shadow($direction: "bottom", $color: rgba(color(text), 0.15)) {
   // The direction map stores values for the direction for both legacy prefixed
   // and standard gradients for the divider shadow.
-
   $directions: (
     top: (
       standard: "at 50% 100%",
@@ -138,7 +135,6 @@
     )
   );
 
-  // Check if direction exists in direction map:
   @if map-has-key($directions, $direction) {
     // Fetch both the legacy and standard versions for given direction
     $standard: map-get-deep($directions, $direction, standard);
@@ -153,9 +149,7 @@
     }
 
     background: radial-gradient(#{$standard}, $color-points);
-  }
-
-  @else {
+  } @else {
     @warn "`#{$direction}` is not a valid direction.";
   }
 }

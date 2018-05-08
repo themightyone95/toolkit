@@ -2,22 +2,12 @@
 // #TOOLS
 // =============================================================================
 
-// CONTENTS
-//
-// Sass MQ..............Neat little library for managing and using Media Queries
-//                      throughout the rest of the project.
-// Supercell............Third-party width generator mixin.
-// Functions............A collection of custom Sass functions.
-// Mixins...............A collection of custom Sass mixins.
-// Typography...........Mixins specifically for helping with setting type.
-// Gradients............Mixins specifically for helping with creating gradients.
-// Divider..............Mixins specifically for helping with creating styles
-//                      for use in dividers.
-// Panels...............Mixins specifically for helping with creating styles
-//                      for use in panels.
+// Dependencies
+// 1. Sass MQ - Sass library for composing elegant media queries
+// 2. Supercell - Grid/Layout system
 
-@import "sass-mq/mq";
-@import "supercell/tools.widths";
+@import "sass-mq/mq"; // [1]
+@import "supercell/tools.widths"; // [2]
 @import "functions";
 @import "mixins";
 @import "typography";

@@ -17,11 +17,11 @@ $link-icon-height: convert-to-em(20px);
  * Link
  *
  * Make a element look and act like an `<a:link>`. Recommended for `<button>s`
- * that need an alterntive display.
+ * that need an alternative display.
  *
  * 1. Reset browser styles.
  * 2. Force element to appear clickable.
- * 3. Match to a:link styling.
+ * 3. Match to `<a:link>` styling.
  */
 .c-link {
   border: none;  /* [1] */
@@ -43,9 +43,8 @@ $link-icon-height: convert-to-em(20px);
  *
  * Adding icons to the beginning of any back links
  *
- * 1. c-link-back currently uses an inline Base64 png chevron icon.
+ * 1. `.c-link-back` currently uses an inline Base64 png chevron icon.
  *    This will eventually be replaced by SVG.
- * 2. Brand-specific override.
  */
 .c-link-back {
   &::before {
@@ -80,9 +79,8 @@ $link-icon-height: convert-to-em(20px);
 /**
  * Adding icons to the end of any external links
  *
- * 1. c-link-external currently uses an inline Base64 png chevron icon.
+ * 1. `.c-link-external` currently uses an inline Base64 png chevron icon.
  *    This will eventually be replaced by SVG.
- * 2. Brand-specific override.
  */
 .c-link-external {
   &::after {
