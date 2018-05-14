@@ -4,6 +4,17 @@
 the impact of releasing new library versions.
 
 
+## 2.22.0
+
+### Fixes
+
+* [Spinner] Spinner color aligned with the color palette.
+
+### Enhancements
+
+* Cleaner inline documentation.
+
+
 ## 2.21.0
 
 ### Enhancements

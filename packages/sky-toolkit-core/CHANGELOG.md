@@ -4,6 +4,19 @@
 manage the impact of releasing new library versions.
 
 
+## 2.22.0
+
+### Features
+
+* [Settings] New `$global-widths` variable to customise the number of width
+  utilities.
+* [Utilities] Expand our default widths to `.u-width-×/6`s.
+
+### Enhancements
+
+* Cleaner inline documentation.
+
+
 ## 2.20.0
 
 ### Enhancements
