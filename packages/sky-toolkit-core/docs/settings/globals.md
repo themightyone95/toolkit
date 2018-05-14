@@ -36,6 +36,16 @@ Exposed in [sky-toolkit-core/objects/container](../../objects/_container.scss).
 
 ---
 
+## Utilities
+
+Exposed in [sky-toolkit-core/utilities/widths](../../utilities/_widths.scss).
+
+| Variable                       | Value         |
+|--------------------------------|---------------|
+| `$global-widths`               | Default       |
+
+---
+
 ## Border
 
 | Variable                       | Value         |
