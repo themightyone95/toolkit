@@ -328,23 +328,14 @@ feba9a8 Use a clearfix mixin instead of @\extends
 ## Maintainers
 
 If you run into any trouble or need support getting to grips with Toolkit,
-reach out to one of the maintainers:
+reach out in [Slack](https://sky.slack.com/messages/toolkit) or contact one of
+the maintainers:
 
 | [![Joe Bell](https://avatars.githubusercontent.com/joebell93?s=100)<br />Joe Bell](https://github.com/joebell93)<br /><sub>💻</sub> | [![Joe Dinsdale](https://avatars.githubusercontent.com/mrdinsdale?s=100)<br />Joe Dinsdale](https://github.com/mrdinsdale)<br /><sub>💻</sub> | [![Steve Duffin](https://avatars.githubusercontent.com/steveduffin?s=100)<br />Steve Duffin](https://github.com/steveduffin)<br /><sub>💻</sub> | [![Sam Kitson](https://avatars.githubusercontent.com/skitson?s=100)<br />Sam Kitson](https://github.com/skitson)<br /><sub>💻</sub> | [![Luke Whitehouse](https://avatars.githubusercontent.com/lukewhitehouse?s=100)<br />Luke Whitehouse](https://github.com/lukewhitehouse)<br/><sub>💻</sub> | [![Mike Gregory](https://avatars.githubusercontent.com/mikejgregory?s=100)<br />Mike Gregory](https://github.com/mikejgregory)<br/><sub>🎨</sub> |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-
-### Champions
-
-You can also get support from your local tribe champion:
-
-| **CF**                                                | DC                                             | DE                                            | DS                                                 | DT                                                       |
-|-------------------------------------------------------|------------------------------------------------|-----------------------------------------------|----------------------------------------------------|----------------------------------------------------------|
-| [**Luke Barratt**](https://github.com/lbarratt)       | [Chris Vernon](https://github.com/welikeideas) | [Callum Barratt](https://github.com/cbarratt) | [**Clare Devine**](https://github.com/claredevine) | [Aaron Thomas](https://github.com/aaronthomas)           |
-| [**Josh Nesbitt**](https://github.com/joshnesbitt)    | [Djenan Kozic](https://github.com/djenan)      | [Jag Sispal](https://github.com/jsispal)      | [Greg Pratt](https://github.com/gregorypratt)      | [Alex Fenton](https://github.com/afenton90)              |
-| [**Mahesh Jagadeesan**](https://github.com/maheshjag) |                                                | [James Peiris](https://github.com/jamespeiris)| [Rory King](https://github.com/geit)               | [**Stefan McCready**](https://github.com/stefanmccready) |
-|                                                       |                                                | [John Bower](https://github.com/beclamide)    |                                                    | [Rich Gorman](https://github.com/coderas)                |
 
 **Special thanks to the following contributors:**
 
 * [Harry Roberts](https://github.com/csswizardry)
 * [Richard McIntyre](https://github.com/mackstar)
+* [Aaron Thomas](https://github.com/aaronthomas)
