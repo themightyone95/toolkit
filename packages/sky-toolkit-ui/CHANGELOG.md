@@ -3,6 +3,13 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
 the impact of releasing new library versions.
 
+## 2.22.1
+
+### Fixes
+
+* [Modal] Add `sky-toolkit-core/tools` import to align with other components and
+  improve ease-of-use.
+
 
 ## 2.22.0
 
