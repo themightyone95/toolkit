@@ -4,6 +4,25 @@
 manage the impact of releasing new library versions.
 
 
+## 2.23.1
+
+### Features
+
+* [Utilities] Add `-x` and `-y` axis spacing utilities.
+    * e.g. `.u-margin-x`, `.u-padding-y-small` etc.
+
+### Enhancements
+
+* [Utilities] Introduce a suffix-less syntax to replace `-all` in `sky-toolkit-core@3.0.0`.
+    * e.g. `.u-margin-all` => `.u-margin`.
+    * e.g. `.u-padding-all-small` => `.u-padding-small`.
+
+
+## 2.23.0
+
+Reverted
+
+
 ## 2.22.0
 
 ### Features
