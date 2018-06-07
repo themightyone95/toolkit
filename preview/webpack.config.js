@@ -60,6 +60,8 @@ const config = {
     inline: true, // inline mode (set to false to disable including client scripts (like livereload)
     open: true, // open default browser while launching,
     openPage: '',
+    host: '0.0.0.0',
+    disableHostCheck: true,
   },
   devtool: 'eval-source-map',
 };
