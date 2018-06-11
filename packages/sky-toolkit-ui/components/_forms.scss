@@ -33,6 +33,13 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 /* Base
   ============================================ */
 
+/**
+ * Allow forms to be marked up semantically with a hidden top level caption
+ */
+.c-form-caption {
+  @include hide-visually(default, false);
+}
+
 /* Form List
   ---------------------------------- */
 
@@ -106,6 +113,15 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   @include font($form-font-size, large);
   display: inline-block;
   margin-bottom: $global-spacing-unit-tiny;
+}
+
+/**
+ * Unhide a legend being used to label a group.
+ * This is a workaround until c-form-caption replaces the legend selector in core
+ */
+.c-form-label--group {
+  @include hide-visually(reset);
+  margin-bottom: $global-spacing-unit-tiny !important;
 }
 
 /* Form Text Inputs

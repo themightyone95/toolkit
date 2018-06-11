@@ -24,7 +24,8 @@ layout: component
 ### Form List
 
 Our forms should utilise a fieldset, descriptive legend (visually hidden but
-announced by screen readers) and a form list.
+announced by screen readers) and a form list. `c-form-caption` will be required
+in a future version of toolkit to ensure only the correct legends are hidden. 
 
 Keeping the form inputs in a list allows us to style items more consistently,
 utilise state classes more efficiently, and improve readability for users with
@@ -36,7 +37,7 @@ which would live within the recommended structure:
 ```html
 <form>
   <fieldset>
-    <legend>Example</legend>
+    <legend class="c-form-caption">Example</legend>
     <ul class="c-form-list">
       <li class="c-form-list__item">
         <label class="c-form-label" for="f-firstname">
@@ -244,12 +245,14 @@ For situations where can only select one option from a set of items, we use the
 As radio buttons and checkboxes share common styles we utilise a modifier rather
 than an entire new element.
 
+`c-form-label--group` should be added to ensure display of a group legend
+
 ```html
 <!-- Within .c-form-list -->
 
 <li class="c-form-list__item">
   <fieldset>
-    <legend class="c-form-label">Which side?</legend>
+    <legend class="c-form-label c-form-label--group">Which side?</legend>
     <label class="c-form-checkbox c-form-checkbox--radio u-margin-bottom-small">
       <input type="radio" class="c-form-checkbox__input" name="f-side" id="f-side_1" value="good">
       <span class="c-form-checkbox__caption">Good</span>
@@ -294,13 +297,13 @@ modifier to display them inline.
 ```html
 <li class="c-form-list__item">
   <fieldset>
-    <legend class="c-form-label">Which side?</legend>
+    <legend class="c-form-label c-form-label--group">Which side?</legend>
     <label class="c-form-checkbox c-form-checkbox--radio c-form-checkbox--inline">
-      <input type="radio" class="c-form-checkbox__input" name="f-side" id="f-side_1" value="good">
+      <input type="radio" class="c-form-checkbox__input" name="f-side_inline" id="f-side_inline_1" value="good">
       <span class="c-form-checkbox__caption">Good</span>
     </label>
     <label class="c-form-checkbox c-form-checkbox--radio c-form-checkbox--inline">
-      <input type="radio" class="c-form-checkbox__input" name="f-side" id="f-side_2" value="evil">
+      <input type="radio" class="c-form-checkbox__input" name="f-side_inline" id="f-side_inline_2" value="evil">
       <span class="c-form-checkbox__caption">Evil</span>
     </label>
   </fieldset>
