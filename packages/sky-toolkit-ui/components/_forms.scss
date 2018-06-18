@@ -368,10 +368,14 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   @include hide-visually();
 }
 
+/**
+ * 1. Prevent caption text inheriting color by modifiers on parent, e.g is-error
+ */
 .c-form-checkbox__caption {
   display: block;
   position: relative;
   margin-left: $form-checkbox-size + $form-checkbox-margin;
+  color: color(text); /* [1] */
 }
 
 .c-form-checkbox__caption::before {
