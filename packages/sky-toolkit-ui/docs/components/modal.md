@@ -25,29 +25,7 @@ By default, the Modal component is centered to the middle of the viewport, wrapp
   <div class="c-modal">
     <div class="u-text-right">
       <button class="c-link-faux c-modal__close" aria-label="Close Modal">
-        <span>Close</span>
-        <svg class="c-modal__close-icon" width="1.75em" height="1.75em" viewBox="0 0 32 32"><!--  CLOSE ICON SVG --></svg>
-      </button>
-    </div>
-    <div class="c-modal__body">
-      <!-- Whatever you want in the Modal -->
-    </div>
-  </div>
-</aside>
-```
-
-## Hiding the Close Label
-
-There are some use cases where you would want to show the close button, but without the label. To do
-so, use the existing `.u-hide-visually` utility provided in `sky-toolkit-core`. This ensures the
-label is still accessible to screen readers, but does not display in the browser.
-
-```html
-<aside class="c-modal-cover" role="dialog" aria-label="A label describing the Modal's current content" tabIndex="-1">
-  <div class="c-modal">
-    <div class="u-text-right">
-      <button class="c-link-faux c-modal__close" aria-label="Close Modal">
-        <span class="u-hide-visually">Close</span>
+        <span class="c-modal__close-label">Close</span>
         <svg class="c-modal__close-icon" width="1.75em" height="1.75em" viewBox="0 0 32 32"><!--  CLOSE ICON SVG --></svg>
       </button>
     </div>

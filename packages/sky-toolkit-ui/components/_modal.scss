@@ -102,3 +102,14 @@
   vertical-align: middle; /* [1] */
   margin-left: $global-spacing-unit-small; /* [2] */
 }
+
+/**
+ * Modal close button label
+ *
+ * Sits to the left of the icon, hidden on smaller screens.
+ */
+.c-modal__close-label {
+  @include mq($until: small) {
+    @include hide-visually();
+  }
+}
