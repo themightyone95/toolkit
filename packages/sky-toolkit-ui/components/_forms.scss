@@ -368,14 +368,10 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   @include hide-visually();
 }
 
-/**
- * 1. Prevent caption text inheriting color by modifiers on parent, e.g is-error
- */
 .c-form-checkbox__caption {
   display: block;
   position: relative;
   margin-left: $form-checkbox-size + $form-checkbox-margin;
-  color: color(text); /* [1] */
 }
 
 .c-form-checkbox__caption::before {
@@ -453,15 +449,17 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   =========================================== */
 
 /**
- * Errors are handled by adding the .is-error class to the field's parent –
- * usually the `.c-form-list__item`.
+ * Modify label styles
  */
-.is-error {
-  color: color(error);
+.c-form-label {
+  .is-error &,
+  &.is-error {
+    color: color(error);
+  }
 }
 
 /**
- * Change form field styles
+ * Modify form field styles
  */
 .c-form-date,
 .c-form-input,
@@ -469,6 +467,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
   .is-error &,
   &.is-error,
   &:invalid:not(:required) {
+    color: color(error);
     border-color: color(error);
 
     &:focus {
@@ -479,7 +478,7 @@ $form-spacing: $global-spacing-unit-small - $form-border-width;
 }
 
 /**
- * Change checkbox/radio indicator border color
+ * Modify checkbox/radio input styles
  */
 .c-form-checkbox__caption {
   .is-error &,
