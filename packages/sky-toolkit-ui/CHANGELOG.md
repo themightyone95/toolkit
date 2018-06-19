@@ -4,6 +4,21 @@
 the impact of releasing new library versions.
 
 
+## 2.24.0
+
+### Features
+
+* [Modal] New `.c-modal__close-label` element to hide the close label on
+  smaller screens by default.
+
+### Fixes
+
+* [Forms]
+    * Scope form `.is-error` styles to prevent them leaking to other components
+      with shared error state classes.
+    * Prevent checkbox caption text from inheriting color
+
+
 ## 2.23.1
 
 ### Dependencies
