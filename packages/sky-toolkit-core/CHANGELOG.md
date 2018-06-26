@@ -4,7 +4,7 @@
 manage the impact of releasing new library versions.
 
 
-## 2.24.0
+## 2.25.0
 
 ### Features
 
