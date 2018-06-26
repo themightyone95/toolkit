@@ -4,6 +4,15 @@
 manage the impact of releasing new library versions.
 
 
+## 2.24.0
+
+### Features
+
+* [Tools] Add `reset` and `important` arguments to `hide-visually()` mixin
+to allow hidden content to be redisplayed and the important value to be toggled.
+* [Tools] Add `_important()` private function to conditionally return 
+`!important` rule.
+
 ## 2.23.1
 
 ### Features

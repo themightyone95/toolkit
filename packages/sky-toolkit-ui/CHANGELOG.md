@@ -3,6 +3,13 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
 the impact of releasing new library versions.
 
+## 2.25.0
+
+### Features
+
+* [Forms] New `c-form-caption` to distinguish top level form `<legends>` and 
+hide without `!important` values.
+* [Forms] New `c-form-label--group` to support `<legends>` on form groups
 
 ## 2.24.0
 
