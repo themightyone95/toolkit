@@ -170,3 +170,18 @@
     @warn "Value must be a number i.e. 12, 24px etc.";
   }
 }
+
+// Private / Framework Only
+// ==============================================
+
+// _important()
+// ------------------------------------
+
+// Function to conditionally return !important rule.
+@function _important($important: true) {
+  @if $important {
+    @return " !important";
+  } @else {
+    @return null;
+  }
+}

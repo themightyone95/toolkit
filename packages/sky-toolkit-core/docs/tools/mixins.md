@@ -85,6 +85,18 @@ Further reading: [Jonathan Snook's 'Hiding Content for Accessibility'](http://sn
 }
 ```
 
+Setting `$option` to `reset` will declare properties that override the original 
+styles to enable visually hidden content to be redisplayed. 
+
+Not passing any arguments will declare each value with `!important`  - useful for 
+building out a utility or override. Set `$important` to `false` to prevent this behaviour.
+
+```scss { "render": false }
+.foo {
+  @include hide-visually(reset, false);
+}
+```
+
 ---
 
 ## Hide Completely
