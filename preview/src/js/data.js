@@ -7,6 +7,8 @@ const components = [
   'forms',
   'hero',
   'links',
+  'modal',
+  'overlay',
   'panel',
   'select',
   'shine',
@@ -29,8 +31,6 @@ const componentsUndocumented = [
   'typography',
 ];
 
-const componentsFullPage = ['modal', 'overlay'];
-
 const reduceMarkdown = comps => {
   return comps.reduce((docs, component) => {
     docs[component] = require(`sky-toolkit-ui/docs/components/${component}.md`);
@@ -40,4 +40,4 @@ const reduceMarkdown = comps => {
 
 const componentsData = reduceMarkdown(components);
 
-export { componentsData as components, componentsUndocumented, componentsFullPage };
+export { componentsData as components, componentsUndocumented };

@@ -21,9 +21,19 @@ const format = () => {
       const classes = {
         flush: 'u-breakout qa-container-flush',
         tile: 'c-example--tile qa-container-tile',
+        overlay: 'u-breakout c-example--overlay qa-container-overlay',
       };
 
-      return container ? classes[container] : '';
+      const classList = containerList => {
+        if (Array.isArray(containerList)) {
+          const containerClassList = containerList.map(containerItem => classes[containerItem]);
+          return containerClassList.join(' ');
+        } else {
+          return classes[containerList];
+        }
+      };
+
+      return container ? classList(container) : '';
     };
 
     const example = `
