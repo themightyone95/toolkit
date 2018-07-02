@@ -7,9 +7,6 @@ introduction: |
 source: sky-toolkit-ui/components/component-file-name
 dependencies:
   - sky-toolkit-core
-contributors:
-  - GitHub username of first contributor
-  - GitHub username of second contributor
 layout: component
 ---
 

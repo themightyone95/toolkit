@@ -9,9 +9,6 @@ introduction: |
 source: sky-toolkit-ui/components/tables
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
-  - skitson
 layout: component
 ---
 

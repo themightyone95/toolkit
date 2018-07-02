@@ -11,9 +11,6 @@ introduction: |
 source: sky-toolkit-ui/components/overlay
 dependencies:
   - sky-toolkit-core
-contributors:
-  - aaronthomas
-  - mikejgregory
 layout: component
 ---
 

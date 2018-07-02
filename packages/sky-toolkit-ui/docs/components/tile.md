@@ -12,10 +12,6 @@ source: sky-toolkit-ui/components/tile
 dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/shine
-contributors:
-  - joebell93
-  - aaronthomas
-  - mrdinsdale
 layout: component
 ---
 

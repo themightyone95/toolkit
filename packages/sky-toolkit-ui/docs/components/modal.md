@@ -7,10 +7,6 @@ introduction: |
 source: sky-toolkit-ui/components/modal
 dependencies:
   - sky-toolkit-core
-contributors:
-  - lukewhitehouse
-  - mikejgregory
-  - rbrtsmith
 layout: component
 ---
 

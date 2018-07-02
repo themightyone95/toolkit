@@ -13,10 +13,6 @@ introduction: |
 source: sky-toolkit-ui/components/spinner
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
-  - skitson
-  - welikeideas
 layout: component
 ---
 

@@ -12,11 +12,6 @@ introduction: |
 source: sky-toolkit-ui/components/buttons
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
-  - aaronthomas
-  - mrdinsdale
-  - steveduffin
 layout: component
 ---
 

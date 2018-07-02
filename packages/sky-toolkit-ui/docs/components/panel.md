@@ -12,11 +12,6 @@ introduction: |
 source: sky-toolkit-ui/components/panel
 dependencies:
   - sky-toolkit-core
-contributors:
-  - aaronthomas
-  - joebell93
-  - mrdinsdale
-  - skitson
 layout: component
 ---
 

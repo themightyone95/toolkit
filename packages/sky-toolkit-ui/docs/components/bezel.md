@@ -9,8 +9,6 @@ introduction: |
 source: sky-toolkit-ui/components/bezel
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 

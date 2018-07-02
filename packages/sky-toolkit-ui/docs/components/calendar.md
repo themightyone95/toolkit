@@ -10,9 +10,6 @@ introduction: |
 source: sky-toolkit-ui/components/calendar
 dependencies:
   - sky-toolkit-core
-contributors:
-  - turnbackdesign
-  - steveduffin
 layout: component
 ---
 

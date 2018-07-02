@@ -10,8 +10,6 @@ introduction: |
 source: sky-toolkit-ui/components/shine
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
 layout: component
 ---
 
