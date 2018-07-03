@@ -11,9 +11,6 @@ introduction: |
 source: sky-toolkit-ui/components/overlay
 dependencies:
   - sky-toolkit-core
-contributors:
-  - aaronthomas
-  - mikejgregory
 layout: component
 ---
 
@@ -34,12 +31,13 @@ entire viewport.
 The footer is an optional addition, which is typically used for rendering a primary call to action
 button.
 
-```html
+```html { "container": [ "overlay", "flush" ] }
 <article class="c-overlay">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">
+    <button class="c-overlay__close c-link-faux u-vertical-align-center">
       <span class="c-overlay__close-label">Close</span>
-      <svg class="c-overlay__close-icon" width="1.25em" height="1.25em" viewBox="0 0 100 100"><!--  CLOSE ICON SVG --></svg>
+      <!-- `img` for demo purposes, please use `svg` in production -->
+      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
     </button>
   </header>
   <div class="c-overlay__content">
@@ -59,12 +57,13 @@ You can optionally display the close button on the left side of the header by pa
 `.c-overlay--close-left` modifier. This is only to be used if extra contextal components need to be
 rendered in the right side of the header, such as a basket or continue button.
 
-```html
+```html { "container": [ "overlay", "flush" ] }
 <article class="c-overlay c-overlay--close-left">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">
+    <button class="c-overlay__close c-link-faux u-vertical-align-center">
       <span class="c-overlay__close-label">Close</span>
-      <svg class="c-overlay__close-icon" width="1.25em" height="1.25em" viewBox="0 0 100 100"><!--  CLOSE ICON SVG --></svg>
+      <!-- `img` for demo purposes, please use `svg` in production -->
+      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
     </button>
   </header>
   <div class="c-overlay__content">
@@ -78,16 +77,16 @@ rendered in the right side of the header, such as a basket or continue button.
 
 ## Hiding the Close Label
 
-There are some use cases where you would want to show the close button, but without the label. To do
-so, use the existing `.u-hide-visually` utility provided in `sky-toolkit-core`. This ensures the
-label is still accessible to screen readers, but does not display in the browser.
+There are some use cases where you would want to show the close button, but
+without the label.
 
-```html
-<article class="c-overlay c-overlay--close-left">
+```html { "container": [ "overlay", "flush" ] }
+<article class="c-overlay">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-text-lead u-vertical-align-center c-link-faux">
+    <button class="c-overlay__close c-link-faux u-vertical-align-center">
       <span class="c-overlay__close-label u-hide-visually">Close</span>
-      <svg class="c-overlay__close-icon" width="1.25em" height="1.25em" viewBox="0 0 100 100"><!--  CLOSE ICON SVG --></svg>
+      <!-- `img` for demo purposes, please use `svg` in production -->
+      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
     </button>
   </header>
   <div class="c-overlay__content">

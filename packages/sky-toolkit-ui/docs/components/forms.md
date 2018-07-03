@@ -9,11 +9,6 @@ introduction: |
 source: sky-toolkit-ui/components/forms
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
-  - mrdinsdale
-  - skitson
-  - aaronthomas
 layout: component
 ---
 

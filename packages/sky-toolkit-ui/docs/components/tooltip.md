@@ -9,8 +9,6 @@ introduction: |
 source: sky-toolkit-ui/components/tooltip
 dependencies:
   - sky-toolkit-core
-contributors:
-  - aaronthomas
 layout: component
 ---
 

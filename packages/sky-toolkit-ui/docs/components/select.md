@@ -10,11 +10,6 @@ source: sky-toolkit-ui/components/select
 dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/buttons
-contributors:
-  - joebell93
-  - steveduffin
-  - mrdinsdale
-  - skitson
 layout: component
 ---
 

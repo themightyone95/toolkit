@@ -11,10 +11,6 @@ introduction: |
 source: sky-toolkit-ui/components/dropdown
 dependencies:
   - sky-toolkit-core
-contributors:
-  - joebell93
-  - mrdinsdale
-  - aaronthomas
 layout: component
 ---
 

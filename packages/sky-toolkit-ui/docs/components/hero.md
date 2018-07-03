@@ -11,9 +11,6 @@ source: sky-toolkit-ui/components/hero
 dependencies:
   - sky-toolkit-core
   - sky-toolkit-ui/components/shine
-contributors:
-  - joebell93
-  - mrdinsdale
 layout: component
 ---
 

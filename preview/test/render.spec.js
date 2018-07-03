@@ -25,6 +25,10 @@ const testMarkdown = {
   <span id="qa-example-tile"/></span>
   \`\`\`
 
+  \`\`\`html { "container": [ "overlay", "flush" ] }
+  <span id="qa-example-overlay"/></span>
+  \`\`\`
+
   \`\`\`html { "theme": "dark" }
   <span id="qa-example-dark"/></span>
   \`\`\`
@@ -72,6 +76,13 @@ describe('Preview: Render', () => {
           .parent()
           .attr('class')
           .includes('qa-container-tile'),
+        true
+      );
+      assert.equal(
+        wrapper('#qa-example-overlay')
+          .parent()
+          .attr('class')
+          .includes('qa-container-overlay', 'qa-container-flush'),
         true
       );
     });
