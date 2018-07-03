@@ -2,6 +2,15 @@
    COMPONENTS / #OVERLAY
    ========================================================================== */
 
+/**
+ * ⚠️ DEPRECATION WARNING
+ * The following classes will be deprecated in sky-toolkit-ui@3.0.0, please use
+ * the alternatives detailed below:
+ *   ◦ `.c-overlay__close-label` → `c-link__label`
+ *   ◦ `c-overlay__close-icon` ⨯
+ *      No longer necessary, please use `c-link c-link--close` on the parent.
+ */
+
 // Imports
 @import "sky-toolkit-core/tools";
 
@@ -103,7 +112,7 @@ $overlay-header-height-small: 60px;
 }
 
 /**
- * Overlay close button
+ * Overlay close button - ⚠️ [SEE DEPRECATION WARNING]
  *
  * The button to close the overlay. This usually sits at the right side of the
  * overlay header, but can be displayed to the left with the
@@ -118,7 +127,7 @@ $overlay-header-height-small: 60px;
 }
 
 /**
- * Hide the close button label on smaller devices
+ * Hide the close button label on smaller devices - ⚠️ [SEE DEPRECATION WARNING]
  */
 .c-overlay__close-label {
   vertical-align: middle;
@@ -142,7 +151,7 @@ $overlay-header-height-small: 60px;
     text-align: left;
   }
 
-  .c-overlay__close-icon {
+  .c-overlay__close-icon { /* ⚠️ [SEE DEPRECATION WARNING] */
     margin-left: 0;
     margin-right: $global-spacing-unit-small;
   }

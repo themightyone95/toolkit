@@ -2,6 +2,15 @@
    COMPONENTS / #MODAL
    ========================================================================== */
 
+/**
+ * ⚠️ DEPRECATION WARNING
+ * The following classes will be deprecated in sky-toolkit-ui@3.0.0, please use
+ * the alternatives detailed below:
+ *   ◦ `.c-modal__close-label` → `c-link__label`
+ *   ◦ `c-modal__close-icon` ⨯
+ *      No longer necessary, please use `c-link c-link--close` on the parent.
+ */
+
 // Imports
 @import "sky-toolkit-core/tools";
 
@@ -81,7 +90,7 @@
  * The button to close the Modal. This sits on the right side
  * of the Modal header.
  *
- * 1. Normalise the buttons spacing to visually mirror the overlay component.
+ * 1. Normalise the buttons spacing to visually mirror the modal component.
  */
 .c-modal__close {
   margin-top: $global-spacing-unit; /* [1] */
@@ -89,7 +98,7 @@
 }
 
 /**
- * Modal close button icon
+ * Modal close button icon - ⚠️ [SEE DEPRECATION WARNING]
  *
  * The icon for the close button. This sits to the right of
  * the text.
@@ -104,7 +113,7 @@
 }
 
 /**
- * Modal close button label
+ * Modal close button label - ⚠️ [SEE DEPRECATION WARNING]
  *
  * Sits to the left of the icon, hidden on smaller screens.
  */

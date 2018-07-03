@@ -34,10 +34,8 @@ button.
 ```html { "container": [ "overlay", "flush" ] }
 <article class="c-overlay">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-link-faux u-vertical-align-center">
-      <span class="c-overlay__close-label">Close</span>
-      <!-- `img` for demo purposes, please use `svg` in production -->
-      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
+    <button class="c-overlay__close c-link c-link--close u-vertical-align-center">
+      Close
     </button>
   </header>
   <div class="c-overlay__content">
@@ -60,10 +58,8 @@ rendered in the right side of the header, such as a basket or continue button.
 ```html { "container": [ "overlay", "flush" ] }
 <article class="c-overlay c-overlay--close-left">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-link-faux u-vertical-align-center">
-      <span class="c-overlay__close-label">Close</span>
-      <!-- `img` for demo purposes, please use `svg` in production -->
-      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
+    <button class="c-overlay__close c-link c-link--close u-vertical-align-center">
+      Close
     </button>
   </header>
   <div class="c-overlay__content">
@@ -77,16 +73,17 @@ rendered in the right side of the header, such as a basket or continue button.
 
 ## Hiding the Close Label
 
-There are some use cases where you would want to show the close button, but
-without the label.
+For some use cases on smaller screens you may want to hide the close button's 
+label whilst keeping the icon visible.
+
+To do so, utilise `.c-link__label` from
+[sky-toolkit-ui/components/links](links.md).
 
 ```html { "container": [ "overlay", "flush" ] }
 <article class="c-overlay">
   <header class="c-overlay__header">
-    <button class="c-overlay__close c-link-faux u-vertical-align-center">
-      <span class="c-overlay__close-label u-hide-visually">Close</span>
-      <!-- `img` for demo purposes, please use `svg` in production -->
-      <img class="c-overlay__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
+    <button class="c-overlay__close c-link c-link--close u-vertical-align-center">
+      <span class="c-link__label">Close</span>
     </button>
   </header>
   <div class="c-overlay__content">
