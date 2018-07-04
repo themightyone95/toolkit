@@ -20,10 +20,8 @@ By default, the Modal component is centered to the middle of the viewport, wrapp
 <aside class="c-modal-cover" role="dialog" aria-label="A label describing the Modal's current content" tabIndex="-1">
   <div class="c-modal">
     <div class="u-text-right">
-      <button class="c-link-faux c-modal__close" aria-label="Close Modal">
-        <span class="c-modal__close-label">Close</span>
-        <!-- `img` for demo purposes, please use `svg` in production -->
-        <img class="c-modal__close-icon" src="https://www.sky.com/assets/toolkit/docs/overlay/close.svg" alt="" />
+      <button class="c-modal__close c-link c-link--close" aria-label="Close Modal">
+        Close
       </button>
     </div>
     <div class="c-modal__body">

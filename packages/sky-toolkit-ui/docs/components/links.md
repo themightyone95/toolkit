@@ -36,32 +36,56 @@ and external link styles on buttons.
 <button class="c-link">This is a Button styled as a link</button>
 ```
 
+### Label
+
+For some use cases on smaller screens you may want to hide the Link's label
+whilst keeping the icon visible.
+
+```html
+<button class="c-link c-link--close"><span class="c-link__label">Close</span></button>
+```
+
 ---
 
-## Back
+## Modifiers
+
+### Icons
+
+#### Back
 
 The `.c-link-back` class from `sky-toolkit-ui` utilises the same default
 link styling, with an additional backward-facing chevron indicator.
 
 ```html
-<a href="#" class="c-link-back">This is a back link</a>
+<a href="#" class="c-link c-link--back">This is a back link</a>
 ```
 
-### Back (Invert)
+#### Close
 
-We use this inverted back link when placed over darker backgrounds.
+The `.c-link--close` class from `sky-toolkit-ui` utilises the same default
+link behaviour with its own colour and additional icon indicator.
 
-```html { "theme": "dark" }
-<a href="#" class="c-link-back c-link-back--invert">This is a back link</a>
+```html
+<a href="#" class="c-link c-link--close">Close</a>
 ```
 
----
-
-## External
+#### External
 
 The `.c-link-external` class from `sky-toolkit-ui` utilises the same default
 link styling, with an additional chevron indicator.
 
 ```html
-<a href="#" class="c-link-external">This is an external link</a>
+<a href="#" class="c-link c-link--external">This is an external link</a>
+```
+
+### Cosmetic
+
+### Invert
+
+We use this inverted close link when placed over darker backgrounds.
+
+```html { "theme": "dark" }
+<a href="#" class="c-link c-link--back c-link--invert">Back</a>
+<br/>
+<a href="#" class="c-link c-link--close c-link--invert">Close</a>
 ```
