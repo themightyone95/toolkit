@@ -3,6 +3,28 @@
 `sky-toolkit-ui` follows [Semantic Versioning](http://semver.org) to help manage
 the impact of releasing new library versions.
 
+
+## 2.26.0
+
+### Features
+
+* [Links]
+  * New `c-link--close` modifier for consistent close links.
+  * New `c-link__label` element for hiding link labels on smaller screens.
+  * New `c-link--back` modifier to replace `c-link-back` in
+    `sky-toolkit-ui@3.0.0`. 
+  * New `c-link--external` modifier to replace `c-link-external` in
+    `sky-toolkit-ui@3.0.0`. 
+
+### Enhancements
+
+* [Docs] Hard-coded contributors removed in favour of GitHub.
+* [Preview] Modal/Overlay added to project `preview`.
+* [Modal] Recommend use of new `c-link--close` modifier for the close button.
+* [Overlay] Recommend use of new `c-link--close` modifier for the close button.
+* [Panel] Recommend use of new `c-link--close` modifier for the close button.
+
+
 ## 2.25.0
 
 ### Features

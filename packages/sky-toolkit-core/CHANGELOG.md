@@ -4,6 +4,13 @@
 manage the impact of releasing new library versions.
 
 
+## 2.26.0
+
+### Enhancements
+
+* `cdnUrl` and `@font-face` now make use of the static assets domain.
+
+
 ## 2.25.0
 
 ### Features
@@ -12,6 +19,7 @@ manage the impact of releasing new library versions.
 to allow hidden content to be redisplayed and the important value to be toggled.
 * [Tools] Add `_important()` private function to conditionally return 
 `!important` rule.
+
 
 ## 2.23.1
 
