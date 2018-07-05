@@ -4,6 +4,13 @@
 the impact of releasing new library versions.
 
 
+## 2.26.1
+
+### Fixes
+
+* [Docs] Update Panel examples to use new `c-link--back` modifier.
+
+
 ## 2.26.0
 
 ### Features
